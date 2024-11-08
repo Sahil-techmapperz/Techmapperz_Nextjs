@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+
+
+.case-study-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+   
+  }
+  
+  .case-study-info {
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white; /* Text color */
+    transform: translateY(200%);
+    transition: transform 0.5s ease;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .case-study-container:hover .case-study-info {
+    transform: translateY(0);
+  }
+
+
+  ul.custom-list li::marker {
+    font-size: 50px; /* Large bullet size */
+    color: #F83131; /* Red bullet color */
+    vertical-align: bottom; /* Adjusts the alignment of the bullet relative to the text */
+}
+
+ul.custom-list {
+    list-style-type: disc; /* Ensures it uses bullet points */
+    padding-left: 20px; /* Adjust padding as needed for better spacing */
+}
+
+ul.custom-list li {
+    font-size: 14px; /* Text size */
+    color: white;
+}
+
+
+.active-category {
+    color: #F83131;
+  }
+  
+
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+
+  .parallax {
+    background-image: url('/Photos/home_about_BG.jpg'); /* Replace with your desired background image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px; /* Adjust height as needed */
+  }
+  
+
+
+  .career_why_choose_us {
+    transition: all ease-in-out 0.5s; /* Added transition for non-hover state */
+}
+
+.career_why_choose_us:hover {
+    color: white !important;
+    background: #396BA9;
+    transform: scale(1.1);
+    transition: all ease-in-out 0.5s; /* Corrected transition duration */
+}
+
+.career_why_choose_us:hover p {
+    color: white !important;
+}
+
+  
+  
+  
