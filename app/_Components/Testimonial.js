@@ -108,8 +108,8 @@ const Testimonial = () => {
                 <div className="mt-16">
                   <div className="flex gap-4 mb-4">
                     <div className="text-left">
-                      <p className=" h-[100px] overflow-auto">{data.message}</p>
-                    </div>
+                      <p className=" h-[100px] overflow-auto">{data.message}</p>  
+                      </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="text-left">
@@ -127,4 +127,4 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default Testimonial; 

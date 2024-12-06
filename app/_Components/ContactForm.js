@@ -1,7 +1,7 @@
 // components/ContactForm.js
 'use client'
 import React, { useState } from 'react';
-import {useToast} from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 
 const init = {
@@ -66,9 +66,12 @@ const ContactForm = () => {
         body: JSON.stringify(data)
       }).then(res => {
         if (res.status === 200) {
-          router.push('/thankyou');
           setHasError({});
           setcontactdata(init);
+          router.push('./thankyou');
+
+          // Reload the page after navigating
+          // router.refresh();
 
         } else {
           toast({

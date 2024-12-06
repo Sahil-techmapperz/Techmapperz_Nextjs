@@ -11,7 +11,7 @@ import Travel_Image from "@/public/Photos/Travel_Image.png";
 import Heathcare_Image from "@/public/Photos/Heathcare.png";
 import Manufacturing_Image from "@/public/Photos/Manufacturing_Image.png";
 import Logistic_Image from "@/public/Photos/Logistic.png";
-import Link from 'next/link';
+import Link from 'next/link';   
 import { FaArrowRightLong } from "react-icons/fa6";
 import Industry_Expertise_CarouselComponent from './CarouselComponent';
 
@@ -21,14 +21,14 @@ const categoryData = [
         name: 'E-Commerce',
         image: Industry_Expertise_Image,
         desc: "IT services are crucial for the e-commerce sector as they ensure seamless website functionality, enhance security, streamline payment processing, and improve customer experience:",
-        listarr: ["Optimize e-commerce platforms for faster load times, mobile compatibility, and SEO to boost customer attraction and increase sales.", "Enhanced Customer Experience by integrating secure payment gateways, data encryption, and fraud detection.", "Efficient delivery tracking.", "IT solutions automate inventory management, order processing, and customer service, boosting efficiency and minimizing manual errors."],
+        listarr: ["Optimize ecommerce website and ecommerce app for quicker loading times, mobile responsiveness, and search engine optimization to attract more customers and drive sales", "Enhanced Customer Experience by integrating secure payment gateways, data encryption, and fraud detection.", "Provide efficient delivery tracking website.", "IT solutions automate inventory management, order processing, and customer service, boosting efficiency and minimizing manual errors."],
         categoryTypes: ["Business to Business", "Business to Consumer", "Consumer to Consumer", "Consumer to Business"]
     },
     {
         name: 'Retail',
         image: Retail_Image,
-        desc: "IT services are essential for the retail sector, enhancing inventory management, streamlining payment systems, and improving customer experiences.",
-        listarr: ["Increased Online Visibility", "Enhanced Customer Experience by using CRM tools, data analysis and AI-powered recommendations.", "Scalability for E-commerce", "Improve Inventory Management by using Inventory management solution", "Seamless Omni-Channel Integration", "Real-Time Monitoring and Alerts:"],
+        desc: "IT services are essential for the retail sector, enhancing inventory management, streamlining payment systems, and improving customer experiences    .",
+        listarr: ["Increased Online Visibility", "Enhanced Customer Experience by using CRM tools, data analysis and AI-powered recommendations.", "Scalability for E-commerce website", "Improve Inventory Management by using Inventory management solution", "Seamless Omni-Channel Integration", "Real-Time Monitoring through CRM tool and Alerts:"],
         categoryTypes: ["Health & Wellness", "Apparel & Accessories", "Electronics & Appliances", "Grocery & Gourmet Foods"]
     },
     {
@@ -63,14 +63,14 @@ const categoryData = [
         name: 'Logistic and supply chain',
         image: Logistic_Image,
         desc: "IT services are crucial for the logistics and supply chain sector, enabling real-time tracking, optimizing route planning, automating inventory management, and enhancing communication. These technologies boost efficiency, reduce costs, and improve overall operational control and transparency:",
-        listarr: ["Real-Time Tracking and Visibility", "Data-Driven Decision Making", "Inventory Management", "Automated Operation", "Enhanced Customer Service and Satisfaction"],
+        listarr: ["Informed, strategic decisions that enhance efficiency.", "Automation to reduce errors and optimize stock control.", "Streamlined tasks to reduce manual work and boost productivity.", "Faster response times and improved communication for better customer satisfaction.", "Enhanced Customer Service and Satisfaction"],
         categoryTypes: ["Inbound Logistics", "Outbound Logistics", "Reverse Logistics", "International Logistics"]
     },
     {
         name: 'Healthcare',
         image: Heathcare_Image,
         desc: "Software companies play a vital role in healthcare by developing innovative solutions. These tools streamline processes, improve patient care, and facilitate research. Ultimately, software companies are driving digital transformation and enhancing healthcare outcomes:",
-        listarr: ["Telemedicine & Remote Consultations", "Easy Appointment Scheduling & Patient Management", "Pharmacy & Prescription Management", "Electronic Health Records (EHR) Management", "Hospital Management Systems"],
+        listarr: ["Remote healthcare services for convenience.", "Easy Appointment Scheduling & Patient Management", "Pharmacy & Prescription Management", "Electronic Health Records (EHR) Management", "Hospital Management Systems"],
         categoryTypes: ["Hospital & Nursing Homes", "Online Health consulting", "Pharmaceuticals", "Clinics"]
     }
 ];

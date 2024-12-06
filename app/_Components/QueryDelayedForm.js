@@ -9,7 +9,7 @@ const QueryDelayedForm = () => {
   useEffect(() => {
     const interval = setTimeout(()=>{
       setShowForm(true);
-    },20000)
+    },15000)
 
     return () => clearTimeout(interval);
   }, []);

@@ -28,20 +28,20 @@ const ItConsulting = () => {
             <section className="h-[300px] max-sm:h-[250px] w-full flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/Photos/banner_3.jpg')" }}>
                 <h1 className="text-4xl max-sm:text-2xl font-bold">IT Consulting Services</h1>
                 <p className="text-[18px] max-sm:text-[16px]">
-                <Link href="/" className="text-white">Home</Link> / <Link href="/service" className="text-white">Services</Link> / IT Consulting Services
+                    <Link href="/" className="text-white">Home</Link> / <Link href="/service" className="text-white">Services</Link> / IT Consulting Services
                 </p>
             </section>
 
             <section className="w-full bg-black ">
                 <p className="text-justify p-20 max-sm:p-2">
-                    We provide IT consulting services to businesses in a wide range of industries. We use our expertise to identify your opportunities and deliver solutions that will help you outperform your competitors. Whether it's strategy, innovation, or implementation, we're able to provide exceptional services thanks to the skills of our impeccable team.
+                    We provide IT consulting services to businesses in a wide range of industries. We use our expertise to identify your opportunities and deliver Custom solutions that will help you outperform your competitors. Whether it's strategy, innovation, or implementation, we're able to provide exceptional services thanks to the skills of our impeccable team.
                 </p>
 
                 <div className="grid grid-cols-3 max-sm:grid-cols-1 max-sm:gap-2 max-sm:px-2 gap-12 px-20 mt-10">
                     <div className="border p-8">
                         <Image src={Itconsulting14} alt="Infrastructure" loading="lazy" width={100} height={100} />
                         <h3 className="text-2xl max-sm:text-xl font-bold mt-4">Infrastructure</h3>
-                        <p className='text-[18px] max-sm:text-[16px]'>Our Infrastructure consulting will help you power through the use of under-utilization of your Infrastructure, and deliver something that can make your business thrive.</p>
+                        <p className='text-[18px] max-sm:text-[16px]'>Our Infrastructure consulting will help you power through the use of under-utilization of your Infrastructure, and deliver something that can make your Custom business thrive.</p>
                     </div>
 
                     <div className="border p-8">
@@ -49,9 +49,9 @@ const ItConsulting = () => {
                         <h3 className="text-2xl max-sm:text-xl font-bold mt-4">Design and Implementation</h3>
                         <p className='text-[18px] max-sm:text-[16px]'>Our team can work with you on designing a network to secure your data and other intelligent infrastructures.</p>
                     </div>
-       
+
                     <div className="p-8">
-                        <Image src={Office_work} alt="Office work" loading="lazy"  className="object-fill w-full h-full" />
+                        <Image src={Office_work} alt="Office work" loading="lazy" className="object-fill w-full h-full" />
                     </div>
 
                     <div className="border p-8">
@@ -63,7 +63,7 @@ const ItConsulting = () => {
                     <div className="border p-8">
                         <Image src={Itconsulting9} alt="Modernization" loading="lazy" width={100} height={100} />
                         <h3 className="text-2xl max-sm:text-xl font-bold mt-4">Modernization</h3>
-                        <p className='text-[18px] max-sm:text-[16px]'>We replatform your apps in order to make functionality easier. Re-architecting your apps to make it more scalable and flexible. This will be done through code.</p>
+                        <p className='text-[18px] max-sm:text-[16px]'>We replatform your online apps in order to make functionality easier. Re-architecting your apps to make it more scalable and flexible. This will be done through code.</p>
                     </div>
 
                     <div className="border p-8">
@@ -79,16 +79,16 @@ const ItConsulting = () => {
                     </div>
 
                     <div className=" p-8">
-                        <Image src={Digital_nomad} alt="Digital nomad" loading="lazy"  className="object-fill w-full h-full" />
+                        <Image src={Digital_nomad} alt="Digital nomad" loading="lazy" className="object-fill w-full h-full" />
                     </div>
                 </div>
 
                 <div className="bg-cover bg-center py-10  mt-10 grid grid-cols-2 max-sm:grid-cols-1" style={{ backgroundImage: "url('/Photos/Rectangle 41.png')" }}>
-                  <div>
-                    <h1 className="text-4xl max-sm:text-2xl font-bold mb-8 text-center">Why Choose Techmapperz for your IT Services?</h1>
-                    <div className="flex flex-col items-center">
-                        <Image src={Good_team} alt="Good team" loading="lazy" width={600} height={400} className="object-fill mb-8" />
-                    </div>
+                    <div>
+                        <h1 className="text-4xl max-sm:text-2xl font-bold mb-8 text-center">Why Choose Techmapperz for your IT Services?</h1>
+                        <div className="flex flex-col items-center">
+                            <Image src={Good_team} alt="Good team" loading="lazy" width={600} height={400} className="object-fill mb-8" />
+                        </div>
 
                     </div>
 

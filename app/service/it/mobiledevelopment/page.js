@@ -36,7 +36,7 @@ const Mobile_development = () => {
             </section>
 
             <section className="w-full bg-black p-10 max-sm:px-4">
-                <p className="text-white text-[18px] max-sm:text-[16px] text-justify leading-relaxed">In this digital era, it's not easy to live without smart devices, especially smartphones. Smart devices are transforming the way we live our lives. Mobile apps have become the most lucrative digital tool to make life easier and more convenient. The mobile app software intelligently combines the latest technology and design solutions, which constantly get updated. It incorporates API, GPS, Camera, Microphone, Artificial Intelligence, and other latest technologies and becomes a Launchpad hurling your business to the next level.</p>
+                <p className="text-white text-[18px] max-sm:text-[16px] text-justify leading-relaxed">In this digital era, it's not easy to live without smart devices, especially smartphones. Smart devices are transforming the way we live our lives. Mobile apps and website have become the most lucrative digital tool to make life easier and more convenient. The mobile app Development software intelligently combines the latest technology and design solutions, which constantly get updated. It incorporates API, GPS, Camera, Microphone, Artificial Intelligence, and other latest technologies and becomes a Launchpad hurling your business to the next level.</p>
 
                 <div className="w-full py-10">
                     <div className="flex flex-col md:flex-row gap-10 bg-black">
@@ -121,7 +121,7 @@ const Mobile_development = () => {
                         <div className="flex flex-col items-center text-center">
                             <Image className="h-64 object-contain" src={MobileDev3} alt="MobileDev3" />
                             <h3 className="text-2xl font-bold mt-5">Native App</h3>
-                            <p className="text-justify leading-relaxed mt-5">These apps are built for a specific mobile platform. For example, Apple native applications are only accessible on Apple devices, and users may only access applications from other cell phone providers on their own branded devices. Native apps may offer higher performance compared to more generalized apps.</p>
+                            <p className="text-justify leading-relaxed mt-5">These apps are built for a specific mobile platform. For example, Apple native applications are only accessible on Apple devices, and users may only access  web applications from other cell phone providers on their own branded devices. Native apps may offer higher performance compared to more generalized apps.</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
                             <Image className="h-64 object-contain" src={MobileDev4} alt="Combind3" />

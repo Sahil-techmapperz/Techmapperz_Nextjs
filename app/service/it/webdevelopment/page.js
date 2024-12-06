@@ -28,7 +28,7 @@ const WebDevelopment = () => {
                         <Image unoptimized="true" src="/Photos/WebDev3.gif" alt="WebDev3.gif" className='w-[30%] max-sm:w-[90vw]' width={100} height={100} />
                         <div className="flex flex-col gap-4">
                             <h1 className="text-4xl max-sm:text-2xl font-bold">What is Web Design and Development?</h1>
-                            <p className='text-[18px] max-sm:text-[16px]'>One of the first website was created in 1991, and since then website and its designing have evolved manifold. Today it is complex and involves an entire ecosystem of roles and skill sets. Website development is an umbrella term for two major parts- Design & Development, Design represents the look and feel whereas Development determines how it functions.</p>
+                            <p className='text-[18px] max-sm:text-[16px]'>One of the first website was created in 1991, and since then website and its designing have evolved manifold. Today it is complex and involves an entire ecosystem of roles and skill sets. Website development is an umbrella term for two major parts- webdesign & webdevelopment, Webdesign represents the look and feel whereas Development determines how it functions.</p>
                             <button
                                 className='py-[10px] px-[15px] w-fit rounded-sm'
                                 style={{
@@ -54,7 +54,7 @@ const WebDevelopment = () => {
 
                 <div className="px-20 py-10 relative flex max-sm:flex-col-reverse max-sm:gap-2 max-sm:px-2 max-sm:items-center justify-between items-center bg-cover bg-center" style={{ backgroundImage: "url('/Photos/banner_3.jpg')" }}>
                     <div className="flex flex-col gap-4 w-1/2 max-sm:w-full">
-                        <h1 className="text-4xl max-sm:text-2xl font-bold ">Why Web Design and Development is Important?</h1>
+                        <h1 className="text-4xl max-sm:text-2xl font-bold ">Why Web Design and Web Development is Important?</h1>
                         <p className='text-[18px] max-sm:text-[16px]'>Today the world is connected online, people get to the Internet for any kind of need they may have, in this era Web design and web development are crucial for any business that wants to create an online presence. it is the first impression of your company, make sure it is a good one, and a functioning one as well. A good web design and functionality is also a key element in good sales and business growth.</p>
                         <button
                             className='py-[10px] px-[15px] w-fit rounded-sm'
@@ -84,8 +84,8 @@ const WebDevelopment = () => {
                     <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:items-center gap-12">
                         <Image src="/Photos/WebDev2.gif" unoptimized="true" alt="" className='w-[30%] max-sm:w-[90vw] ' width={100} height={100} />
                         <div className="flex flex-col gap-4">
-                            <h1 className="text-4xl max-sm:text-2xl font-bold">The Right Web Design and Development Team</h1>
-                            <p className='text-[18px] max-sm:text-[16px]'>With so much at stake it is important that your web designing and development company is reliable and has a team that is experienced and can be trusted.</p>
+                            <h1 className="text-4xl max-sm:text-2xl font-bold">The Right Web Design and Web App Development Team</h1>
+                            <p className='text-[18px] max-sm:text-[16px]'>With so much at stake it is important that your web designing and web app development company is reliable and has a team that is experienced and can be trusted.</p>
                             <button
                                 className='py-[10px] px-[15px] w-fit rounded-sm'
                                 style={{
@@ -110,7 +110,7 @@ const WebDevelopment = () => {
                 </div>
 
                 <div className="px-20 max-sm:px-2 py-10 bg-cover" style={{ backgroundImage: 'url("/Photos/banner_3.jpg")' }}>
-                    <h3 className="text-4xl max-sm:text-2xl font-bold mb-8">Elements of Web Design</h3>
+                    <h3 className="text-4xl max-sm:text-2xl font-bold mb-8">Elements of Website Design</h3>
                     <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:gap-2 max-sm:w-[90vw] gap-20 w-[60%] m-auto">
                         <div className="border border-white p-4 mt-[20px] relative">
                             <Image src="/Photos/Combind1.png" alt="" width={100} height={100} />
@@ -163,11 +163,11 @@ const WebDevelopment = () => {
                 <div className="px-20 max-sm:px-2 py-10 relative flex max-sm:flex-col-reverse justify-between items-center bg-cover bg-center" style={{ backgroundImage: "url('/Photos/background_4.png')" }}>
                     <div className="flex flex-col gap-4 w-1/2 max-sm:w-full max-sm:px-4 max-sm:py-2">
                         <h1 className="text-4xl max-sm:text-2xl font-bold">Benefits of Getting Web Development Professionally</h1>
-                        <p className='text-[18px] max-sm:text-[16px]'>We at Techmapperz have some of the best developers in the field with a combined experience of more than 200 years...</p>
+                        <p className='text-[18px] max-sm:text-[16px]'>We at Techmapperz have some of the best developers in the field with a combined experience of more than 50 years...</p>
                         <ul className="list-disc text-[18px] max-sm:text-[16px] list-inside text-[#396ba9]">
                             <li><span className='text-white'>Drive Social Media Growth </span></li>
-                            <li><span className='text-white'>Leveraging SEO </span></li>
-                            <li><span className='text-white'>Drive Wider Reach </span></li>
+                            <li><span className='text-white'>Web Seo Services</span></li>
+                            <li><span className='text-white'>Drive Wider Reach</span></li>
                             <li><span className='text-white'>Tapping on the Brand Power </span></li>
                             <li><span className='text-white'>Boost Sales </span></li>
                             <li><span className='text-white'>Stay ahead of Competitors </span></li>

@@ -25,16 +25,6 @@ const DroneService = () => {
 
             <section className="w-full max-sm:px-4 py-8 px-[50px]  bg-black relative overflow-hidden">
                 <div className="flex flex-col">
-                    {/* <p className="text-[18px] font-normal text-center leading-7 tracking-wide text-gray-300">
-                        Techmapperz has expertise in cutting-edge drone technology, and high-quality data processing techniques to provide <br />
-                        spatial services for a range of requirements. Since drones can provide current and high-quality data at low <br />
-                        costs they becoming used more frequently for the collection of data. Our drone technology can <br />
-                        capture high resolution orthoimagery, video and elevation data with the use of various <br />
-                        cameras and sensors. Techmapperz can capture multispectral imagery (NDVI), <br />
-                        thermal imagery and video and precision LiDAR imagery on a <br />
-                        substantial high level with additional payloads.<br />
-                    </p> */}
-
                     <p className="text-[18px] max-sm:text-[16px] text-center font-normal leading-7 tracking-wide text-gray-300">
                         Techmapperz specializes in advanced drone technology and high-quality data processing for spatial services. Drones provide accurate, up-to-date data at low costs, making them a popular choice for data collection. Our drones capture high-resolution orthoimagery, video, and elevation data using various cameras and sensors. We also offer multispectral (NDVI), thermal imagery, video, and precise LiDAR imagery with additional payloads for enhanced data accuracy.
                     </p>

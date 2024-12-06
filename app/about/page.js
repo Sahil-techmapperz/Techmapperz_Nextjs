@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 
-const About = () => {
+const About = () => {  
 
 
   return (
