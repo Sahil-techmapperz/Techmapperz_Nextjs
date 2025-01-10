@@ -28,9 +28,9 @@ const Casestudies = () => {
         </div>
       </div>
       {/* <Scrolltextanimation text="TechMapperz offers software development, web design, mobile app development." /> */}
-      <div className='bg-gray-800 h-auto flex px-16 justify-center items-center sm:flex-col sm:px-0'>
+      <div className='bg-gray-800 h-auto flex max-sm:px-0 px-16 justify-center items-center sm:flex-col sm:px-0'>
         <div className='w-[90%] m-auto'>
-          <div className='w-[75%]  m-auto flex justify-around mt-[50px] mb-[30px]  border-t-[3px] border-b-[3px] text-white'>
+          <div className='w-[75%] max-sm:w-full  m-auto flex justify-around mt-[50px] mb-[30px]  border-t-[3px] border-b-[3px] text-white'>
             {['All', 'IT', 'GIS'].map((category) => (
               <p
                 key={category}

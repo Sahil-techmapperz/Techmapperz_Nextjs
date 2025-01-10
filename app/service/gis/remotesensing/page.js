@@ -13,6 +13,9 @@ export const metadata = {
 };
 
 const RemoteSensing = () => {
+
+
+    
     return (
         <div className="bg-black overflow-hidden text-white">
             <ScrollToTop />
@@ -24,12 +27,14 @@ const RemoteSensing = () => {
             </div>
             <div className="w-full bg-black">
                 <div className="p-8 lg:px-20">
-                    <p className="text-white text-[18px] max-sm:text-[16px] max-sm:text-justify text-center">
-                        Measuring the physical characteristics of an area by measuring it's reflected and emitted radiation from satellite or <br />
-                        aircraft is Remote sensing, this help researchers "sense" things about the Earth. Techmapperz has extensive <br />
+                    <p className="text-white xl:text-[18px] max-sm:text-[14px]  max-sm:text-start text-center md:text-[16px]">
+                        Measuring the physical characteristics of an area by measuring its reflected and emitted radiation from satellite or <br />
+                        aircraft is Remote sensing, this helps researchers "sense" things about the Earth. Techmapperz has extensive <br />
                         expertise in Satellite Image Processing & Interpretation. Various Remote Sensing services <br />
                         offered by Techmapperz are: <br />
                     </p>
+
+                   
 
                     <div className="mt-8 flex flex-col space-y-8">
                         <div className="flex flex-col  md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -38,7 +43,7 @@ const RemoteSensing = () => {
                             </div>
                             <div className="md:w-1/2 relative">
                                 <h1 className="text-2xl max-sm:text-xl font-semibold mb-4">Image Processing</h1>
-                                <p className="text-[18px] max-sm:text-[16px] max-sm:text-justify mb-8">
+                                <p className="text-[18px] max-sm:text-[14px] max-sm:text-justify mb-8">
                                     Most remote sensing data are recorded in the digital format in today's world of advanced technology, almost all image interpretation and analysis involves some element of digital processing. It involves various processes to enhance the image, we at Techmapperz use some of the best software and hardware available commercially to process high-quality images for commercial use.
                                 </p>
                                 <ul className='flex flex-col max-sm:text-[16px] gap-2 my-6 font-semibold list-disc ml-6'>
@@ -72,7 +77,7 @@ const RemoteSensing = () => {
                         <div className="flex flex-col max-sm:flex-col-reverse md:flex-row md:space-y-0 md:space-x-4 bg-cover bg-center p-8 max-sm:px-0" >
                             <div className="md:w-1/2 relative">
                                 <h1 className="text-2xl max-sm:text-xl font-semibold mb-4">Land Use / Land Cover Mapping</h1>
-                                <p className="text-[18px] max-sm:text-[16px] text-justify mb-8">
+                                <p className="text-[18px] max-sm:text-[14px] text-justify mb-8">
                                     Land use and land cover may sound the same but there is a slight difference between them. Land cover refers to the surface cover on the ground like vegetation, urban infrastructure, water, bare soil, etc. whereas Land use refers to the purpose the land serves, for example, recreation, wildlife habitat, or agriculture. Land use and Land cover mapping play a significant role in economic development. It is required for a better understanding and use of land in urban and rural areas.
                                 </p>
                                 <button
@@ -103,9 +108,9 @@ const RemoteSensing = () => {
                 </div>
                 <div className="flex flex-col items-center p-8 bg-gray-800">
                     <h1 className="text-2xl max-sm:text-xl max-sm:text-center font-semibold mb-8">Techmapperz's Remote sensing services include</h1>
-                    <div className="flex flex-col max-sm:text-[16px] md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                    <div className="flex flex-col max-sm:text-[14px] md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                         <div className="w-80 text-left">
-                            <ul className="list-disc space-y-4">
+                            <ul className="list-disc space-y-4 max-sm:ml-[15px]">
                                 <li>
                                     <p>Change Detection Mapping & Analysis</p>
                                 </li>
@@ -121,7 +126,7 @@ const RemoteSensing = () => {
                             </ul>
                         </div>
                         <div className="w-80 text-left">
-                            <ul className="list-disc space-y-4">
+                            <ul className="list-disc space-y-4 max-sm:ml-[15px]">
                                 <li>
                                     <p>Forest Mapping</p>
                                 </li>

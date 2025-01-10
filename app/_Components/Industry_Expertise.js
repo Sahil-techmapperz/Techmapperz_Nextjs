@@ -77,13 +77,13 @@ const categoryData = [
 
 const CategoryItem = ({ item, index, setHoveredItem, isActive }) => (
     <li
-        key={`${item}-${index}`}
-        onClick={() => setHoveredItem(index)}
+        onMouseEnter={() => setHoveredItem(index)} // Changed to onMouseEnter
         className={`cursor-pointer font-bold text-[20px] mb-5 p-4 rounded-tl-full rounded-bl-full ${isActive ? 'bg-gray-700' : ''}`}
     >
         {item.name}
     </li>
 );
+
 
 const InfoPanel = ({ variants, name, image, desc, listarr, categoryTypes }) => (
     <motion.div

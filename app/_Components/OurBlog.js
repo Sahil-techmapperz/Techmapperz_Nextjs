@@ -23,7 +23,7 @@ const OurBlog = async () => {
 
       <Link
         href="/blog"
-        className="relative mt-6 inline-block uppercase w-fit font-semibold text-[22px] text-[#00B0FE] py-2 px-4 bg-white rounded-lg shadow-[0px_0px_8px_0px_#00B0FE] hover:text-[#D555B5] hover:shadow-[0px_0px_8px_0px_#D555B5] transition-all duration-300"
+        className="relative animate-blink mt-6 inline-block uppercase w-fit font-semibold  text-[#00B0FE] py-2 px-4 bg-white rounded-lg shadow-[0px_0px_8px_0px_#00B0FE] hover:text-[#D555B5] hover:shadow-[0px_0px_8px_0px_#D555B5] transition-all duration-300"
       >
         Explore more
       </Link>

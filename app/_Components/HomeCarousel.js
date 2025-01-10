@@ -6,6 +6,7 @@ import Image from "next/image";
 import Home_banner_1 from "@/public/Photos/new_home_banner_1.png";
 import Home_banner_2 from "@/public/Photos/new_home_banner_2.png";
 import Link from "next/link";
+import { FiMessageSquare, FiCalendar } from 'react-icons/fi';
 
 // Slick settings for autoplay and fade effects
 const settings = {
@@ -41,7 +42,7 @@ const CustomCarousel = () => {
       <Slider {...settings}>
         {carouselItems.map((item, index) => (
           <div key={index}>
-            <div className="relative w-full  h-[100vh]">
+            <div className="relative w-full  h-[90vh]">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -56,24 +57,31 @@ const CustomCarousel = () => {
                   background: "linear-gradient(101.3deg, rgba(57, 107, 169, 0.92) 40.68%, rgba(23, 42, 67, 0) 54.8%)",
                 }}
               >
-                <h3 className="text-[40px] max-sm:text-[30px] w-[50%] max-sm:w-full font-semibold">
+                <h3 className="text-[50px] max-sm:text-[30px] w-[50%] max-sm:w-full font-semibold">
                   {item.title}
                 </h3>
-                <p className="my-3 w-[40%] max-sm:w-full">{item.description}</p>
-                <div className="flex gap-2 max-sm:flex-col-reverse">
-                <Link
-                  href="/contact"
-                  className="relative inline-block uppercase w-fit font-semibold text-[22px] text-[#00B0FE] py-2 px-4 bg-white rounded-lg shadow-[0px_0px_8px_0px_#00B0FE] hover:text-[#D555B5] hover:shadow-[0px_0px_8px_0px_#D555B5] transition-all duration-300"
-                >
-                  Request a Quote
-                </Link>
-                <a
-                  target="_blank"
-                  href="https://calendly.com/techmapperz-projects/30min"
-                  class="relative inline-block uppercase w-fit font-semibold text-[22px] text-[#4CAF50] py-2 px-4 bg-white rounded-lg shadow-[0px_0px_8px_0px_#4CAF50] hover:text-[#9C27B0] hover:shadow-[0px_0px_8px_0px_#9C27B0] transition-all duration-300"
-                >
-                  Book a Demo
-                </a>
+                <p className="my-3 mb-8 w-[40%] max-sm:w-full">{item.description}</p>
+                <div className="flex gap-6 max-sm:flex-col-reverse">
+                  <Link
+                    href="/contact"
+                    className="relative inline-flex items-center gap-2 uppercase w-fit font-semibold text-[22px] text-[#00B0FE] py-2 px-4 bg-white rounded-lg overflow-hidden group"
+                  >
+                    <span className="absolute inset-0 w-full h-full bg-[#00B0FE] transform -translate-x-full transition-transform duration-300 group-hover:translate-x-0 z-0"></span>
+                    <FiMessageSquare className="text-[24px] z-10 transition-colors duration-300 group-hover:text-white" />
+                    <span className="z-10 transition-colors duration-300 group-hover:text-white">Request a Quote</span>
+                  </Link>
+
+                  <a
+                    target="_blank"
+                    href="https://calendly.com/techmapperz-projects/30min"
+                    className="relative inline-flex items-center gap-2 uppercase w-fit font-semibold text-[22px] text-[#4CAF50] py-2 px-4 bg-white rounded-lg overflow-hidden group"
+                  >
+                    <span className="absolute inset-0 w-full h-full bg-[#4CAF50] transform -translate-x-full transition-transform duration-300 group-hover:translate-x-0 z-0"></span>
+                    <FiCalendar className="text-[24px] z-10 transition-colors duration-300 group-hover:text-white" />
+                    <span className="z-10 transition-colors duration-300 group-hover:text-white">Book a Demo</span>
+                  </a>
+
+
                 </div>
 
 

@@ -2,6 +2,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { FaArrowRight } from 'react-icons/fa'; // For the arrow icon
+import Link from 'next/link';
 
 
 const categoryData = [
@@ -80,14 +81,14 @@ const Industry_Expertise_CarouselComponent = () => {
   };
 
   return (
-    <Carousel responsive={responsive} arrows={false} infinite={true} autoPlay={true} autoPlaySpeed={3000}>
+    <Carousel responsive={responsive} arrows={false} infinite={true} autoPlay={true} autoPlaySpeed={6000}>
       {categoryData && categoryData.map((category, index) => (
         <div key={index} className="carousel-card bg-white shadow-md overflow-hidden mx-4">
           <img src={category.image} alt={category.name} width={100} height={100} className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-xl  text-gray-500  font-semibold">{category.name}</h2>
             <p className="text-sm text-gray-500 mt-2">{category.desc}</p>
-            <div className="mt-3 grid grid-cols-1 gap-4 justify-center">
+            <div className="mt-3 ml-[-6px] grid grid-cols-1 gap-4 justify-center">
               {category.categoryTypes.map((type, idx) => (
                 <div key={idx} className="mx-1 w-fit bg-blue-200 text-blue-800 py-1 px-2 rounded-full text-xs">
                   {type}
@@ -95,9 +96,9 @@ const Industry_Expertise_CarouselComponent = () => {
               ))}
             </div>
             <div className="mt-4">
-              <button className="flex items-center text-blue-500">
+              <Link href={'/contact'} className="flex items-center text-blue-500">
                 Explore More <FaArrowRight className="ml-2" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

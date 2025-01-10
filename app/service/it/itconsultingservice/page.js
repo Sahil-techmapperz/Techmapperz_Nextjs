@@ -78,7 +78,7 @@ const ItConsulting = () => {
                         <p className='text-[18px] max-sm:text-[16px]'>We'll help define the required skill sets for our team (including developers, project managers, QA, etc.) so that we can build a robust architecture and prototype.</p>
                     </div>
 
-                    <div className=" p-8">
+                    <div className="p-8">
                         <Image src={Digital_nomad} alt="Digital nomad" loading="lazy" className="object-fill w-full h-full" />
                     </div>
                 </div>
@@ -87,7 +87,7 @@ const ItConsulting = () => {
                     <div>
                         <h1 className="text-4xl max-sm:text-2xl font-bold mb-8 text-center">Why Choose Techmapperz for your IT Services?</h1>
                         <div className="flex flex-col items-center">
-                            <Image src={Good_team} alt="Good team" loading="lazy" width={600} height={400} className="object-fill mb-8" />
+                            <Image src={Good_team} alt="Good team" loading="lazy" width={600} height={400} className="object-fill mb-8" /> 
                         </div>
 
                     </div>

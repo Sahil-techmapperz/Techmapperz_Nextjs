@@ -31,7 +31,7 @@ const AboutUs = () => {
           <p className="text-gray-300 text-lg max-sm:text-[16px] mb-4">
             We strive to be a software development company that delivers cutting-edge solutions, helping not just Fortune 500 companies but also enterprise clients on their digital evolution journey.
           </p>
-          <Link href="/about" className="bg-white text-[#D555B5] font-semibold px-4 py-2 rounded-md shadow-[0px_0px_8px_0px_#D555B5]">
+          <Link href="/about" className="bg-white animate-blink text-[#D555B5] font-semibold px-4 py-2 rounded-md shadow-[0px_0px_8px_0px_#D555B5]">
             Know more
           </Link>
         </div>

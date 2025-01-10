@@ -64,15 +64,15 @@ const Sitemap = () => {
               </div>
             </Link>
             <ul className="pl-4 border-l-4 border-blue-600 space-y-2">
-              <li><Link href="/giscasestudies">GIS Case Studies</Link></li>
-              <li><Link href="/gisservice">GIS Services</Link></li>
-              <li><Link href="/crmservice">CRM-ERP</Link></li>
-              <li><Link href="/droneservice">Drone Services</Link></li>
-              <li><Link href="/photogrammetry">Photogrammetry Services</Link></li>
-              <li><Link href="/webgis">Web GIS Services</Link></li>
-              <li><Link href="/mobiledevelopment">Mobile Application Development</Link></li>
-              <li><Link href="/webdevelopment">Website Development</Link></li>
-              <li><Link href="/itconsultingservice">IT Consulting Services</Link></li>
+              <li><Link href="/portfolios">GIS Case Studies</Link></li>
+              <li><Link href="/service/gis/gisservice">GIS Services</Link></li>
+              <li><Link href="/service/it/crmservice">CRM-ERP</Link></li>
+              <li><Link href="/service/gis/droneservice">Drone Services</Link></li>
+              <li><Link href="/service/gis/photogrammetry">Photogrammetry Services</Link></li>
+              <li><Link href="/service/gis/webgis">Web GIS Services</Link></li>
+              <li><Link href="/service/it/mobiledevelopment">Mobile Application Development</Link></li>
+              <li><Link href="/service/it/webdevelopment">Website Development</Link></li>
+              <li><Link href="/service/it/itconsultingservice">IT Consulting Services</Link></li>
             </ul>
           </div>
 
@@ -110,7 +110,7 @@ const Sitemap = () => {
           </div>
 
           <div className="space-y-4">
-            <Link href="/privacy&policy">
+            <Link href="/privacy">
               <div className="flex items-center space-x-4">
                 <div className="text-2xl bg-red-500 p-2">
                   <AiOutlineLeft />
@@ -119,12 +119,12 @@ const Sitemap = () => {
               </div>
             </Link>
             <ul className="pl-4 border-l-4 border-blue-600 space-y-2">
-              <li><Link href="/privacy&policy">Data Privacy Policy</Link></li>
+              <li><Link href="/privacy">Data Privacy Policy</Link></li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <Link href="/itcasestudies">
+            <Link href="/portfolios">
               <div className="flex items-center space-x-4">
                 <div className="text-2xl bg-red-500 p-2">
                   <AiOutlineLeft />
@@ -135,7 +135,7 @@ const Sitemap = () => {
           </div>
 
           <div className="space-y-4">
-            <Link href="/article">
+            <Link href="#">
               <div className="flex items-center space-x-4">
                 <div className="text-2xl bg-red-500 p-2">
                   <AiOutlineLeft />
@@ -146,7 +146,7 @@ const Sitemap = () => {
           </div>
 
           <div className="space-y-4">
-            <Link href="/remotesensing">
+            <Link href="/service/gis/remotesensing">
               <div className="flex items-center space-x-4">
                 <div className="text-2xl bg-red-500 p-2">
                   <AiOutlineLeft />

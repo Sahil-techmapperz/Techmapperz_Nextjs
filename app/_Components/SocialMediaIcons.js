@@ -1,83 +1,43 @@
 "use client"
-import React, { useState } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { IoIosArrowForward, IoMdClose } from 'react-icons/io';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const SocialMediaIcons = () => {
+const RequestQuoteButton = () => {
   const [isOpen, setIsOpen] = useState(true);
 
-  const toggleIcons = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsOpen(prevState => !prevState);
+    }, 5000); // Toggle every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="fixed top-1/3 z-50 right-0 transform -translate-y-1/2 flex items-center">
-      {/* Social Media Icons */}
+    <div className="fixed top-1/3 right-0 transform -translate-y-1/2 z-50 flex items-center">
+      {/* Request a Quote Button */}
       <motion.div
-        className={`relative flex flex-col space-y-4 p-4 bg-white rounded-l-lg shadow-lg ${
-          isOpen ? 'mr-0' : 'mr-[-100%]'
-        }`}
-        initial={{ x: 100, opacity: 0 }}
-        animate={isOpen ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+        initial={{ x: 100, opacity: 0, rotate: 0 }}
+        animate={
+          isOpen
+            ? { x: 0, opacity: 1, rotate: -90 }
+            : { x: 100, opacity: 0, rotate: 0 }
+        }
         transition={{ duration: 0.5 }}
+        className="origin-bottom-right"
       >
-        {/* Close Icon */}
-        {isOpen && (
-          <div
-            className="absolute top-1 right-0 cursor-pointer text-gray-700"
-            onClick={toggleIcons}
-          >
-            <IoMdClose size={20} />
-          </div>
-        )}
-
-        {/* Social Media Links */}
+        {/* Request a Quote Link */}
         <a
-          href="https://www.facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600"
+          href="/contact"
+          className="text-white bg-blue-600 px-4 py-2 rounded-lg text-center"
         >
-          <FaFacebookF size={24} />
-        </a>
-        <a
-          href="https://www.twitter.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-400"
-        >
-          <FaTwitter size={24} />
-        </a>
-        <a
-          href="https://www.instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-pink-500"
-        >
-          <FaInstagram size={24} />
-        </a>
-        <a
-          href="https://www.linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-700"
-        >
-          <FaLinkedinIn size={24} />
+          Request a Quote
         </a>
       </motion.div>
-
-      {/* Toggle Arrow (Shown when icons are hidden) */}
-      {!isOpen && (
-        <div
-          className="cursor-pointer bg-gray-800 text-white p-2 rounded-l-lg fixed right-0"
-          onClick={toggleIcons}
-        >
-          <IoIosArrowForward size={24} />
-        </div>
-      )}
     </div>
+
+
   );
 };
 
-export default SocialMediaIcons;
+export default RequestQuoteButton;

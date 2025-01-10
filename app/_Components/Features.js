@@ -24,19 +24,19 @@ const Features = () => {
       </div>
 
 
-      <div className='grid grid-cols-3 max-sm:grid-cols-1 gap-4 w-[100%] m-auto'>
-        <FlipCard frontImage ={feature_1} backImage={feature_1}  title={"Website Development"} subtitle={"Give Your Brand Face"} backdiv_arr={['Dynamic Website Development','Static Website Development','E-Commerce Website Development',"Custom Website Development"]}/>
-        <FlipCard frontImage ={feature_2} backImage={feature_2} title={"Mobile Development"} subtitle={"Give Your Brand Face"} backdiv_arr={['Android Apps Development','iOS Apps Development','Hybrid Apps Development',"Progressive Web Apps"]}/>
-        <FlipCard frontImage ={feature_3} backImage={feature_3} title={"Drone Solution"} subtitle={"Give Your Brand Face"} backdiv_arr={['Drone Surveying','Drone Data Mapping','Inspection & Analysis',"Drone Data Processing"]}/>
-        <FlipCard frontImage ={feature_4} backImage={feature_4} title={"CRM Solution"} subtitle={"Give Your Brand Face"} backdiv_arr={['Sales CRM Development','Project CRM Development',"Finance CRM Development",'Custom CRM Development']}/>
-        <FlipCard frontImage ={feature_5} backImage={feature_5} title={"IT Consulting"} subtitle={"Give Your Brand Face"} backdiv_arr={['IT Strategy & Consulting','Digital Transformation',"Custom Software Development","Software modernization"]}/>
-        <FlipCard frontImage ={feature_6} backImage={feature_6} title={"GIS Solution"} subtitle={"Give Your Brand Face"} backdiv_arr={['GIS Mapping','Image Processing','Web GIS Services',"GIS Field Survey"]}/>
+      <div className='grid grid-cols-3 max-sm:grid-cols-1 gap-4 w-[90%] m-auto'>
+        <FlipCard  backImage={"Photos/feature_2.png"} title={"Mobile Development"}  backdiv_arr={['Android Apps Development','iOS Apps Development','Hybrid Apps Development',"Progressive Web Apps"]}/>
+        <FlipCard  backImage={"Photos/feature_3.png"} title={"Drone Solution"}  backdiv_arr={['Drone Surveying','Drone Data Mapping','Inspection & Analysis',"Drone Data Processing"]}/>
+        <FlipCard  backImage={"Photos/feature_4.png"} title={"CRM Solution"}  backdiv_arr={['Sales CRM Development','Project CRM Development',"Finance CRM Development",'Custom CRM Development']}/>
+        <FlipCard  backImage={"Photos/feature_5.png"} title={"IT Consulting"}  backdiv_arr={['IT Strategy & Consulting','Digital Transformation',"Custom Software Development","Software modernization"]}/>
+        <FlipCard  backImage={"Photos/feature_6.png"} title={"GIS Solution"}  backdiv_arr={['GIS Mapping','Image Processing','Web GIS Services',"GIS Field Survey"]}/>
+        <FlipCard  backImage={"Photos/feature_1.png"}  title={"Website Development"}  backdiv_arr={['Dynamic Website Development','Static Website Development','E-Commerce Website Development',"Custom Website Development"]}/>
 
       </div>
 
       <div className='flex relative justify-center mt-5 mb-[50px]'>
           {/* <div className='bg-blue-500 w-12 h-12 rounded-full'></div> */}
-          <button className='bg-white text-[#D454B4] text-lg py-2 px-4 rounded-md  shadow-[0px_0px_8px_0px_#D555B5] hover:shadow-[0px_0px_8px_0px_#00B0FE] uppercase hover:text-[#00B0FE] font-[600] transition-all duration-300'>
+          <button className='bg-white animate-blink text-[#D454B4] text-lg py-2 px-4 rounded-md  shadow-[0px_0px_8px_0px_#D555B5] hover:shadow-[0px_0px_8px_0px_#00B0FE] uppercase hover:text-[#00B0FE] font-[600] transition-all duration-300'>
             <Link href="/service">View All Services</Link>
           </button>
       </div>

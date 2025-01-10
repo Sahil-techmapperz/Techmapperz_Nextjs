@@ -100,7 +100,11 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handalesubmit} className="grid text-black grid-cols-1 gap-2 w-full max-w-4xl mx-auto">
+    <form onSubmit={handalesubmit} className="grid text-black grid-cols-1 gap-2 w-[70%] max-sm:w-full max-w-4xl mx-auto bg-white  px-6 py-10 rounded-md">
+      <div>
+        <h1 className='text-black text-[34px] font-bold'>Drop us a</h1>
+        <h3  className='text-blue-500 text-[50px]'>MESSAGE</h3>
+      </div>
       <div className="grid grid-cols-1">
         <input
           type="text"
@@ -108,8 +112,8 @@ const ContactForm = () => {
           id="name"
           value={contactdata.name}
           onChange={handalechange}
-          placeholder="Enter Full Name"
-          className={`mt-1 block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm 
+          placeholder="Enter Full Name *"
+          className={`mt-1 block  w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm 
         focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm ${hasError.name ? "border-red-500" : ""}`}
         />
         {hasError.name && <p className="text-red-500 text-sm mt-2">{hasError.name}</p>}
@@ -122,7 +126,7 @@ const ContactForm = () => {
           id="email"
           value={contactdata.email}
           onChange={handalechange}
-          placeholder="Enter Email"
+          placeholder="Enter Email *"
           className={`mt-1 block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm 
         focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm ${hasError.email ? "border-red-500" : ""}`}
         />
@@ -150,7 +154,7 @@ const ContactForm = () => {
           id="mobile"
           value={contactdata.mobile}
           onChange={handalechange}
-          placeholder="Enter Mobile"
+          placeholder="Enter Mobile *"
           pattern="\d{10}"
           className={`mt-1 block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm 
         focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm ${hasError.mobile ? "border-red-500" : ""}`}
@@ -164,7 +168,7 @@ const ContactForm = () => {
           id="projectdetails"
           value={contactdata.projectdetails}
           onChange={handalechange}
-          placeholder="Write Project Details"
+          placeholder="Write Project Details"   
           rows="6"
           className={`mt-1 block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm 
         focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm ${hasError.projectdetails ? "border-red-500" : ""}`}

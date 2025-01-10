@@ -21,7 +21,7 @@ const Choose = () => {
                     </div>
 
                     <div className={styles.company_info}>
-                        <h2 className={`text-[36px] font-bold text-white mb-[2rem] max-sm:text-[18px]`}>Why Choose Techmapperz?</h2>
+                        <h2 className={`text-[36px] max-sm:text-center font-bold text-white mb-[2rem] max-sm:text-[18px]`}>Why Choose Techmapperz?</h2>
                         <p>The smaller things make big difference in everything that we do, we at Techmapperz also believe in the attention
                             to detail methodology. Our eye for detail in every project that we manage is what makes us stand out from the
                             rest. We have a 4-step approach on how we execute a project.</p>

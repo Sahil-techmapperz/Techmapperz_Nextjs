@@ -52,10 +52,10 @@ const About = () => {
               <div className='h-full relative'>
                 <h1 className="text-[22px] max-sm:text-[20px] max-sm:text-center font-bold text-white">Get known us</h1>
                 <h2 className="text-[36px] max-sm:text-[25px] max-sm:text-center font-bold mt-[5px] mb-[2rem] text-white">About Company</h2>
-                <p className="text-[18px] max-sm:text-[14px] leading-[33px] text-justify text-[#A3A3A3]" >Let your imagination fly, this has always been the spirit that made Techmapperz possible, we were always free-thinkers, a team that believed that the solution to a complex problem need not be complex, that complex issues should have very simple solutions, and this is the change that we all believe in.</p>
+                <p className="text-[18px] max-sm:text-[14px] leading-[33px] text-justify text-white">Let your imagination fly, this has always been the spirit that made Techmapperz possible, we were always free-thinkers, a team that believed that the solution to a complex problem need not be complex, that complex issues should have very simple solutions, and this is the change that we all believe in.</p>
                 <button
                   style={{ boxShadow: "0px 0px 8px 0px #00B0FE" }}
-                  className="bg-white text-[#00B0FE] mt-2 py-2 px-4 w-max rounded-full"><Link href={"/contact"} className="flex gap-2 justify-center items-center">Know More <FaArrowRightLong /></Link> </button>
+                  className="bg-white max-sm:m-auto text-[#00B0FE] mt-2 py-2 px-4 w-max rounded-full"><Link href={"/contact"} className="flex gap-2 justify-center items-center">Know More <FaArrowRightLong /></Link> </button>
               </div>
             </div>
           </section>
@@ -75,10 +75,10 @@ const About = () => {
               </div>
 
               <div className="w-1/2 max-sm:w-full">
-                <div className=" text-[40px] max-sm:text-[20px] leading-[54px] font-bold text-white"><h1>How Do We Work</h1></div>
+                <div className=" text-[40px] max-sm:text-[20px] max-sm:text-center leading-[54px] font-bold text-white"><h1>How Do We Work</h1></div>
 
                 <div className="flex flex-col gap-[2rem] w-full">
-                  <p className="text-[18px] max-sm:text-[14px] leading-[33px] text-white text-justify" >
+                  <p className="text-[18px] max-sm:font-[400] max-sm:text-[14px] leading-[30px] text-white text-justify" >
                     We are constantly looking for ways to keep us updated with the changing technology and evolving markets and demands. We believe that our performance should be more efficient, nimble, and flexible than before. That's where the Agile methodology comes in. We follow 4 values of Agile:
                   </p>
                   <ul className="list-disc max-sm:text-[14px] ml-[1.3rem] flex flex-col gap-4">
@@ -94,12 +94,12 @@ const About = () => {
 
           <section className="flex flex-col justify-center items-center gap-[1rem] p-[2rem_5rem] max-sm:py[10px] max-sm:px-[15px]">
             <div className="text-[18px] leading-[33px] text-white text-justify">
-              <p className='text-lg max-sm:text-[14px]'>Following Agile methodology gives us a high degree of understanding of client requirements and collaboration between the client and the development team. We have happier clients because we maintain transparency throughout the process and our teams know and understand the client requirements and limitations better.</p>
+              <p className='text-lg max-sm:text-[14px] max-sm:font-[400]'>Following Agile methodology gives us a high degree of understanding of client requirements and collaboration between the client and the development team. We have happier clients because we maintain transparency throughout the process and our teams know and understand the client requirements and limitations better.</p>
             </div>
-            <div className="text-[26px] max-sm:text-[20px] w-full text-center text-white p-4">
+            <div className="text-[26px] max-sm:text-[18px] font-bold w-full text-center text-white p-4">
               <p>Some of the benefits that we would like to highlight of using the Agile methodology in our work are:</p>
             </div>
-            <ul className="list-disc grid grid-cols-2 gap-[10px] justify-center items-center max-sm:items-start p-[2rem_0] max-sm:pl-4">
+            <ul className="list-disc grid grid-cols-2 gap-[10px] justify-center items-center max-sm:text-[14px] max-sm:items-start max-sm: p-[2rem_0] max-sm:pl-4">
               <li className="text-[#396ba9]"><p className='text-white'>Cost protection and the time frame required.</p></li>
               <li className="text-[#396ba9]"><p className='text-white'>Constant feedback and a superior product result.</p></li>
               <li className="text-[#396ba9]"><p className='text-white'>Possibility of change during the process.</p></li>

@@ -47,16 +47,15 @@ const Footer = () => {
               <p className="pb-4 font-bold">Resources</p>
               <ul className="grid grid-cols-1 gap-5 ">
                 <Link href="/blog"><li>Blogs</li></Link>
-                <Link href="/casestudies"><li>Case Studies</li></Link>
+                <Link href="/portfolios"><li>Portfolio</li></Link>
                 <Link href="/contact"><li>Contact Us</li></Link>
               </ul>
             </div>
 
             <div className="ml-15 max-sm:text-[12px]">
-              <p className="pb-4 font-bold">Utility</p>
+              <p className="pb-4 font-bold">Utility</p>   
               <ul className="grid grid-cols-1 gap-5 ">
                 <Link href="/privacy"><li>Privacy Policy</li></Link>
-                <Link href="/terms"><li>Terms of Use</li></Link>
                 <Link href="/help"><li>Help</li></Link>
                 <Link href="/sitemap"><li>Sitemap</li></Link>
               </ul>
@@ -76,7 +75,7 @@ const Footer = () => {
           <a href='https://www.youtube.com/channel/UCWogNBwwxTvoX8Ax24j6c6Q' target="_blank" className="text-white text-2xl"> <FaYoutube /></a>
           <a href='https://pin.it/2nsXnBd' target="_blank"><FaPinterest className="text-white text-2xl" /></a>
         </div>
-        <div className='max-sm:text-[12px]'> Copyright &copy; {currentYear} Techmapperz LLP. All Rights Reserved</div>
+        <div className='max-sm:text-[12px]'> Copyright &copy; {currentYear} Techmapperz All Rights Reserved</div>
       </div>
     </>
   );

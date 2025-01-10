@@ -36,7 +36,7 @@ const CaseStudyCard = ({ filter:category }) => {
           </div>
           <div className='case-study-info h-[100%] pt-2 px-4 overflow-x-auto'>
             <p className='font-bold text-2xl mb-2'>
-              <Link href={`/casestudies/${data.link}`}>{data.name}</Link>
+              <Link href={`/portfolios/${data.link}`}>{data.name}</Link>
             </p>
             <ul className='list-decimal ml-[15px]'>
               {data.details.map((detail, index) => <li  key={index}>{detail}</li>)}
