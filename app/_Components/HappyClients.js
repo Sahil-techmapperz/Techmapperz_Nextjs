@@ -1,14 +1,14 @@
 "use client";
 
-import Genesys_logo from "@/public/Photos/Genesys_logo.png";
-import Cocreatelab_logo from "@/public/Photos/Cocreatelab_logo.png";
-import manusherghorbari_logo from "@/public/Photos/manusherghorbari_logo.png";
-import premierautosource_logo from "@/public/Photos/premierautosource_logo.png";
-import shrc_logo from "@/public/Photos/Shrc_logo.png";
-import whitespreadfoods_logo from "@/public/Photos/whitespreadfoods_logo.png";
+import Genesys_logo from "@/public/Photos/Genesys_logo.webp";
+import Cocreatelab_logo from "@/public/Photos/Cocreatelab_logo.webp";
+import manusherghorbari_logo from "@/public/Photos/manusherghorbari_logo.webp";
+import premierautosource_logo from "@/public/Photos/premierautosource_logo.webp";
+import shrc_logo from "@/public/Photos/Shrc_logo.webp";
+import whitespreadfoods_logo from "@/public/Photos/whitespreadfoods_logo.webp";
 import client_gradient_bg from "@/public/Photos/client_gradient-bg 1.png";
-import NS_logo from "@/public/Photos/NS_logo.png";
-import khanconsultants_logo from "@/public/Photos/khanconsultants_logo.png";
+import NS_logo from "@/public/Photos/NS_logo.webp";
+import khanconsultants_logo from "@/public/Photos/khanconsultants_logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import Carousel from "react-multi-carousel";
@@ -48,7 +48,7 @@ const HappyClients = () => {
     <section className="relative h-[450px]" style={{ background: "linear-gradient(270.25deg, rgba(2, 24, 50, 0.69) 0.9%, rgba(0, 49, 109, 0.69) 50.43%, rgba(2, 24, 50, 0.69) 97.19%)" }} >
       <Image className="absolute z-30 w-full h-full" src={client_gradient_bg} alt="client_gradient_bg" />
       <div className="p-[20px]">
-        {/* <h1 className="text-white text-center text-xl relative z-30 font-[600] mb-6">Our Happy Clients</h1> */}
+        <h1 className="text-white text-center text-xl relative z-30 font-[600] mb-6">Our Happy Clients</h1>
         {/* <h1 className="text-[26px] max-sm:text-[18px] pb-4 text-white text-center relative z-30">Trusted by Many, Valued by All: Meet Our Happy Clients</h1> */}
 
         <h1

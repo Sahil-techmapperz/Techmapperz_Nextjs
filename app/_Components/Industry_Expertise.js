@@ -154,7 +154,7 @@ const IndustryExpertise = () => {
     return (
         <div className="bg-black text-white py-12 max-sm:pb-4">
             <div className="text-center mb-8">
-                {/* <h2 className="text-xl font-semibold max-sm:text-lg">Industry Expertise</h2> */}
+                <h2 className="text-4xl font-semibold max-sm:text-lg">Industry Expertise</h2>
                 {/* <h1 className="text-[26px] font-semibold max-sm:text-[18px]">Navigating Businesses to the New Digital Era</h1> */}
 
                 <h1
@@ -162,7 +162,7 @@ const IndustryExpertise = () => {
     text-white bg-clip-text 
   drop-shadow-md leading-snug"
                 >
-                    Guiding Businesses into the Future of Digital Innovation
+                    Manage your business with Expertise
                 </h1>
 
             </div>

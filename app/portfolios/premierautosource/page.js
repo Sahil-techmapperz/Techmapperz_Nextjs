@@ -1,6 +1,6 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop'
 import premierautosource_banner from "@/public/Photos/premierautosource_banner.png";
-import premierautosource_logo from "@/public/Photos/premierautosource_logo.png";
+import premierautosource_logo from "@/public/Photos/premierautosource_logo.webp";
 import premierautosource_Challenges from "@/public/Photos/premierautosource_Challenges.png";
 import premierautosource_Solutions from "@/public/Photos/premierautosource_Solutions.png";
 import premierautosource_Results from "@/public/Photos/premierautosource_Results.png";

@@ -4,10 +4,11 @@ import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { FaFacebookF, FaPhoneAlt, FaInstagram, FaEnvelope, FaLinkedinIn, FaTwitter, FaYoutube, FaPinterest } from "react-icons/fa";
+import { FaFacebookF, FaPhoneAlt, FaInstagram, FaEnvelope, FaLinkedinIn, FaYoutube, FaPinterest } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 import Image from 'next/image';
 
-import company_logo from "@/public/logo.png"
+import company_logo from "@/public/logo.webp"
 import styles from './Navbar.module.css';
 import Resources from './Resources';
 
@@ -93,7 +94,7 @@ const Navbar = () => {
                 className="text-white text-lg"
                 aria-label="Visit TechMapperz on X (formerly Twitter)"
               >
-                <FaTwitter />
+                <BsTwitterX />
               </a>
               <a
                 href="https://www.facebook.com/techmapperz"
@@ -136,7 +137,7 @@ const Navbar = () => {
                 src={company_logo}
                 alt="company logo"
                 priority
-                className='w-[200px]'
+                width={200}
               />
             </Link>
           </div>

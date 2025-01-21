@@ -1,7 +1,6 @@
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 import Navbar from './_Components/Navbar';
-import { ChakraProvider } from '@chakra-ui/react';
 import Footer from './_Components/Footer';
 import Script from 'next/script';
 import SocialMediaIcons from './_Components/SocialMediaIcons';
@@ -26,11 +25,11 @@ export default function RootLayout({ children }) {
       </head>
       <body className={poppins.className}>
         <Navbar />
-        <ChakraProvider>
+
           <SocialMediaIcons />
           {children}
           <ZohoChat />
-        </ChakraProvider>
+    
         <Footer />
 
         {/* Meta Pixel Code */}

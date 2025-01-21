@@ -1,6 +1,6 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop'
 import whitespreadfoods_banner from "@/public/Photos/whitespreadfoods_banner.png";
-import whitespreadfoods_logo from "@/public/Photos/whitespreadfoods_logo.png";
+import whitespreadfoods_logo from "@/public/Photos/whitespreadfoods_logo.webp";
 import whitespreadfoods_Challenges from "@/public/Photos/whitespreadfoods_Challenges.png";
 import whitespreadfoods_Solutions from "@/public/Photos/whitespreadfoods_Solutions.png";
 import whitespreadfoods_Results from "@/public/Photos/whitespreadfoods_Results.png";

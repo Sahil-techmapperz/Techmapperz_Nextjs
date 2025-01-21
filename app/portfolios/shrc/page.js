@@ -1,6 +1,6 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop'
 import shrc_banner from "@/public/Photos/shrc_banner.png";
-import Shrc_logo from "@/public/Photos/Shrc_logo.png";
+import Shrc_logo from "@/public/Photos/Shrc_logo.webp";
 import shrc_Challenges from "@/public/Photos/shrc_Challenges.png";
 import shrc_Solutions from "@/public/Photos/shrc_Solutions.png";
 import shrc_Results from "@/public/Photos/shrc_Results.png";

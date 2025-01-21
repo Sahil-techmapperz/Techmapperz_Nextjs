@@ -4,17 +4,17 @@ import FlipCard from "./FlipCard";
 const Features = () => {
   const features = [
     {
-      backImage: "Photos/feature_2.png",
+      backImage: "Photos/feature_2.webp",
       title: "App Development",
       backdiv_arr: [
-        "Android Apps Development",
-        "iOS Apps Development",
-        "Hybrid Apps Development",
-        "Progressive Web Apps",
+        "Android App Development",
+        "iOS App Development",
+        "Hybrid App Development",
+        "Progressive Web App",
       ],
     },
     {
-      backImage: "Photos/feature_3.png",
+      backImage: "Photos/feature_3.webp",
       title: "Drone Solution",
       backdiv_arr: [
         "Drone Surveying",
@@ -24,7 +24,7 @@ const Features = () => {
       ],
     },
     {
-      backImage: "Photos/feature_4.png",
+      backImage: "Photos/feature_4.webp",
       title: "CRM Solution",
       backdiv_arr: [
         "Sales CRM Solution",
@@ -34,7 +34,7 @@ const Features = () => {
       ],
     },
     {
-      backImage: "Photos/feature_5.png",
+      backImage: "Photos/feature_5.webp",
       title: "IT Consulting",
       backdiv_arr: [
         "IT Strategy & Consulting",
@@ -44,7 +44,7 @@ const Features = () => {
       ],
     },
     {
-      backImage: "Photos/feature_6.png",
+      backImage: "Photos/feature_6.webp",
       title: "GIS Solution",
       backdiv_arr: [
         "GIS Mapping",
@@ -54,7 +54,7 @@ const Features = () => {
       ],
     },
     {
-      backImage: "Photos/feature_1.png",
+      backImage: "Photos/feature_1.webp",
       title: "Website Development",
       backdiv_arr: [
         "Dynamic Website Development",
@@ -69,7 +69,7 @@ const Features = () => {
     <section className="bg-black py-8 max-sm:py-2 max-sm:px-4 px-[4rem] relative overflow-x-hidden">
       <div className="grid grid-cols-1 m-auto">
         <div className="flex flex-col items-center">
-          {/* <h1 className="text-white text-xl font-semibold mb-4">Services</h1> */}
+          <h1 className="text-white text-4xl font-semibold mb-4">Services</h1>
           {/* <h1 className="text-white text-center w-[60%] max-sm:w-full max-sm:text-[20px] font-semibold text-3xl mb-6">
             These Services to Expand your Business
           </h1> */}
@@ -78,7 +78,7 @@ const Features = () => {
             className="text-white text-center w-[60%] max-sm:w-full max-sm:text-[20px] font-semibold text-3xl mb-6 
   tracking-wide leading-snug bg-clip-text drop-shadow-md"
           >
-            Unlock Your Growth with Our Business-Boosting Services
+            Service that add value to your business
           </h1>
 
         </div>

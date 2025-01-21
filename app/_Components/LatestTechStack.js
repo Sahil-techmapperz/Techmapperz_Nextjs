@@ -82,10 +82,9 @@ const techStack = [
 const LatestTechStack = () => {
   return (
     <div style={styles.container}>
-      {/* <h1 className="text-[2.5rem] mb-[2rem] text-[#333] max-sm:text-2xl">Our Latest Technology Stack</h1> */}
       <div style={styles.grid} >
         {techStack.map((tech, index) => (
-          <Link href={`./technology/${tech.name}`}>
+          <Link key={index} href={`./technology/${tech.name}`}>
           <motion.div
             key={index}
             style={{

@@ -1,6 +1,6 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop'
 import Welho_banner from "@/public/Photos/Welho_banner.png";
-import Welho_logo from "@/public/Photos/welho_logo.png";
+import Welho_logo from "@/public/Photos/welho_logo.webp";
 import welho_Challenges from "@/public/Photos/welho_Challenges.png";
 import welho_Solutions from "@/public/Photos/welho_Solutions.png";
 import welho_Results from "@/public/Photos/welho_Results.png";

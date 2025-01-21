@@ -1,6 +1,6 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop'
 import manusherghorbari_banner from "@/public/Photos/manusherghorbari_banner.png";
-import manusherghorbari_logo from "@/public/Photos/manusherghorbari_logo.png";
+import manusherghorbari_logo from "@/public/Photos/manusherghorbari_logo.webp";
 import manusherghorbari_Challenges from "@/public/Photos/manusherghorbari_Challenges.png";
 import manusherghorbari_Solutions from "@/public/Photos/welho_Results.png";
 import manusherghorbari_Results from "@/public/Photos/manusherghorbari_Results.png";

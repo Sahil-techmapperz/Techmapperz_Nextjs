@@ -45,10 +45,14 @@ const RemoteSensing = () => {
                                     Most remote sensing data are recorded in the digital format in today's world of advanced technology, almost all image interpretation and analysis involves some element of digital processing. It involves various processes to enhance the image, we at Techmapperz use some of the best software and hardware available commercially to process high-quality images for commercial use.
                                 </p>
                                 <ul className='flex flex-col max-sm:text-[16px] gap-2 my-6 font-semibold list-disc ml-6'>
-                                    <li>Topographical Mapping</li>
+                                    {/* <li>Topographical Mapping</li>
                                     <li>Utility Mapping</li>
                                     <li>Cadastral Mapping</li>
-                                    <li>Parcel Mapping</li>
+                                    <li>Parcel Mapping</li> */}
+                                    <li>Environmental Monitoring</li>
+                                    <li>Change Detection</li>
+                                    <li>Crop Monitoring</li>
+                                    <li>Satellite image analysis</li>
                                 </ul>
                                 <button
                                     className='py-[10px] px-[15px] w-fit rounded-sm'

@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link"
-import home_contact_img from "@/public/Photos/home_contact_img.png";
+import home_contact_img from "@/public/Photos/home_contact_img.webp";
+import Home_contact_banner from "@/public/Photos/Home_contact_banner.webp";
 import { TypeAnimation } from 'react-type-animation';
 import { FiMessageSquare } from 'react-icons/fi';
 
@@ -11,7 +12,13 @@ const Homecontact = () => {
         <div className="bg-gray-800 bg-opacity-75 flex justify-center items-center">
             <div className="relative w-full">
                 <div className='w-full'>
-                    <img src={"/Photos/Home_contact_banner.png"} alt="Main Banner" className="w-full h-[300px] object-cover" />
+                    <Image
+                        src={Home_contact_banner}
+                        alt="Main Banner"
+                        width={1920}
+                        height={300}
+                        className="w-full h-[300px] object-cover"
+                    />
                 </div>
 
                 <div className="absolute inset-0 flex max-sm:flex-col-reverse justify-between max-sm:px-2 max-sm:justify-center max-sm:items-center px-[30px] py-2">

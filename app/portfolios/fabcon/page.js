@@ -1,6 +1,5 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop'
 import fabcon_banner from "@/public/Photos/fabcon_banner.png";
-import Cocreatelab_logo from "@/public/Photos/Cocreatelab_logo.png";
 import fabcon_Challenges from "@/public/Photos/fabcon_Challenges.png";
 import fabcon_Solutions from "@/public/Photos/fabcon_Solutions.png";
 import fabcon_Results from "@/public/Photos/fabcon_Results.png";

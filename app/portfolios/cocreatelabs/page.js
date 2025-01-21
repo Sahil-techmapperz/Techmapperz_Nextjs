@@ -1,6 +1,6 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop'
 import CoCreateall from "@/public/Photos/Co-Createall2.png";
-import Cocreatelab_logo from "@/public/Photos/Cocreatelab_logo.png";
+import Cocreatelab_logo from "@/public/Photos/Cocreatelab_logo.webp";
 import Cocreatelabs_Challenges from "@/public/Photos/Cocreatelabs_Challenges.png";
 import Cocreatelabs_Solutions from "@/public/Photos/Cocreatelabs_Solutions.png";
 import Cocreatelabs_Results from "@/public/Photos/Cocreatelabs_Results.png";
