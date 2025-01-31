@@ -12,14 +12,18 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.12",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
+    "cwebp": "^3.2.0",
     "framer-motion": "^11.3.19",
     "moment": "^2.30.1",
     "next": "^14.2.16",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.2.1",
+    "react-error-boundary": "^5.0.0",
+    "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.13.0",
     "react-multi-carousel": "^2.8.5",
     "react-responsive-carousel": "^3.2.23",
@@ -29,10 +33,14 @@
     "sharp": "^0.33.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
-    "tailwind-scrollbar": "^3.1.0"
+    "tailwind-scrollbar": "^3.1.0",
+    "three": "^0.172.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "css-loader": "^6.7.3",
     "postcss": "^8",
+    "style-loader": "^3.3.2",
     "tailwindcss": "^3.4.1",
     "webpack-cli": "^5.1.4"
   }

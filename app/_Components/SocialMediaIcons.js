@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ContactForm from "./ContactForm";
 import RequestQuoteForm from "./QuoteRequestForm";
 
 const RequestQuoteButton = () => {
@@ -27,8 +26,8 @@ const RequestQuoteButton = () => {
           initial={{ x: 100, opacity: 0, rotate: 0 }}
           animate={
             isVisible
-              ? { x: 0, opacity: 1, rotate: -90 }
-              : { x: 100, opacity: 0, rotate: 0 }
+              ? { x: 0, opacity: 1 }
+              : { x: 100, opacity: 0 }
           }
           transition={{ duration: 0.5 }}
           className="origin-bottom-right"

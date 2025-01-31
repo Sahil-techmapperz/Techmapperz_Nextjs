@@ -1,39 +1,40 @@
-import AboutUs from "./_Components/AboutUs";
-import Features from "./_Components/Features";
-import HappyClients from "./_Components/HappyClients";
-import Carousel from "./_Components/HomeCarousel";
-import Homecontact from "./_Components/Homecontact";
-import IndustryExpertise from "./_Components/Industry_Expertise";
-import OurBlog from "./_Components/OurBlog";
-import QueryDelayedForm from "./_Components/QueryDelayedForm";
-import ScrollToTop from "./_Components/ScrollToTop";
-import Technology from "./_Components/Technology";
-import Testimonial from "./_Components/Testimonial";
+import ScrollToTop from './_Components/ScrollToTop';
+import CustomCarousel from './_Components/HomeCarousel';
+import Features from './_Components/Features';
+import Technology from './_Components/Technology';
+import IndustryExpertise from './_Components/Industry_Expertise';
+import AboutUs from './_Components/AboutUs';
+import HappyClients from './_Components/HappyClients';
+import OurBlog from './_Components/OurBlog';
+import Testimonial from './_Components/Testimonial';
+import Homecontact from './_Components/Homecontact';
+import StickyScrollExample from './_Components/StickyScrollExample';
+import ExpandableCards from './_Components/ExpandableCards';
+
+
+
+
+
+
 
 
 const Home = () => {
-
-
   return (
     <div>
-     
-    <ScrollToTop/>
-    {/* <QueryDelayedForm/> */}
-      <Carousel/>
+      <ScrollToTop />
+      <CustomCarousel />
       <Features />
+      {/* <ExpandableCards/> */}
+      {/* <StickyScrollExample/> */}
       <Technology />
-      <IndustryExpertise/>
-      <Homecontact/>
+      <IndustryExpertise />
       <AboutUs />
       <HappyClients />
-      <OurBlog/>
-      <Testimonial/>
-
-      {/* The rest of your content */}
+      <OurBlog />
+      <Testimonial />
+      <Homecontact />
     </div>
   );
 };
-
-
 
 export default Home;

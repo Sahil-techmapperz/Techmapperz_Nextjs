@@ -56,7 +56,7 @@ const AboutUs = () => {
           </p>
           <Link
             href="/about"
-            className="bg-white animate-blink text-[#D555B5] font-semibold px-4 py-2 rounded-md shadow-[0px_0px_8px_0px_#D555B5]"
+            className="bg-white  font-semibold px-4 py-2 rounded-md btn-gradient"
           >
             Know more
           </Link>

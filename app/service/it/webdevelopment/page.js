@@ -6,6 +6,9 @@ import T03 from '@/public/Photos/03.png';
 import T04 from '@/public/Photos/04.png';
 import ScrollToTop from '@/app/_Components/ScrollToTop';
 import { FaArrowRightLong } from "react-icons/fa6";
+import WebsiteIntroduction from '@/app/_Components/WebsiteIntroduction';
+import StickyScrollExample from '@/app/_Components/StickyScrollExample';
+import WhyChooseTechmapperz from '@/app/_Components/WhyChooseTechmapperz';
 
 const WebDevelopment = () => {
 
@@ -22,7 +25,7 @@ const WebDevelopment = () => {
             </section>
 
             <section className="w-full overflow-hidden">
-                <div className="px-20 max-sm:px-2 py-10 relative">
+                {/* <div className="px-20 max-sm:px-2 py-10 relative">
                     <div className="absolute top-12 right-[-8rem] text-[116px] leading-[174px] text-white opacity-5">IT Service</div>
                     <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:items-center gap-12">
                         <Image unoptimized="true" src="/Photos/WebDev3.gif" alt="WebDev3.gif" className='w-[30%] max-sm:w-[90vw]' width={100} height={100} />
@@ -50,7 +53,9 @@ const WebDevelopment = () => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
+
+                <WebsiteIntroduction/>
 
                 <div className="px-20 py-10 relative flex max-sm:flex-col-reverse max-sm:gap-2 max-sm:px-2 max-sm:items-center justify-between items-center bg-cover bg-center" style={{ backgroundImage: "url('/Photos/banner_3.jpg')" }}>
                     <div className="flex flex-col gap-4 w-1/2 max-sm:w-full">
@@ -79,7 +84,7 @@ const WebDevelopment = () => {
                     <Image src="/Photos/WebDev4.gif" unoptimized="true" alt="" className='w-[30%] max-sm:w-[90vw]' width={100} height={100} />
                 </div>
 
-                <div className="px-20 max-sm:px-2 py-10 relative">
+                {/* <div className="px-20 max-sm:px-2 py-10 relative">
                     <div className="absolute bottom-4 right-[-5rem] text-[116px] leading-[174px] text-white opacity-5">Teamwork</div>
                     <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:items-center gap-12">
                         <Image src="/Photos/WebDev2.gif" unoptimized="true" alt="" className='w-[30%] max-sm:w-[90vw] ' width={100} height={100} />
@@ -107,7 +112,9 @@ const WebDevelopment = () => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
+
+                <StickyScrollExample/>
 
                 <div className="px-20 max-sm:px-2 py-10 bg-cover" style={{ backgroundImage: 'url("/Photos/banner_3.jpg")' }}>
                     <h3 className="text-4xl max-sm:text-2xl font-bold mb-8">Elements of Website Design</h3>
@@ -139,7 +146,7 @@ const WebDevelopment = () => {
                     </div>
                 </div>
 
-                <div className="px-20 max-sm:px-2 py-10">
+                {/* <div className="px-20 max-sm:px-2 py-10">
                     <h1 className="text-4xl max-sm:text-2xl font-bold text-center mb-8">Things to Consider</h1>
                     <div className="flex max-sm:flex-col max-sm:gap-2 justify-center gap-6">
                         <div className=" p-4 flex flex-col justify-center items-center">
@@ -158,9 +165,9 @@ const WebDevelopment = () => {
                             <p>Our team compatibility and pooled experience is our biggest asset the major reason that we use it in creating masterpiece websites.</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="px-20 max-sm:px-2 py-10 relative flex max-sm:flex-col-reverse justify-between items-center bg-cover bg-center" style={{ backgroundImage: "url('/Photos/background_4.png')" }}>
+                {/* <div className="px-20 max-sm:px-2 py-10 relative flex max-sm:flex-col-reverse justify-between items-center bg-cover bg-center" style={{ backgroundImage: "url('/Photos/background_4.png')" }}>
                     <div className="flex flex-col gap-4 w-1/2 max-sm:w-full max-sm:px-4 max-sm:py-2">
                         <h1 className="text-4xl max-sm:text-2xl font-bold">Benefits of Getting Web Development Professionally</h1>
                         <p className='text-[18px] max-sm:text-[16px]'>We at Techmapperz have some of the best developers in the field with a combined experience of more than 50 years...</p>
@@ -193,9 +200,11 @@ const WebDevelopment = () => {
                         </button>
                     </div>
                     <Image src="/Photos/WebDev1.gif" unoptimized="true" alt="" className='w-[30%] max-sm:w-[90vw]' width={100} height={100} />
-                </div>
+                </div> */}
 
-                <div className="px-20 max-sm:px-2 py-10 relative">
+
+
+                {/* <div className="px-20 max-sm:px-2 py-10 relative">
                     <div className="absolute top-12 right-[-5rem] text-[645px] leading-[968px] text-white opacity-5">?</div>
                     <h3 className="text-4xl max-sm:text-2xl font-bold text-center mb-8">Why Choose Techmapperz for your Development</h3>
                     <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:w-[90vw] max-sm:gap-2 gap-12 w-[60%] m-auto">
@@ -224,7 +233,9 @@ const WebDevelopment = () => {
                             <p title='Our team planning is so efficient that the project overall time in not extended and thus keeping the overall coast in check.'>Our team planning is so efficient that the project overall time is not extended and thus keeping the overall cost in check...</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
+
+                <WhyChooseTechmapperz/>
             </section>
         </div>
     );

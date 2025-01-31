@@ -28,7 +28,7 @@ const Card = ({ post }) => {
           sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 800px"
           width={800}
           height={500}
-          className="object-cover"
+          className="object-cover hover:scale-150 transition-all duration-700 ease-in-out"
           alt={post.title}
           loading="lazy"
         />

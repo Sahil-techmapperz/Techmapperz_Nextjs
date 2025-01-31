@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Choose from './choose';
-import Rectangle_6 from '@/public/Photos/Rectangle_6.png';
 import Group1 from '@/public/Photos/Group1.png'
 import ScrollToTop from '../_Components/ScrollToTop';
 import Missionvision from '../_Components/Missionvision';
@@ -50,7 +49,7 @@ const About = () => {
               </div>
 
               <div className='h-full relative'>
-                <h1 className="text-[22px] max-sm:text-[20px] max-sm:text-center font-bold text-white">Get know us</h1>
+                <h1 className="text-[22px] max-sm:text-[20px] max-sm:text-center font-bold text-white">Get to know us</h1>
                 <h2 className="text-[36px] max-sm:text-[25px] max-sm:text-center font-bold mt-[5px] mb-[2rem] text-white">About Company</h2>
                 <p className="text-[18px] max-sm:text-[14px] leading-[33px] text-justify text-white">Let your imagination fly, this has always been the spirit that made Techmapperz possible, we were always free-thinkers, a team that believed that the solution to a complex problem need not be complex, that complex issues should have very simple solutions, and this is the change that we all believe in.</p>
                 <button

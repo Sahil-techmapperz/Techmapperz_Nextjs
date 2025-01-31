@@ -1,8 +1,8 @@
 // import React from 'react';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import { FaArrowRight } from 'react-icons/fa'; // For the arrow icon
 import Link from 'next/link';
+
 
 
 const categoryData = [

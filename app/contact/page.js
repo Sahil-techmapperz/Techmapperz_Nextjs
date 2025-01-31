@@ -27,7 +27,7 @@ const Contact = () => {
         </div>
 
         {/* Flex container for image and form */}
-        <div className="flex w-full justify-between max-sm:flex-col gap-10 max-sm:mt-[20px] mt-[50px]">
+        <div className="flex w-full justify-between max-sm:flex-col-reverse gap-10 max-sm:mt-[20px] mt-[50px]">
           <div className="mt-10 max-sm:mt-0 w-3/4 max-sm:w-full bg-white rounded-md">
             <p className="text-[40px] max-sm:text-2xl text-center text-black font-[600] flex items-center justify-center gap-2">
               <FiCalendar className="text-black" />
@@ -38,7 +38,7 @@ const Contact = () => {
             </p>
             <CalendlyWidget />
           </div>
-          <div className="w-1/2 mt-[60px] max-sm:w-full flex flex-col gap-4 ">
+          <div className="w-1/2 mt-[60px] max-sm:mt-2 max-sm:w-full flex flex-col gap-4 ">
             <ContactForm />
           </div>
         </div>

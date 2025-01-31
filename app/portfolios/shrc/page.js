@@ -16,13 +16,13 @@ const Shrc = () => {
     <div id='CaseStudiesITServices' className='bg-gray-900'>
       <ScrollToTop />
       <div className='flex flex-col h-[350px] text-center items-center justify-center bg-cover bg-center' style={{ backgroundImage: 'url("/Photos/Rectangle41.png")' }}>
-        <p className='text-white mt-[66px] mb-[30px] text-[66px] font-bold sm:text-[50px]'>IT Portfolio</p>
+        <p className='text-white mt-[66px] mb-[30px] text-[66px] max-sm:text-[50px]  font-bold sm:text-[50px]'>IT Portfolio</p>
         {/* <p className='text-white'>IT Portfolio</p> */}
         <Link
           href="/contact"
           className="relative w-fit text-[18px] text-[#00B0FE] py-2 px-4 bg-white rounded-lg shadow-[0px_0px_8px_0px_#00B0FE] hover:text-[#D555B5] hover:shadow-[0px_0px_8px_0px_#D555B5] transition-all duration-300"
         >
-         Contact Now 
+          Contact Now
         </Link>
       </div>
       <div className='w-full m-auto bg-gray-900'>
@@ -32,20 +32,16 @@ const Shrc = () => {
         <div className='text-white flex justify-center flex-col  relative'>
           {/* <p className='absolute top-8 left-5'>Case Studies/IT Services</p> */}
           <Image src={Shrc_logo} className='w-[50px] m-auto py-4' alt='Welho_logo.png' />
-          <p className='m-auto text-[20px] font-[600]'> Empowering Welfare Societies with SHRC Introduction </p>
-          <p className='w-[65%] m-auto text-center'>
-            First of all, A specialized platform called the Special Human Rights Commision(SHRC) aims to encourage innovation
-            and cooperation among welfare societies. Constructed using the CodeIgniter 4 framework and PHP, SHRC offers
-            a safe environment for members to communicate and engage. By offering features like personalized
-            notifications and two-step OTP verification, the platform increases community engagement
-            while guaranteeing security.
+          <p className='m-auto text-[20px] max-sm:text-[16px] max-sm:text-center font-[600]'>Transforming the Welfare Landscape: Introducing the Special Human Rights Commission (SHRC) Platform</p>
+          <p className='w-[65%] max-sm:w-full m-auto text-center'>
+          First of all, a specialized platform called the Special Human Rights Commission (SHRC) aims to encourage innovation and cooperation among welfare societies. The Web Design was built using the CodeIgniter 4 framework and PHP, SHRC provides a secure environment for members to communicate and engage. By offering features like personalized notifications and two-step OTP verification, the website enhances community engagement while ensuring security.
           </p>
           <Image src={shrc_banner} className='mx-auto' alt='Welho_banner.png' />
 
         </div>
 
-        <div className="flex gap-4 bg-gray-900 text-white py-5 px-5 mt-[100px]" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
-          <div className="w-[65%]">
+        <div className="flex max-sm:flex-col-reverse gap-4 bg-gray-900 text-white py-5 px-5 mt-[100px]" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
+          <div className="w-[65%] max-sm:w-full">
             <div className="relative w-fit">
               <Image src={ChallengesBg} alt="Challengesbg" />
               <h2 className="text-xl font-bold absolute inset-0 flex items-center left-[20px] text-black">
@@ -55,7 +51,7 @@ const Shrc = () => {
 
             <div className="h-1 w-full bg-gradient-to-r from-transparent to-gray-500"></div>
             <p className="mb-2">
-              <strong>Security Issues:</strong>
+              <strong>Security Issues: </strong>
               In order to build trust and protect sensitive member data, welfare societies require a secure
               platform.
             </p>
@@ -68,41 +64,39 @@ const Shrc = () => {
               signing up for the platform.
             </p>
           </div>
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={shrc_Challenges} alt="Cocreatelabs Challenges" className="rounded-lg shadow-lg" />
           </div>
         </div>
 
-        <div className='w-full flex text-white gap-[50px] justify-center items-center py-[50px] px-[30px]'>
+        <div className='w-full  flex max-sm:flex-col text-white gap-[50px] justify-center items-center py-[50px] px-[30px]'>
 
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={shrc_Solutions} alt="Cocreatelabs Challenges" className="rounded-lg shadow-lg" />
           </div>
 
-          <div className="w-[60%]">
+          <div className="w-[60%] max-sm:w-full">
             <div className="w-fit">
               <h2 className="text-2xl font-bold text-white">
                 Solutions
               </h2>
             </div>
             <p className="mb-2">
-              <strong> Two-Step OTP Verification :</strong> To improve security and authenticate member registrations, a strong
-              verification procedure was put in place
+              <strong> Two-Step OTP Verification :</strong> During the website development, security improvements and authenticated member registrations were prioritized, and a strong verification procedure was implemented.
             </p>
             <p className="mb-2">
               <strong> Personalized Notifications:</strong>  Members' mobile devices display personalized notifications, which
               boost interaction and communication.
             </p>
             <p className="mb-2">
-              <strong> Improved  the registration process:</strong>
-              to make it easier for more members to join, with
-              added security measures .
+              <strong>Streamlined Registration Process:</strong>
+              The registration process was improved to make it easier for more members to join, with enhanced security measures implemented during website development.
             </p>
           </div>
         </div>
 
-        <div className="flex gap-4 bg-gray-900 text-white py-5 px-5" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
-          <div className="w-[65%]">
+        <div className="flex max-sm:flex-col-reverse gap-4 bg-gray-900 text-white py-5 px-5" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
+          <div className="w-[65%] max-sm:w-full">
             <div className="relative w-fit">
               <Image src={ChallengesBg} alt="Challengesbg" />
               <h2 className="text-xl font-bold absolute inset-0 flex items-center left-[20px] text-black">
@@ -112,7 +106,8 @@ const Shrc = () => {
 
             <div className="h-1 w-full bg-gradient-to-r from-transparent to-gray-500"></div>
             <p className="mb-2">
-              <strong>wo-step OTP verification :</strong>for enhanced protection of sensitive information and secure member accounts.
+              <strong>Two-step OTP Verification :</strong> Implemented for enhanced
+              protection of sensitive information and secure member accounts.
             </p>
             <p className="mb-2">
               <strong>Enhanced Community Engagement : </strong> Sending out birthday greetings and notifications in a personalized
@@ -120,35 +115,37 @@ const Shrc = () => {
               community.
             </p>
             <p className="mb-2">
-              <strong>Enhanced User Experience : </strong> All members had a seamless and joyful experience thanks to the user-friendly
-              interface and streamlined registration process, which raised user satisfaction.
+              <strong>Enhanced User Experience : </strong> All members had a seamless and joyful experience thanks
+              to the user-friendly interface and streamlined registration process, which
+              increased user satisfaction.
             </p>
           </div>
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={shrc_Results} alt="welho Challenges" className="rounded-lg shadow-lg" />
           </div>
         </div>
 
 
-        <div className='w-full flex text-white gap-[50px] justify-center items-center py-[70px] px-[30px]'>
+        <div className='w-full flex max-sm:flex-col text-white gap-[50px] justify-center items-center py-[70px] px-[30px]'>
 
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={shrc_Inconclusion} alt="Cocreatelabs Challenges" className="rounded-lg shadow-lg" />
           </div>
 
-          <div className="w-[60%]">
+          <div className="w-[60%] max-sm:w-full">
             <div className="w-fit">
               <h2 className="text-2xl font-bold text-white">
-                In  Conclusion
+                CONCLUSION
               </h2>
             </div>
             <p className="mb-2">
-              The SHRC India internet site has efficiently addressed the demanding situations confronted via way of means
-              of welfare societies in communique, aid accessibility, and security, ensuing in progressed collaboration,
-              stronger aid accessibility, and reinforced network engagement. By supplying a centralized platform for
-              communique and aid-sharing, the internet site has empowered welfare societies to paintings collectively
-              extra successfully toward their not unusual place goals, in the end contributing to the development of
-              society and the welfare of its members.
+              The SHRC India website has effectively addressed the challenges faced by
+              welfare societies in communication, aid accessibility, and security, resulting
+              in improved collaboration, enhanced aid accessibility, and strengthened
+              community engagement. By providing a centralized platform for communication and
+              resource sharing, the website has empowered welfare societies to work together
+              more effectively towards their common goals, ultimately contributing to the
+              development of society and the well-being of its members.
             </p>
 
           </div>
@@ -156,7 +153,7 @@ const Shrc = () => {
 
         <div className="w-full flex flex-col justify-center text-white items-center">
           <h1 className='text-2xl font-bold'>Technology Stacks</h1>
-          <p className='w-[40%] text-center'>We have used the latest technologies that can justify client requirements at
+          <p className='w-[40%] max-sm:w-full  text-center'>We have used the latest technologies that can justify client requirements at
             the best to deliver bug-free solutions.</p>
         </div>
 

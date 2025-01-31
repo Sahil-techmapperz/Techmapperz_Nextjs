@@ -5,32 +5,45 @@ import Footer from './_Components/Footer';
 import Script from 'next/script';
 import SocialMediaIcons from './_Components/SocialMediaIcons';
 import ZohoChat from './_Components/ZohoChat';
+import SlickCarouselProvider from './_Components/SlickCarouselProvider';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'] // Specify the desired weights here
+  weight: ['400', '700'], // Specify the desired weights here
+  display: "swap",
 });
 
 export const metadata = {
   title: 'Techmapperz',
-  description: 'Techmapperz map your business',
+  description: 'Techmapperz - IT Solutions and Services',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#f3f4f6" />
         <meta name="description" content={metadata.description} />
         <title>{metadata.title}</title>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://fonts.googleapis.com"
+        />
       </head>
       <body className={poppins.className}>
-        <Navbar />
-
+        <SlickCarouselProvider>
+          <Navbar />
           <SocialMediaIcons />
           {children}
           <ZohoChat />
-    
-        <Footer />
+          <Footer />
+        </SlickCarouselProvider>
 
         {/* Meta Pixel Code */}
         <Script

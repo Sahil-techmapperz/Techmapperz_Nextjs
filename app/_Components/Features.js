@@ -1,68 +1,57 @@
 import Link from "next/link";
 import FlipCard from "./FlipCard";
+import { FaLaptopCode } from 'react-icons/fa';
 
 const Features = () => {
   const features = [
     {
       backImage: "Photos/feature_2.webp",
       title: "App Development",
-      backdiv_arr: [
-        "Android App Development",
-        "iOS App Development",
-        "Hybrid App Development",
-        "Progressive Web App",
-      ],
+      desc:"Whether you're starting with a blank canvas or you're in need of a rebrand, our team carry the expertise to help you level up! We work with you to create a blisteringly brilliant visual identity, and to powerfully define your messaging, positioning & values.",
+      icon:<FaLaptopCode className="fill-[url(#gradient)] group-hover:fill-white transition-all duration-700 ease-in-out" />
+    ,link:"/"
     },
+    
     {
       backImage: "Photos/feature_3.webp",
       title: "Drone Solution",
-      backdiv_arr: [
-        "Drone Surveying",
-        "Drone Data Mapping",
-        "Inspection & Analysis",
-        "Drone Data Processing",
-      ],
+      desc:"Whether you're starting with a blank canvas or you're in need of a rebrand, our team carry the expertise to help you level up! We work with you to create a blisteringly brilliant visual identity, and to powerfully define your messaging, positioning & values.",
+      icon:<FaLaptopCode className="fill-[url(#gradient)] group-hover:fill-white transition-all duration-700 ease-in-out" />
+    ,link:"/"
     },
+    
     {
       backImage: "Photos/feature_4.webp",
       title: "CRM Solution",
-      backdiv_arr: [
-        "Sales CRM Solution",
-        "Project CRM Solution",
-        "Finance CRM Solution",
-        "Custom CRM Solution",
-      ],
+      desc:"Whether you're starting with a blank canvas or you're in need of a rebrand, our team carry the expertise to help you level up! We work with you to create a blisteringly brilliant visual identity, and to powerfully define your messaging, positioning & values.",
+      icon:<FaLaptopCode className="fill-[url(#gradient)] group-hover:fill-white transition-all duration-700 ease-in-out" />
+    ,link:"/"
     },
+    
     {
       backImage: "Photos/feature_5.webp",
       title: "IT Consulting",
-      backdiv_arr: [
-        "IT Strategy & Consulting",
-        "Digital Transformation",
-        "Custom Software Development",
-        "Software Modernization",
-      ],
+      desc:"Whether you're starting with a blank canvas or you're in need of a rebrand, our team carry the expertise to help you level up! We work with you to create a blisteringly brilliant visual identity, and to powerfully define your messaging, positioning & values.",
+      icon:<FaLaptopCode className="fill-[url(#gradient)] group-hover:fill-white transition-all duration-700 ease-in-out" />
+    ,link:"/"
     },
+    
     {
       backImage: "Photos/feature_6.webp",
       title: "GIS Solution",
-      backdiv_arr: [
-        "GIS Mapping",
-        "Image Processing",
-        "Web GIS Services",
-        "GIS Field Survey",
-      ],
+      desc:"Whether you're starting with a blank canvas or you're in need of a rebrand, our team carry the expertise to help you level up! We work with you to create a blisteringly brilliant visual identity, and to powerfully define your messaging, positioning & values.",
+      icon:<FaLaptopCode className="fill-[url(#gradient)] group-hover:fill-white transition-all duration-700 ease-in-out" />
+    ,link:"/"
     },
+    
     {
       backImage: "Photos/feature_1.webp",
       title: "Website Development",
-      backdiv_arr: [
-        "Dynamic Website Development",
-        "Static Website Development",
-        "E-Commerce Website Development",
-        "Custom Website Development",
-      ],
+      desc:"Whether you're starting with a blank canvas or you're in need of a rebrand, our team carry the expertise to help you level up! We work with you to create a blisteringly brilliant visual identity, and to powerfully define your messaging, positioning & values.",
+      icon:<FaLaptopCode className="fill-[url(#gradient)] group-hover:fill-white transition-all duration-700 ease-in-out" />
+    ,link:"/"
     },
+    
   ];
 
   return (
@@ -70,17 +59,6 @@ const Features = () => {
       <div className="grid grid-cols-1 m-auto">
         <div className="flex flex-col items-center">
           <h1 className="text-white text-4xl font-semibold mb-4">Services</h1>
-          {/* <h1 className="text-white text-center w-[60%] max-sm:w-full max-sm:text-[20px] font-semibold text-3xl mb-6">
-            These Services to Expand your Business
-          </h1> */}
-
-          <h1
-            className="text-white text-center w-[60%] max-sm:w-full max-sm:text-[20px] font-semibold text-3xl mb-6 
-  tracking-wide leading-snug bg-clip-text drop-shadow-md"
-          >
-            Service that add value to your business
-          </h1>
-
         </div>
         <div className="flex flex-col items-center">
           <p className="text-gray-300 w-[70%] max-sm:w-full text-center text-lg max-sm:text-[14px] mb-8">
@@ -93,16 +71,16 @@ const Features = () => {
         {features.map((feature, index) => (
           <FlipCard
             key={index}
-            backImage={feature.backImage}
             title={feature.title}
-            backdiv_arr={feature.backdiv_arr}
-            animationDirection={index % 2 === 0 ? "left" : "right"} // Alternate directions
+            desc={feature.desc}
+            icon={feature.icon}
+            link={feature.link}
           />
         ))}
       </div>
 
       <div className="flex relative justify-center mt-5 mb-[50px]">
-        <button className="bg-white animate-blink text-[#D454B4] text-lg py-2 px-4 rounded-md shadow-[0px_0px_8px_0px_#D555B5] hover:shadow-[0px_0px_8px_0px_#00B0FE] uppercase hover:text-[#00B0FE] font-[600] transition-all duration-300">
+        <button className=" text-lg py-2 px-4 rounded-md btn-gradient">
           <Link href="/service">View All Services</Link>
         </button>
       </div>

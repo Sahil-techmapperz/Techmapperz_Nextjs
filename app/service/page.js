@@ -45,6 +45,48 @@ const service = () => {
           To assist companies in thriving in the digital age, we provide a variety of technological services. Drone, GIS, and Remote Sensing services, Mobile App Development, Website Design, CRM Solutions, and IT Consulting are just a few of the things we offer. We can assist businesses in managing their resources, connecting with their audiences online, and optimizing their operations thanks to our knowledge and expertise.
         </p>
 
+
+        <div className="mt-20">
+          <h1 className="text-4xl max-sm:text-[20px] font-bold text-center mb-10">Our IT Services</h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-4 border border-gray-700">
+              <div className="flex items-center gap-4">
+                <Image src={Ourservice11} alt="Web Development Services" className='h-[90px]' width={90} height={120} />
+                <Image src={T01} alt="01" width={70} height={20} />
+              </div>
+              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/webdevelopment">Web Development Services</Link></h3>
+              <p className="text-gray-400">Website development is an umbrella term for two major parts-Design & Development, Design represents the look and feel whereas Development determines how it functions.</p>
+            </div>
+            <div className="p-4 border border-gray-700">
+              <div className="flex items-center gap-4">
+                <Image src={Ourservice4} alt="Mobile Application Development" className='h-[90px]' width={90} height={120} />
+                <Image src={T02} alt="02" width={70} height={20} />
+              </div>
+              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/mobiledevelopment">Mobile Development</Link></h3>
+              <p className="text-gray-400">The mobile app software intelligently combines the latest technology, and design solutions which constantly get updated. It incorporates API, GPS, Camera, Microphone, AI and other latest technologies and becomes a Launchpad hurling your business to the next level.</p>
+            </div>
+            <div className="p-4 border border-gray-700">
+              <div className="flex items-center gap-4">
+                <Image src={Ourservice3} alt="CRM/ERP" width={90} height={120} />
+                <Image src={T03} alt="03" width={70} height={20} />
+              </div>
+              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/crmservice">CRM/ERP</Link></h3>
+              <p className="text-gray-400">At custom CRM consulting we understand your current capabilities, map your organisation's desired future state, and then recommend CRM implementation.</p>
+            </div>
+            <div className="p-4 border border-gray-700">
+              <div className="flex items-center gap-4">
+                <Image src={Ourservice2} alt="IT Consulting Services" width={90} height={120} />
+                <Image src={T04} alt="04" width={70} height={20} />
+              </div>
+              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/itconsultingservice">IT Consulting Services</Link></h3>
+              <p className="text-gray-400">We provide IT consulting services to businesses in a wide range of industries. We use our expertise to identify your opportunities and deliver solutions that will help you outperform your competitors.</p>
+            </div>
+            <div className="p-4 border border-gray-700">
+              <Image src={Coworking_gif} alt="Coworking" layout="responsive" unoptimized />
+            </div>
+          </div>
+        </div>
+
         <div className="mt-10">
           <h1 className="text-4xl max-sm:text-[20px] font-bold text-center mb-10">Our GIS Services</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -94,46 +136,7 @@ const service = () => {
           </div>
         </div>
 
-        <div className="mt-20">
-          <h1 className="text-4xl max-sm:text-[20px] font-bold text-center mb-10">Our IT Services</h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-4 border border-gray-700">
-              <div className="flex items-center gap-4">
-                <Image src={Ourservice11} alt="Web Development Services" className='h-[90px]' width={90} height={120} />
-                <Image src={T01} alt="01" width={70} height={20} />
-              </div>
-              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/webdevelopment">Web Development Services</Link></h3>
-              <p className="text-gray-400">Website development is an umbrella term for two major parts-Design & Development, Design represents the look and feel whereas Development determines how it functions.</p>
-            </div>
-            <div className="p-4 border border-gray-700">
-              <div className="flex items-center gap-4">
-                <Image src={Ourservice4} alt="Mobile Application Development" className='h-[90px]' width={90} height={120} />
-                <Image src={T02} alt="02" width={70} height={20} />
-              </div>
-              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/mobiledevelopment">Mobile Development</Link></h3>
-              <p className="text-gray-400">The mobile app software intelligently combines the latest technology, and design solutions which constantly get updated. It incorporates API, GPS, Camera, Microphone, AI and other latest technologies and becomes a Launchpad hurling your business to the next level.</p>
-            </div>
-            <div className="p-4 border border-gray-700">
-              <div className="flex items-center gap-4">
-                <Image src={Ourservice3} alt="CRM/ERP" width={90} height={120} />
-                <Image src={T03} alt="03" width={70} height={20} />
-              </div>
-              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/crmservice">CRM/ERP</Link></h3>
-              <p className="text-gray-400">At custom CRM consulting we understand your current capabilities, map your organisation's desired future state, and then recommend CRM implementation.</p>
-            </div>
-            <div className="p-4 border border-gray-700">
-              <div className="flex items-center gap-4">
-                <Image src={Ourservice2} alt="IT Consulting Services" width={90} height={120} />
-                <Image src={T04} alt="04" width={70} height={20} />
-              </div>
-              <h3 className="text-2xl max-sm:text-[18px] font-bold mt-4"><Link href="/service/it/itconsultingservice">IT Consulting Services</Link></h3>
-              <p className="text-gray-400">We provide IT consulting services to businesses in a wide range of industries. We use our expertise to identify your opportunities and deliver solutions that will help you outperform your competitors.</p>
-            </div>
-            <div className="p-4 border border-gray-700">
-              <Image src={Coworking_gif} alt="Coworking" layout="responsive" unoptimized />
-            </div>
-          </div>
-        </div>
+        
       </section>
     </div>
   );

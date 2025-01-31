@@ -16,7 +16,7 @@ const Welho = () => {
     <div id='CaseStudiesITServices' className='bg-gray-900'>
       <ScrollToTop />
       <div className='flex flex-col h-[350px] text-center items-center justify-center bg-cover bg-center' style={{ backgroundImage: 'url("/Photos/Rectangle41.png")' }}>
-        <p className='text-white mt-[66px] mb-[30px] text-[66px] font-bold sm:text-[50px]'>IT Portfolio</p>
+        <p className='text-white mt-[66px] mb-[30px] text-[66px] max-sm:text-[50px] font-bold sm:text-[50px]'>IT Portfolio</p>
         {/* <p className='text-white'>IT Portfolio</p> */}
         <Link
           href="/contact"
@@ -32,20 +32,22 @@ const Welho = () => {
         <div className='text-white flex justify-center flex-col  relative'>
           {/* <p className='absolute top-8 left-5'>Case Studies/IT Services</p> */}
           <Image src={Welho_logo} className='m-auto py-4' alt='Welho_logo.png' />
-          <p className='m-auto text-[20px] font-[600]'> Welho.in </p>
-          <p className='w-[65%] m-auto text-center'>Welho is a outstanding on line platform providing a huge variety of well being services and products to sell
-            holistic fitness and well-being. The internet site serves as a one-forestall vacation spot for customers
-            looking for get right of entry to to top rate well being merchandise, professional advice,
-            and customized services. Developed with a focal point on consumer revel
-            in and accessibility, Welho.in pursuits to empower people to
-            prioritize their fitness and lead satisfying lives
+          <p className='m-auto text-[20px] max-sm:text-[16px] font-[600]'> Welho.in </p>
+          <p className='w-[65%] max-sm:w-full m-auto text-center'>
+            Welho is a outstanding online platform providing a huge variety of well
+            being services and products to sell holistic fitness and well-being. The
+            website serves as a one-forestall vacation spot for customers looking for get
+            right of entry to to top rate well being merchandise, professional advice, and
+            customized services. Developed with a focal point on consumer revel
+            in and accessibility, Welho.in pursuits to empower people to prioritize
+            their fitness and lead satisfying lives.
           </p>
           <Image src={Welho_banner} className='w-full' alt='Welho_banner.png' />
 
         </div>
 
-        <div className="flex gap-4 bg-gray-900 text-white py-5 px-5 mt-[100px]" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
-          <div className="w-[65%]">
+        <div className="flex max-sm:flex-col-reverse gap-4 bg-gray-900 text-white py-5 px-5 mt-[100px]" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
+          <div className="w-[65%] max-sm:w-full">
             <div className="relative w-fit">
               <Image src={ChallengesBg} alt="Challengesbg" />
               <h2 className="text-xl font-bold absolute inset-0 flex items-center left-[20px] text-black">
@@ -55,62 +57,65 @@ const Welho = () => {
 
             <div className="h-1 w-full bg-gradient-to-r from-transparent to-gray-500"></div>
             <p className="mb-2">
-              <strong>Product Diversity:</strong> Curating and handling a various variety of well being merchandise, consisting of supplements,
-              health equipment, and private care items, posed a task in phrases of categorization and organization.
+              <strong>Product Diversity:</strong> Curating and managing a wide variety of wellness
+              merchandise, including supplements, health equipment, and personal care items,
+              presented a challenge in terms of categorization and organization.
             </p>
             <p className="mb-2">
-              <strong>User Experience:</strong>  Ensuring a continuing and intuitive consumer revel in throughout gadgets and platforms,
-              consisting of desktops, tablets, and smartphones, changed into a concern to beautify consumer engagement
-              and satisfaction.
+              <strong>User Experience:</strong>  Ensuring a consistent and intuitive user experience
+              across devices and platforms, including desktops, tablets, and smartphones, changed
+              into a concern to beautify consumer engagement and satisfaction.
             </p>
             <p className="mb-2">
-              <strong>Customer Support:</strong> Providing green and responsive customer service to cope with inquiries, clear up issues,
-              and help customers in navigating the internet site and making knowledgeable shopping selections changed
-              into crucial for constructing consider and loyalty.
+              <strong>Customer Support:</strong> Providing efficient and responsive customer service to
+              address inquiries, resolve issues, and assist customers in navigating the
+              website and making informed purchasing decisions was crucial for building trust
+              and loyalty.
 
             </p>
           </div>
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={welho_Challenges} alt="Cocreatelabs Challenges" className="rounded-lg shadow-lg" />
           </div>
         </div>
 
-        <div className='w-full flex text-white gap-[50px] justify-center items-center py-[50px] px-[30px]'>
+        <div className='w-full flex max-sm:flex-col text-white gap-[50px] justify-center items-center py-[50px] px-[30px]'>
 
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={welho_Solutions} alt="Cocreatelabs Challenges" className="rounded-lg shadow-lg" />
           </div>
 
-          <div className="w-[60%]">
+          <div className="w-[60%] max-sm:w-full">
             <div className="w-fit">
               <h2 className="text-2xl font-bold text-white">
                 Solutions
               </h2>
             </div>
             <p className="mb-2">
-              <strong> Product Categorization :</strong> A complete categorization device changed into carried out to categorise well being
-              merchandise into applicable classes and subcategories, facilitating clean navigation and product discovery
-              for customers.
+              <strong> Product Categorization :</strong> A comprehensive categorization system was implemented
+              to categorize wellness products into relevant classes and subcategories,
+              facilitating easy navigation and product discovery for customers.
 
 
             </p>
             <p className="mb-2">
-              <strong> Responsive Design :</strong> The internet site changed into advanced the usage of responsive layout concepts to make
-              certain optimum overall performance and value throughout lots of gadgets and display sizes, improving
-              accessibility and consumer revel in.
+              <strong> Responsive Design :</strong> The website was developed using responsive design
+              principles to ensure optimal performance and value across various devices and
+              screen sizes, improving accessibility and the user experience.
             </p>
             <p className="mb-2">
-              <strong> Live Chat Support:</strong> A stay chat help function changed into included into the internet site to offer real-time help
-              to customers, permitting them to hook up with customer service representatives and get hold of instantaneously
-              assist and steerage as needed.
+              <strong> Live Chat Support:</strong> A live chat support function was integrated into the
+              website to provide real-time assistance to customers, enabling them to connect
+              with customer service representatives and receive immediate help and guidance
+              as needed.
 
             </p>
 
           </div>
         </div>
 
-        <div className="flex gap-4 bg-gray-900 text-white py-5 px-5" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
-          <div className="w-[65%]">
+        <div className="flex max-sm:flex-col-reverse gap-4 bg-gray-900 text-white py-5 px-5" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
+          <div className="w-[65%] max-sm:w-full">
             <div className="relative w-fit">
               <Image src={ChallengesBg} alt="Challengesbg" />
               <h2 className="text-xl font-bold absolute inset-0 flex items-center left-[20px] text-black">
@@ -120,51 +125,51 @@ const Welho = () => {
 
             <div className="h-1 w-full bg-gradient-to-r from-transparent to-gray-500"></div>
             <p className="mb-2">
-              <strong>Enhanced Product Discovery :</strong>The implementation of a complete categorization device has progressed
-              product discovery and navigation for customers, permitting them to discover applicable well being
-              merchandise greater without difficulty and efficiently.
+              <strong>Enhanced Product Discovery :</strong>The implementation of a comprehensive categorization
+              system has improved product discovery and navigation for customers, enabling
+              them to discover relevant wellness products more easily and efficiently.
 
 
             </p>
             <p className="mb-2">
-              <strong>Improved User Engagement : </strong> The responsive layout of the internet site has led to improved consumer
-              engagement and satisfaction, with site visitors taking part in a continuing and intuitive surfing revel in
-              throughout gadgets.
+              <strong>Improved User Engagement : </strong> The responsive design of the website has led to
+              improved user engagement and satisfaction, with visitors enjoying a consistent
+              and intuitive browsing experience across devices.
 
 
             </p>
             <p className="mb-2">
-              <strong>Efficient Customer Support : </strong>The advent of stay chat help has brought about greater green and
-              responsive customer service, with customers taking advantage of instantaneously help and
-              steerage from informed representatives.
+              <strong>Efficient Customer Support : </strong>The introduction of live chat support has resulted in
+              more efficient and responsive customer service, with customers benefiting from
+              immediate help and guidance from knowledgeable representatives.
 
             </p>
           </div>
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={welho_Results} alt="welho Challenges" className="rounded-lg shadow-lg" />
           </div>
         </div>
 
 
-        <div className='w-full flex text-white gap-[50px] justify-center items-center py-[70px] px-[30px]'>
+        <div className='w-full flex max-sm:flex-col text-white gap-[50px] justify-center items-center py-[70px] px-[30px]'>
 
-          <div className="w-[35%] flex items-center justify-center">
+          <div className="w-[35%] max-sm:w-full flex items-center justify-center">
             <Image src={welho_Inconclusion} alt="Cocreatelabs Challenges" className="rounded-lg shadow-lg" />
           </div>
 
-          <div className="w-[60%]">
+          <div className="w-[60%] max-sm:w-full">
             <div className="w-fit">
               <h2 className="text-2xl font-bold text-white">
-                Conclusion
+              CONCLUSION
               </h2>
             </div>
             <p className="mb-2">
-              Welho has effectively addressed the demanding situations of product diversity, consumer revel
-              in, and customer service, turning in tangible effects with inside the shape of more suitable
-              product discovery, progressed consumer engagement, and green customer service. As a
-              result, the internet site maintains to function a relied on platform for people looking for get
-              right of entry to to top rate well being services and products, empowering them to
-              prioritize their fitness and well-being
+              Welho has effectively addressed the challenges of product diversity, user
+              experience, and customer service, delivering tangible results in the form of
+              enhanced product discovery, improved user engagement, and efficient customer
+              service. As a result, the website continues to function as a trusted platform
+              for individuals seeking access to premium health services and products,
+              empowering them to prioritize their health and well-being.
 
             </p>
 
@@ -173,7 +178,7 @@ const Welho = () => {
 
         <div className="w-full flex flex-col justify-center text-white items-center">
           <h1 className='text-2xl font-bold'>Technology Stacks</h1>
-          <p className='w-[40%] text-center'>We have used the latest technologies that can justify client requirements at
+          <p className='w-[40%] max-sm:w-full text-center'>We have used the latest technologies that can justify client requirements at
             the best to deliver bug-free solutions.</p>
         </div>
 

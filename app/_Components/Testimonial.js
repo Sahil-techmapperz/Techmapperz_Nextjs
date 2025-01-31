@@ -1,133 +1,93 @@
-"use client";
-import { useEffect, useState } from "react";
 import axios from "axios";
-import avater from "@/public/Photos/testimonial_aveter.png";
-import Image from "next/image";
-import "react-multi-carousel/lib/styles.css";
-import { Box, Text, keyframes } from "@chakra-ui/react";
-import Carousel from "react-multi-carousel";
+import { FaStar, FaCheckCircle } from 'react-icons/fa';
+import CarouselWrapper from './CarouselWrapper';
 
-const Testimonial = () => {
-  const [testimonials, setTestimonials] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const url = `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/Testimonial`;
-        const results = await axios.get(url, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        setTestimonials(results.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching testimonials: ", error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const pulseAnimation = keyframes`
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-  `;
-
-  if (loading) {
-    return (
-      <Box
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        height="100%"
-      >
-        <Text
-          fontSize="2xl"
-          fontWeight="bold"
-          animation={`${pulseAnimation} 2s infinite`}
-        >
-          Loading Techmapperz...
-        </Text>
-      </Box>
-    );
+async function getTestimonials() {
+  try {
+    const url = `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/Testimonial`;
+    const response = await axios.get(url, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching testimonials:", error);
+    return [];
   }
+}
 
-  // Responsive settings for the carousel
+const Testimonial = async () => {
+  const testimonials = await getTestimonials();
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 2, // Show 2 items
-      slidesToSlide: 1, // Scroll 1 item at a time
+      items: 3,
+      slidesToSlide: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 1, // Show 1 item
+      items: 3,
       slidesToSlide: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1, // Show 1 item
+      items: 1,
       slidesToSlide: 1,
     },
   };
 
   return (
-    <div className="bg-black py-8 px-4 text-center">
-      {/* <p className="text-xl font-semibold text-white">Testimonial</p> */}
-      {/* <h1 className="text-[26px] mb-6 text-white">What our Clients Say</h1> */}
-
-      <h1
-        className="text-3xl max-sm:text-xl  mb-6 text-white text-center font-semibold tracking-wide 
-  drop-shadow-md leading-snug"
-      >
+    <div className="bg-black py-8 px-4 text-center ">
+      <h1 className="text-3xl max-sm:text-xl mb-6 text-white text-center font-semibold tracking-wide drop-shadow-md leading-snug">
         Hear From Our Happy Clients
       </h1>
 
       <div className="p-12 max-sm:px-2">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          containerClass="carousel-container"
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-          renderDotsOutside={false}
-        >
+        <CarouselWrapper responsive={responsive}>
           {testimonials.map((data, index) => (
             <div
               key={index}
-              className="bg-gray-900 text-white p-6 rounded-lg shadow-lg mx-4"
-            // style={{
-            //   background:
-            //     "linear-gradient(90deg, rgba(0, 0, 0, 0.3) 4.63%, rgba(197, 197, 197, 0.3) 50.08%, rgba(0, 0, 0, 0.3) 95.86%)",
-            // }}
+              className="bg-[#1C1C1C] text-white p-8 rounded-lg shadow-lg mx-4 min-h-[300px] flex flex-col"
             >
-              <div className="w-[80px] h-[80px] flex justify-center items-center mx-auto mb-4">
-                <Image
-                  src={data.image || avater}
-                  alt={data.name}
-                  className="w-full h-full object-cover rounded-full border-4 border-white"
-                />
+              <div className="flex items-center mb-6">
+                <span className="text-3xl font-bold mr-2">5.0</span>
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="text-pink-500 text-xl" />
+                  ))}
+                </div>
               </div>
-              <div className="text-center">
-                <p className="h-[80px] overflow-hidden text-sm italic mb-4">
-                  "{data.message}"
+
+              <div className="tooltip w-full flex-grow">
+                <p className="text-base text-start leading-relaxed">
+                  {data.message.length > 100
+                    ? `${data.message.substring(0, 100)}...`
+                    : data.message}
                 </p>
-                <p className="text-lg font-semibold">{data.name}</p>
-                <p className="text-sm">{data.Companyname}</p>
+                
+              </div>
+
+              <div className="mt-6">
+                <div className="mb-4 text-start">
+                  <p className="font-semibold text-lg">{data.name}</p>
+                  <p className="text-gray-400">{data.Companyname}</p>
+                </div>
+
+                <div className="flex items-center text-green-500">
+                  <FaCheckCircle className="mr-2" />
+                  <span className="text-sm">Verified Review</span>
+                </div>
               </div>
             </div>
           ))}
-        </Carousel>
+        </CarouselWrapper>
       </div>
     </div>
   );
 };
 
 export default Testimonial;
+
+

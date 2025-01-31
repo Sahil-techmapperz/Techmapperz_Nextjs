@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="w-full bg-white p-8 max-sm:p-1 max-sm:px-4 relative">
+      <div className="w-full bg-gray-100 p-8 max-sm:p-1 max-sm:px-4 relative">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-[50px] justify-between text-black">
           {/* Left Section */}
           <div className="flex flex-col justify-center gap-4">
@@ -37,12 +37,7 @@ const Footer = () => {
                 
               />
               <button
-                className="w-fit  px-4 py-2 h-[40px] text-white font-bold border-none rounded-md"
-                style={{ 
-                  background: "linear-gradient(90deg, #EC212C 0%, #396BA9 100%)", 
-                  
-                }}
-              >
+                className="w-fit  px-4 py-2 h-[40px] text-white font-bold border-none rounded-md btn-gradient">
                 Subscribe
               </button>
             </div>

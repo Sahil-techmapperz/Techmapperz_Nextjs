@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
+
 
 const Scrool_Icons = ({ icons = [] }) => {
     const responsive = {

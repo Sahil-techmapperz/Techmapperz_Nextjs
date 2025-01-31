@@ -2,138 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+/* Font Family Setup */
 
-
-
-
-
+@layer base {
+  html {
+    font-family: "GT Sectra Fine", Palatino, serif;
+  }
+}
 
 .case-study-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-   
-  }
-  
-  .case-study-info {
-    position: absolute;
-    top: 0;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white; /* Text color */
-    transform: translateY(200%);
-    transition: transform 0.5s ease;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .case-study-container:hover .case-study-info {
-    transform: translateY(0);
-  }
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
 
+.case-study-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  transform: translateY(200%);
+  transition: transform 0.5s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  ul.custom-list li::marker {
-    font-size: 50px; /* Large bullet size */
-    color: #F83131; /* Red bullet color */
-    vertical-align: bottom; /* Adjusts the alignment of the bullet relative to the text */
+.case-study-container:hover .case-study-info {
+  transform: translateY(0);
+}
+
+ul.custom-list li::marker {
+  font-size: 50px;
+  color: #F83131;
+  vertical-align: bottom;
 }
 
 ul.custom-list {
-    list-style-type: disc; /* Ensures it uses bullet points */
-    padding-left: 20px; /* Adjust padding as needed for better spacing */
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 ul.custom-list li {
-    font-size: 14px; /* Text size */
-    color: white;
+  font-size: 14px;
+  color: white;
 }
 
-
 .active-category {
-    color: #F83131;
-  }
-  
+  color: #F83131;
+}
 
-  
-  .backface-hidden {
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-  }
+.backface-hidden {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
 
+.parallax {
+  background-image: url('/Photos/home_about_BG.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
 
-  .parallax {
-    background-image: url('/Photos/home_about_BG.jpg'); /* Replace with your desired background image */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 500px; /* Adjust height as needed */
-  }
-  
-
-
-  .career_why_choose_us {
-    transition: all ease-in-out 0.5s; /* Added transition for non-hover state */
+.career_why_choose_us {
+  transition: all ease-in-out 0.5s;
 }
 
 .career_why_choose_us:hover {
-    color: white !important;
-    background: #396BA9;
-    transform: scale(1.1);
-    transition: all ease-in-out 0.5s; /* Corrected transition duration */
+  color: white !important;
+  background: #396BA9;
+  transform: scale(1.1);
+  transition: all ease-in-out 0.5s;
 }
 
 .career_why_choose_us:hover p {
-    color: white !important;
+  color: white !important;
 }
 
-
-
-
-
-
 @keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 
 .animate-blink {
-  animation: blink 1s infinite; /* Adjust duration as needed */
+  animation: blink 1s infinite;
 }
 
-  
-  
-/* Add this to your global CSS file */
 .custom-scrollbar {
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #a0aec0 #edf2f7; /* thumb and track colors */
+  scrollbar-width: thin;
+  scrollbar-color: #a0aec0 #edf2f7;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px; /* Set the width of the scrollbar */
+  width: 8px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #a0aec0; /* Thumb color */
-  border-radius: 8px; /* Round the thumb */
+  background: #a0aec0;
+  border-radius: 8px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #edf2f7; /* Track color */
+  background: #edf2f7;
 }
-
-
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -145,5 +124,42 @@ ul.custom-list li {
 }
 
 
+.custom-button {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 9999px; /* Fully rounded corners */
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
 
+.custom-button:hover {
+  background: white;
+  color: black;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+.scroll-container {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
+}
+
+.scroll-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.scroll-lock {
+  overflow: hidden;
+  height: 100vh;
+}
 
