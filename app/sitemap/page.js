@@ -109,7 +109,7 @@ const Sitemap = () => {
 
           {/* GIS Services Section */}
           <div className="group space-y-4 bg-gradient-to-br from-gray-800/50 to-gray-700/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/10">
-            <Link href="/service/gis">
+            <Link href="/service">
               <div className="flex items-center space-x-4 group">
                 <div className="text-2xl bg-gradient-to-r from-red-500 to-pink-500 p-3 rounded-lg group-hover:scale-110 transition-transform">
                   <AiOutlineLeft />
@@ -172,7 +172,7 @@ const Sitemap = () => {
 
           {/* IT Services Section */}
           <div className="group space-y-4 bg-gradient-to-br from-gray-800/50 to-gray-700/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/10">
-            <Link href="/service/it">
+            <Link href="/service">
               <div className="flex items-center space-x-4 group">
                 <div className="text-2xl bg-gradient-to-r from-red-500 to-pink-500 p-3 rounded-lg group-hover:scale-110 transition-transform">
                   <AiOutlineLeft />
@@ -199,7 +199,7 @@ const Sitemap = () => {
 
           {/* Resources */}
           <div className="group space-y-4 bg-gradient-to-br from-gray-800/50 to-gray-700/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/10">
-            <Link href="/service/it">
+            <Link href="/blog?page=1">
               <div className="flex items-center space-x-4 group">
                 <div className="text-2xl bg-gradient-to-r from-red-500 to-pink-500 p-3 rounded-lg group-hover:scale-110 transition-transform">
                   <AiOutlineLeft />

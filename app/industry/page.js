@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 import ScrollToTop from '@/app/_Components/ScrollToTop';
 import { FaArrowRightLong } from 'react-icons/fa6';

@@ -7,6 +7,11 @@ import careers_do_what_you_love_img from "@/public/Photos/careers_do_what_you_lo
 import career_banner_img from "@/public/Photos/career_banner.png"
 import Link from "next/link";
 
+export const metadata = {
+  title: "Techmapperz Service",
+  description: "Techmapperz map your business",
+};
+
 
 const Career = async () => {
   const Jobsdata = await getJobsdata();
