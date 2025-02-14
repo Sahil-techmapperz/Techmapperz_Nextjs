@@ -1,0 +1,176 @@
+// pages/gisServices.js
+import Image from 'next/image';
+import Link from 'next/link';
+
+import ScrollToTop from '@/app/_Components/ScrollToTop';
+import WhyChooseTechmapperz from '@/app/_Components/WhyChooseTechmapperz';
+import FAQ from '@/app/_Components/FAQ';
+import GisServices_Services_We_Offer from '@/app/_Components/GisServices_Services_We_Offer';
+
+import GIS_Mapping from "@/public/gis_images/GIS_Main_Page/GIS_Mapping.webp";
+import GIS_Consulting from "@/public/gis_images/GIS_Main_Page/GIS_Consulting.webp";
+import GIS_Data_Digitization from "@/public/gis_images/GIS_Main_Page/GIS_Data_Digitization.webp";
+import Web_GIS from "@/public/gis_images/GIS_Main_Page/Web_GIS.webp";
+import GIS_Survey from "@/public/gis_images/GIS_Main_Page/GIS_Survey.webp";
+import WebsiteBanner from '@/app/_Components/WebsiteBanner';
+
+import GISintroImg from "@/public/gis_images/GISintroImg.webp";
+import WebsiteIntroduction from '@/app/_Components/WebsiteIntroduction';
+
+export const metadata = {
+  title: "Techmapperz GIS Services",
+  description: "Techmapperz map your business",
+};
+
+export const categoryData = [
+  {
+    name: 'GIS Mapping ',
+    image: GIS_Mapping,
+    link: '/service/gis/gisservice/gismapping'
+  },
+  {
+    name: 'Data Digitization',
+    image: GIS_Data_Digitization,
+    link: '/service/gis/gisservice/datadigitization'
+  },
+  {
+    name: 'GIS Consulting',
+    image: GIS_Consulting,
+    link: '/service/gis/gisservice/gisconsulting'
+  },
+  {
+    name: 'Web GIS Development',
+    image: Web_GIS,
+    link: '/service/gis/gisservice/webgisdevelopment'
+  },
+  {
+    name: 'GIS Surveying',
+    image: GIS_Survey,
+    link: '/service/gis/gisservice/gissurveying'
+  }
+];
+
+const count = categoryData.length;
+
+const features = [
+  {
+    img: '/gis_images/why_choose_gis_icons/High_Accuracy_Data.svg',
+    title: 'High Accuracy Data',
+    description: 'We deliver accurate and error-free project results with our advanced tools and skilled team helping analysis and decision-making.'
+  },
+  {
+    img: '/gis_images/why_choose_gis_icons/End_To_End_Solutions.svg',
+    title: 'End To End Solutions',
+    description: 'Techmapperz provide end-to-end solutions as per project requirements whether it is urban planning or environmental monitoring.'
+  },
+  {
+    img: '/gis_images/why_choose_gis_icons/cost_effective.svg',
+    title: 'Cost-Effective',
+    description: 'We provide affordable prices while maintaining quality, delivering high-value services to businesses and organizations of any size.'
+  },
+  {
+    img: '/gis_images/why_choose_gis_icons/fast_turnaround.svg',
+    title: 'Fast Turnarounds',
+    description: 'With effective workflows, skilled team, and without compromising on accuracy we ensure your projects remain on schedule.'
+  }
+];
+
+const faqData = [
+  {
+    question: "1.	How does GIS Mapping improve operational efficiency?",
+    answer: "Through GIS Mapping businesses can derive data-based choices through their visualization of complicated geographic information. The use of accurate maps in urban planning together with the logistics field leads to resource optimization cost reduction and better industry-wide decision-making capabilities.",
+  },
+  {
+    question: "2.	What is the role of Navigation Mapping in GIS?",
+    answer: "Distribution paths and trip durations become shorter because Navigation Mapping generates correct location datasets. Operational efficiency as well as customer satisfaction improve through the use of this solution in logistics and fleet management systems for mobility applications.",
+  },
+  {
+    question: "3.	What is Utility Mapping, and how does it help infrastructure management?",
+    answer: "The utility mapping system delivers complete information about the infrastructure networks of water, electricity and gas distribution systems. This solution enables administrative entities and business operators to handle infrastructure management and development planning and to stop accidents at building sites or while excavating.",
+  },
+  {
+    question: "4.	How does Cadastral Mapping support land management?",
+    answer: "The Cadastral Mapping system presents complete property records which visualize land parcels and establish boundaries together with the property ownership info. Property developers as well as governments together with urban planners need to settle disputes so they can optimize their land management functions.",
+  },
+  {
+    question: "5.	How can GIS help in agricultural operations?",
+    answer: "GIS users can optimize farming practices since they receive information about different soil types and irrigation systems and local weather patterns from Agricultura Mapping. Through GIS applications farmers can reach higher production statistics and reduce losses along with practicing farming more sustainably.",
+  },
+  {
+    question: "6.	How does Data Digitization enhance GIS functionality?",
+    answer: "The process of Data Digitization transforms physical documents and mapping products into digital data formats which can be used by GIS systems. The digital transformation enables organizations to enhance data control and accuracy as well as achieve better operational integration and make enhanced operational decisions.",
+  },
+  {
+    question: "7.	Can Techmapperz develop customized GIS applications for my business?",
+    answer: "Yes, Our business builds customized GIS applications through mobile and web platform development. Mobile applications provided by this solution enable team members to view and work with geospatial data through any location thus enhancing their operational efficiency and decision capabilities.",
+  },
+  {
+    question: "8.	Why should I choose Techmapperz for my GIS needs?",
+    answer: "Techmapperz integrates forward-thinking GIS technology through their experts who understand numerous industries. The combination of our specific solutions together with our expert team along with our focus on quality delivers accurate and reliable and time-sensitive geospatial data which enables business accomplishments.",
+  },
+  {
+    question: "9. How can GIS Surveying improve construction projects? ",
+    answer: "Construction projects require exact geospatial data that comes from GIS Surveying methods. The implementation of GIS enables correct measurement of land parcels while defining boundaries and revealing terrain details which leads to organized construction planning and implementation projects."
+  },
+  {
+    question: "10. What is LiDAR Surveying, and why is it important? ",
+    answer: "Practical 3D Earth surface information results from the laser-based LiDAR Surveying technology. The mapping of inaccessible places including forests and floodplains as well as infrastructure model creation relies on accurate data delivered by LiDAR."
+  }
+];
+
+const bannerData = {
+  title: (
+    <>
+      <span className="text-gradient">Transform Data</span> into Actionable Insights with Our Cutting-Edge{" "}
+      <span className="text-gradient">GIS Services</span>
+    </>
+  ),
+  subtitle: "Cutting-Edge GIS Solutions Service Provider",
+  description: "",
+  buttonText: "Get In Touch",
+  imageSrc: "/gis_images/GISserviceBanner.webp",
+  imageAlt: "GIS Services Mockup"
+};
+
+const introData = {
+  imageSrc: GISintroImg,
+  imageAlt: "GIS Services",
+  paragraphs: [
+    "At Techmapperz we help transform your operations, improve your decision-making, and accelerate your growth with the help of our GIS solutions. We offer end-to-end GIS Solutions that help the public & Government organizations, improve their decision support system. Our goal is simple: to give detailed and accurate spatial data insights that facilitate better decision-making, operational efficiency, and strategic planning."
+  ],
+  services: [
+    { text: "High Accuracy", highlight: "GIS Data" },
+    { text: "End-to-End", highlight: "Geospatial Services" },
+    { text: "High-Precision", highlight: "Outputs" },
+    { text: "Cost-Effective  & ", highlight: "Scalable Solution" }
+  ],
+  backgroundText: "GIS Services"
+};
+
+const gisservice = () => {
+
+  return (
+    <>
+      <div className="bg-black text-white">
+        <ScrollToTop />
+        <WebsiteBanner {...bannerData} />
+        <section>
+
+          <WebsiteIntroduction
+            imageSrc={introData.imageSrc}
+            imageAlt={introData.imageAlt}
+            paragraphs={introData.paragraphs}
+            services={introData.services}
+            backgroundText={introData.backgroundText}
+          />
+          <GisServices_Services_We_Offer categoryData={categoryData} count={count} />
+          <WhyChooseTechmapperz features={features} heading={'Why Choose Techmapperz for GIS Services'} />
+          <FAQ faqData={faqData} />
+
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default gisservice;
