@@ -30,7 +30,7 @@ const CTAButtons = () => (
 
 const CustomCarousel = () => {
   return (
-    <div className="relative h-[90vh] max-sm:h-[90vh] bg-black overflow-hidden">
+    <div className="relative h-[90vh] max-sm:h-[100vh] bg-black overflow-hidden">
       {/* Enhanced background gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(55,107,171,0.3),transparent_70%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(210,41,43,0.1),transparent_40%)]"></div>
@@ -86,7 +86,7 @@ const CustomCarousel = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full lg:w-1/2 h-[50vh] max-sm:hidden lg:h-auto relative">
+        <div className="w-full lg:w-1/2 h-[50vh] lg:h-auto relative">
           {/* Enhanced decorative gradient circle */}
           <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 pointer-events-none">
             <div className="relative w-[900px] h-[900px]">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import ScrollToTop from '@/app/_Components/ScrollToTop';
 import { FaArrowRightLong } from 'react-icons/fa6';
@@ -7,7 +8,7 @@ import HappyClients from '../_Components/HappyClients';
 import AboutUs from '../_Components/AboutUs';
 
 export const metadata = {
-    title: "Techmapperz Service",
+    title: "Techmapperz Industry",
     description: "Techmapperz map your business",
 };
 

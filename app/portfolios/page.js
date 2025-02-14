@@ -73,12 +73,12 @@ const Casestudies = () => {
           priority
         />
         <div className="absolute inset-0 w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center">
-          <h1 className="text-center text-4xl md:text-6xl text-white font-bold px-4">
+          <p className="text-center text-4xl md:text-6xl text-white font-bold px-4">
             Our Portfolio
-          </h1>
-          <p className="text-center text-lg md:text-xl text-gray-200 mt-4 px-4 md:px-8 md:w-[50%]">
-            Explore our comprehensive portfolio of IT and GIS solutions
           </p>
+          <h1 className="text-center text-lg md:text-xl text-gray-200 mt-4 px-4 md:px-8 md:w-[50%]">
+            Explore our comprehensive portfolio of IT and GIS solutions
+          </h1>
         </div>
       </div>
 

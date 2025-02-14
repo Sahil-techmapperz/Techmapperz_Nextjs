@@ -235,16 +235,16 @@ const Sitemap = () => {
                 <Link href="/industry/e-commerce" className="text-gray-300 hover:text-blue-400 transition-colors">E-Commerce</Link>
               </li>
               <li className="transform hover:translate-x-2 transition-all duration-300">
-                <Link href="/industry/education-&-e-learning" className="text-gray-300 hover:text-blue-400 transition-colors">Education & E-Learning</Link>
+                <Link href="/industry/education-e-learning" className="text-gray-300 hover:text-blue-400 transition-colors">Education & E-Learning</Link>
               </li>
               <li className="transform hover:translate-x-2 transition-all duration-300">
-                <Link href="/industry/government-&-public-sector" className="text-gray-300 hover:text-blue-400 transition-colors">Government & Public Sector</Link>
+                <Link href="/industry/government-public-sector" className="text-gray-300 hover:text-blue-400 transition-colors">Government & Public Sector</Link>
               </li>
               <li className="transform hover:translate-x-2 transition-all duration-300">
                 <Link href="/industry/healthcare" className="text-gray-300 hover:text-blue-400 transition-colors">Healthcare</Link>
               </li>
               <li className="transform hover:translate-x-2 transition-all duration-300">
-                <Link href="/industry/logistics-&-supply-chain" className="text-gray-300 hover:text-blue-400 transition-colors">Logistics & Supply Chain</Link>
+                <Link href="industry/logistics-supply-chain" className="text-gray-300 hover:text-blue-400 transition-colors">Logistics & Supply Chain</Link>
               </li>
               <li className="transform hover:translate-x-2 transition-all duration-300">
                 <Link href="/industry/manufacturing" className="text-gray-300 hover:text-blue-400 transition-colors">Manufacturing</Link>
@@ -253,7 +253,7 @@ const Sitemap = () => {
                 <Link href="/industry/retail" className="text-gray-300 hover:text-blue-400 transition-colors">Retail</Link>
               </li>
               <li className="transform hover:translate-x-2 transition-all duration-300">
-                <Link href="/industry/travel-&-hospitality" className="text-gray-300 hover:text-blue-400 transition-colors">Travel & Hospitality</Link>
+                <Link href="/industry/travel-hospitality" className="text-gray-300 hover:text-blue-400 transition-colors">Travel & Hospitality</Link>
               </li>
             </ul>
           </div>

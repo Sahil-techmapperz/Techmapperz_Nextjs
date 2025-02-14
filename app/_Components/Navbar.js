@@ -210,8 +210,8 @@ const Navbar = () => {
                   </Link>
                 </div>
                 <div className="text-2xl">
-                  <Link href="/blog?page=1" onClick={onClose}>
-                    Resources
+                  <Link href="/industry" onClick={onClose}>
+                    Industry
                   </Link>
                 </div>
                 <div className="text-2xl">
@@ -220,13 +220,13 @@ const Navbar = () => {
                   </Link>
                 </div>
                 <div className="text-2xl">
-                  <Link href="/about" onClick={onClose}>
-                    About Us
+                  <Link href="/blog?page=1" onClick={onClose}>
+                    Blogs
                   </Link>
                 </div>
                 <div className="text-2xl">
-                  <Link href="/career" onClick={onClose}>
-                    Career
+                  <Link href="/about" onClick={onClose}>
+                    About Us
                   </Link>
                 </div>
                 <div className="text-2xl">

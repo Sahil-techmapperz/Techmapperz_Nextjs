@@ -24,7 +24,7 @@ const Gis = () => {
       <div className='w-full m-auto bg-black'>
         <div className='w-full max-w-[1600px] mx-auto text-white  flex justify-center items-center flex-col  relative mb-[50px]'>
           <Image src={Gis_casestudies_1_banner} className='w-[30%] max-sm:w-[90%] mt-[100px] mb-6' alt='Gis_casestudies_1_banner.png' />
-          <p className='m-auto text-[20px] max-sm:text-[16px] font-[600]'>Landuse and Landcover mapping</p>
+          <h1 className='m-auto text-[20px] max-sm:text-[16px] font-[600]'>Landuse and Landcover mapping</h1>
           <p className='w-[70%] max-sm:w-full m-auto text-center text-[18px]'>
             Landuse and Landcover mapping involves creating detailed representations of human settlements using geographic information systems. This entails identifying and delineating residential zones, urban areas, rural settlements, and other inhabited regions. By overlaying various data layers such as population density, building footprints, infrastructure, and land use, GIS facilitates comprehensive analysis and visualization of habitation patterns. This information is crucial for urban planning, disaster management, public health, and resource allocation.
           </p>

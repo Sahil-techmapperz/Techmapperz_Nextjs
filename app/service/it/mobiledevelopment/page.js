@@ -119,7 +119,7 @@ const Mobile_development = () => {
             <>
                 <span className="text-gradient">Custom Mobile App</span>
                 {" "} That Boosts Your Business – {" "}
-                <span className="text-gradient">Build, Launch & Grow!</span>
+                <span className="text-gradient">Build, Launch, Grow!</span>
             </>
         ),
         // title: "Custom Mobile App That Boost Your Business – Build, Launch, Grow!",

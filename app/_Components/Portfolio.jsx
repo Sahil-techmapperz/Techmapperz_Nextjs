@@ -42,7 +42,7 @@ const defaultProjects = [
         description: "Landuse and Landcover mapping involves creating detailed representations of human settlements using geographic information systems. This entails identifying and delineating residential zones, urban areas, rural settlements, and other inhabited regions. By overlaying various data layers such as population density, building footprints, infrastructure, and land use, GIS facilitates comprehensive analysis and visualization of habitation patterns. This information is crucial for urban planning, disaster management, public health, and resource allocation.",
         mobileDescription: "Landuse and Landcover mapping involves creating detailed representations of human settlements using geographic information systems. This entails ident...",
         image: "/Photos/Land_Use_Land_Cover_Mapping.png",
-        link: "/portfolios/landcover_mapping",
+        link: "/portfolios",
         bgColor: "#1e293b",
         // bgColor: "#1a472a",
 
