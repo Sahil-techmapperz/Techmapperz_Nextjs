@@ -78,9 +78,9 @@ function ProjectCard({ item, onOpen }) {
             </>
           ) : (
             <>
-              <Metric icon={<Layers size={16} />} label="Projects Delivered" value="30+" />
-              <Metric icon={<BarChart3 size={16} />} label="Avg. CSAT" value="4.9/5" />
-              <Metric icon={<Gauge size={16} />} label="Sectors Served" value="12+" />
+              <Metric icon={<Layers size={16} />} label="Status" value="Live" />
+              <Metric icon={<BarChart3 size={16} />} label="Quality" value="4.9/5" />
+              <Metric icon={<Gauge size={16} />} label="On Time" value="98%" />
             </>
           )}
         </div>
@@ -153,10 +153,10 @@ function ProjectDrawer({ open, onClose, item }) {
                 ) : (
                   <>
                     <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
-                      <Metric icon={<Layers size={16} />} label="Projects Delivered" value="30+" />
+                      <Metric icon={<Layers size={16} />} label="Status" value="Live" />
                     </div>
                     <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
-                      <Metric icon={<BarChart3 size={16} />} label="Avg. TAT Reduction" value="40%" />
+                      <Metric icon={<BarChart3 size={16} />} label="Performance" value="99.8%" />
                     </div>
                   </>
                 )}

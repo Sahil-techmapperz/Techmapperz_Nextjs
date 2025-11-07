@@ -56,7 +56,7 @@ let CaseStudiesData = [
         ]
     },
     {
-        image: "/Photos/Gis_casestudies_1.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "City Mapping", link: "/portfolios/city_mapping", details: [
+        image: "/Photos/Gis_casestudies_1.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Hooghly", link: "/portfolios/city_mapping", details: [
             "Drones have revolutionized city mapping by providing high-resolution aerial imagery that can be integrated into GIS systems. This technology enables cities to create detailed and up-to-date maps of urban infrastructure, land use, and environmental conditions, supporting informed decision-making and effective resource allocation. Drones play a crucial role in optimizing emergency response, predicting potential hotspots, and enhancing overall public safety. ",
 
         ]
@@ -72,42 +72,28 @@ let CaseStudiesData = [
 
 
     {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Topographical Drone Survey & Mapping of proposed Elevated Railway Track", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
     {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Ammonia & Water Pipeline Drone Survey & Digitization", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
     {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Gas Pipeline Digitization & Report Making", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
     {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Mining", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
+    
     {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
-            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
-        ]
-    },
-    {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
-            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
-        ]
-    },
-    {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
-            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
-        ]
-    },
-    {
-        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Navigation Mapping", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
