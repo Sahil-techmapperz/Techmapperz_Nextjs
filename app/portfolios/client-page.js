@@ -183,7 +183,7 @@ const Casestudies = () => {
         const transformedProjects = data.map((item) => ({
           id: item.id,
           title: item.name,
-          // techStack: getTechStack(item.category),
+          category: item.category, // Add this missing field!
           techStack: item.techStack,
           description: Array.isArray(item.details) ? item.details[0] : item.description,
           mobileDescription: getMobileDescription(Array.isArray(item.details) ? item.details[0] : item.description, item.category),
@@ -213,7 +213,7 @@ const Casestudies = () => {
     if (query.trim()) {
       const q = query.trim().toLowerCase();
       filtered = filtered.filter(project =>
-        [project.title, project.description, project.techStack]
+        [project.title, project.description, project.techStack, project.category]
           .join(" ")
           .toLowerCase()
           .includes(q)
