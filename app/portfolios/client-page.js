@@ -70,9 +70,19 @@ function ProjectCard({ item, onOpen }) {
           ))}
         </div>
         <div className="mb-4 grid grid-cols-3 gap-3">
-          <Metric icon={<Layers size={16} />} label="Status" value="Completed" />
-          <Metric icon={<BarChart3 size={16} />} label="Quality" value="95%" />
-          <Metric icon={<Gauge size={16} />} label="On Time" value="100%" />
+          {item.category === "GIS" ? (
+            <>
+              <Metric icon={<Layers size={16} />} label="Projects Delivered" value="25+" />
+              <Metric icon={<BarChart3 size={16} />} label="Avg. CSAT" value="4.8/5" />
+              <Metric icon={<Gauge size={16} />} label="Sectors Served" value="8+" />
+            </>
+          ) : (
+            <>
+              <Metric icon={<Layers size={16} />} label="Status" value="Completed" />
+              <Metric icon={<BarChart3 size={16} />} label="Quality" value="95%" />
+              <Metric icon={<Gauge size={16} />} label="On Time" value="100%" />
+            </>
+          )}
         </div>
         <div className="flex items-center justify-between">
           <div className="text-xs text-gray-400">Techmapperz</div>
@@ -131,12 +141,25 @@ function ProjectDrawer({ open, onClose, item }) {
               </div>
               <p className="text-sm leading-relaxed text-gray-300">{item.description}</p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
-                  <Metric icon={<Layers size={16} />} label="Status" value="Completed" />
-                </div>
-                <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
-                  <Metric icon={<BarChart3 size={16} />} label="Quality" value="95%" />
-                </div>
+                {item.category === "GIS" ? (
+                  <>
+                    <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
+                      <Metric icon={<Layers size={16} />} label="Projects Delivered" value="25+" />
+                    </div>
+                    <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
+                      <Metric icon={<BarChart3 size={16} />} label="Avg. TAT Reduction" value="35%" />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
+                      <Metric icon={<Layers size={16} />} label="Status" value="Completed" />
+                    </div>
+                    <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
+                      <Metric icon={<BarChart3 size={16} />} label="Quality" value="95%" />
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

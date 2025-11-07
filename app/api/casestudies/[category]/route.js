@@ -8,12 +8,6 @@ let CaseStudiesData = [
         ]
     },
     {
-        image: "/Photos/Site_Suitability_Analysis.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Site Suitability Analysis", link: "/portfolios/site_mapping", details: [
-            "Site suitability for block-wise soil erosion involves evaluating a specific location's ability to withstand or mitigate the effects of soil erosion. It involves assessing various factors that influence erosion processes, including rainfall (R), flow accumulation and slope (LS), soil data(K), soilconservation (C), elevation, slope, and land use/land cover.",
-
-        ]
-    },
-    {
         image: "/Photos/IT_2.webp", category: "IT", techStack: "React.js, TypeScript, Redux, Next.js, Tailwind CSS, Firebase, Node.js, Express.js, MongoDB, AWS", name: "Cocreate Lab", link: "/portfolios/cocreatelabs", details: [
             "First of all, a state-of-the-art web tool, the CoCreate Labs AMC Mentor and Mentee Dashboard, was created to assist with mentorship and teamwork within the CoCreate Labs program. The platform offers an easy and interactive experience for participants to engage with mentors, access resources, and track their progress, with dedicated dashboards for mentors and mentees. The dashboard, which is hosted on Amazon Web Services (AWS), utilizes modern web technologies to provide a dynamic and intuitive user interface.",
         ]
