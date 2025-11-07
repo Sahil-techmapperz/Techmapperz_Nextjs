@@ -9,8 +9,7 @@ import SlickCarouselProvider from './_Components/SlickCarouselProvider';
 import { Montserrat } from "next/font/google";
 import Head from 'next/head';
 
-// Dynamic imports for non-critical components
-const ZohoChat = dynamic(() => import('./_Components/ZohoChat'), { ssr: false });
+// Dynamic imports for non-critical components removed for performance
 
 
 
@@ -43,7 +42,6 @@ export default function RootLayout({ children }) {
           <Navbar />
           <SocialMediaIcons />
           {children}
-          <ZohoChat />
           <Footer />
         </SlickCarouselProvider>
       
