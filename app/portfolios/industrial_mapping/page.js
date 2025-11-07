@@ -55,24 +55,23 @@ const Gis = () => {
               <h1 className='text-[18px] font-semibold'>Industrial planning requires identifying and developing industrial clusters and corridors using a data-driven approach.
               </h1>
               <ul className='list-disc text-[18px] ml-6'>
-                <li>Data-Driven Industrial Planning :
+                <li><strong>Data-Driven Industrial Planning:</strong>
                   Industrial planning requires identifying and developing industrial clusters and
                   corridors using a data-driven approach.
                 </li>
-                <li>Challenges in Landbank Identification :
+                <li><strong>Challenges in Landbank Identification:</strong>
                   Identifying new landbanks for industrial development is constrained by
                   limited spatial data coverage and availability.
                 </li>
-
-                <li>Data Integration and Interoperability Issues :
+                <li><strong>Data Integration and Interoperability Issues:</strong>
                   Inadequate data integration and interoperability hinder infrastructural
                   development decisions for new landbanks.
                 </li>
-                <li>Adapting to Rapid Technological Changes :
+                <li><strong>Adapting to Rapid Technological Changes:</strong>
                   Keeping pace with rapidly evolving technology and data requirements is challenging
                   for monitoring industrial development activities.
                 </li>
-                <li>Ensuring Data Accuracy and Precision :
+                <li><strong>Ensuring Data Accuracy and Precision:</strong>
                   Achieving data accuracy and precise land measurements is crucial for effective
                   planning and development.
                 </li>
@@ -98,18 +97,18 @@ const Gis = () => {
             </div>
             <p className="mb-2 text-[18px]">
               <ul className='list-disc ml-6'>
-                <li> Drone Survey for Industrial Regions : Flying drones over
+                <li><strong>Drone Survey for Industrial Regions:</strong> Flying drones over
                   existing industrial regions and newly acquired landbanks for industrial
                   development.
                 </li>
-                <li> Image Processing for Data Analysis : Processing captured drone images to
+                <li><strong>Image Processing for Data Analysis:</strong> Processing captured drone images to
                   extract valuable insights for mapping and planning.
                 </li>
-                <li> GIS Software for Industrial Mapping : Utilizing GIS software and its
+                <li><strong>GIS Software for Industrial Mapping:</strong> Utilizing GIS software and its
                   specialized extensions for industrial mapping, including utility networking and
                   connectivity.
                 </li>
-                <li> Enhanced Operations and Site Selection : Leveraging GIS tools to improve
+                <li><strong>Enhanced Operations and Site Selection:</strong> Leveraging GIS tools to improve
                   operations, optimize utility networks, and support on-site selection for
                   industrial regions.
                 </li>

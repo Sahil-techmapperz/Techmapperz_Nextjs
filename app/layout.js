@@ -41,8 +41,9 @@ export default function RootLayout({ children }) {
       </Head>
 
       <body className={montserrat.variable}>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content" role="main">{children}</main>
         <SlickCarouselProvider>
           <SocialMediaIcons />
           <Footer />

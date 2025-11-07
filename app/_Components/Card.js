@@ -46,18 +46,18 @@ const Card = ({ post }) => {
       </div>
       <div className="flex px-4 max-sm:px-1 text-2xl gap-[10px] mt-4 space-x-4 pb-4">
 
-        <a href={socialLinks.linkedin} className="text-blue-700 hover:text-blue-800">
+        <a href={socialLinks.linkedin} className="text-blue-700 hover:text-blue-800" aria-label="Share on LinkedIn">
           <FaLinkedinIn />
         </a>
 
-        <a href="#" className="text-blue-500 hover:text-blue-600">
+        <a href="#" className="text-blue-500 hover:text-blue-600" aria-label="Share on Reddit">
           <FaRedditAlien />
         </a>
-        <a href="#" className="text-pink-600 hover:text-pink-700">
+        <a href="#" className="text-pink-600 hover:text-pink-700" aria-label="Share on Quora">
           <SiQuora />
         </a>
 
-        <a href={socialLinks.twitter} className="text-blue-300 hover:text-blue-400">
+        <a href={socialLinks.twitter} className="text-blue-300 hover:text-blue-400" aria-label="Share on Twitter">
           <FaTwitter />
         </a>
 

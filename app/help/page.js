@@ -141,12 +141,12 @@ const Help = () => {
         <p className="text-sm md:text-base mb-2">
           For any other questions, feel free to get in touch with us:
         </p>
-        <ul className="space-y-2 text-sm md:text-base">
-          <li>Email: <a href="mailto:info@techmapperz.com" className="text-blue-500">info@techmapperz.com</a></li>
-          <li>Phone: +91-9643002065 / +91-3335752689</li>
-          <li className="break-words">Address: 55, Lane - 2, Westend Marg, Saidullajab, Near Saket metro station, New Delhi - 110030, India</li>
-          <li className="break-words">Address: CF 401, Block CF, Sector 1, Salt Lake, Kolkata-700064, India</li>
-        </ul>
+        <address className="space-y-2 text-sm md:text-base not-italic">
+          <div>Email: <a href="mailto:info@techmapperz.com" className="text-blue-500">info@techmapperz.com</a></div>
+          <div>Phone: <a href="tel:+919643002065" className="text-blue-500">+91-9643002065</a> / <a href="tel:+913335752689" className="text-blue-500">+91-3335752689</a></div>
+          <div className="break-words">Address: 55, Lane - 2, Westend Marg, Saidullajab, Near Saket metro station, New Delhi - 110030, India</div>
+          <div className="break-words">Address: CF 401, Block CF, Sector 1, Salt Lake, Kolkata-700064, India</div>
+        </address>
       </section>
     </div>
   );

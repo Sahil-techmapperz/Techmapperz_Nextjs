@@ -49,7 +49,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="w-full bg-gray-100 p-8 max-sm:p-1 max-sm:px-4 relative">
+      <footer className="w-full bg-gray-100 p-8 max-sm:p-1 max-sm:px-4 relative" role="contentinfo">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-[50px] justify-between text-black">
           {/* Left Section */}
           <div className="flex flex-col justify-center gap-4">
@@ -70,13 +70,16 @@ const Footer = () => {
             </p>
             {/* Subscribe Section */}
             <div className='flex max-sm:w-full max-sm:justify-between  border-[2px] text-black w-fit px-2 py-1 rounded-md gap-2 max-sm:gap-0'>
+              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
               <input
+                id="newsletter-email"
                 className='border-none max-sm:w-[50%]'
                 placeholder='Enter your email...'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 required
+                aria-describedby="newsletter-status"
               />
               <button
                 className="w-fit px-4 py-2 h-[40px] text-white font-bold border-none rounded-md btn-gradient"
@@ -87,7 +90,7 @@ const Footer = () => {
               </button>
             </div>
             {subscribeStatus && (
-              <p className={`mt-2 text-sm ${subscribeStatus.includes('Successfully') ? 'text-green-600' : 'text-red-600'}`}>
+              <p id="newsletter-status" className={`mt-2 text-sm ${subscribeStatus.includes('Successfully') ? 'text-green-600' : 'text-red-600'}`} role="status" aria-live="polite">
                 {subscribeStatus}
               </p>
             )}
@@ -97,7 +100,7 @@ const Footer = () => {
           <div className='flex gap-4 justify-between'>
             {/* Company Links */}
             <div className=" max-sm:text-[12px]">
-              <p className="pb-4 font-bold">Company</p>
+              <h3 className="pb-4 font-bold">Company</h3>
               <ul className="grid grid-cols-1 gap-5">
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/service">Service</Link></li>
@@ -109,7 +112,7 @@ const Footer = () => {
 
             {/* Resources Links */}
             <div className="ml-15 max-sm:text-[12px]">
-              <p className="pb-4 font-bold">Resources</p>
+              <h3 className="pb-4 font-bold">Resources</h3>
               <ul className="grid grid-cols-1 gap-5">
                 <li><Link href="/blog">Blogs</Link></li>
                 <li><Link href="/events">Events</Link></li>
@@ -120,7 +123,7 @@ const Footer = () => {
 
             {/* Utility Links */}
             <div className="ml-15 max-sm:text-[12px]">
-              <p className="pb-4 font-bold">Utility</p>
+              <h3 className="pb-4 font-bold">Utility</h3>
               <ul className="grid grid-cols-1 gap-5">
                 <li><Link href="/privacy">Privacy Policy</Link></li>
                 <li><Link href="/help">Help</Link></li>
@@ -130,7 +133,7 @@ const Footer = () => {
           </div>
         </div>
         <Gotop />
-      </div>
+      </footer>
 
       {/* Footer Bottom */}
       <div className="w-full h-10 bg-black text-white flex justify-between items-center font-medium px-[70px] max-sm:justify-center max-sm:items-center max-sm:px-0">

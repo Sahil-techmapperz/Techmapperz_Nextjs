@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import moment from 'moment';
 import PaginationButtons from './PaginationButtons';
 import getallblogs from '@/lib/getallblogs';
@@ -17,10 +18,13 @@ const BlogList = async ({ page }) => {
               key={post._id}
               className="group border rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:rotate-1"
             >
-              <img
+              <Image
                 src={post.images[0]}
                 alt={post.title}
+                width={400}
+                height={192}
                 className="w-full h-48 object-cover transition-opacity duration-300 group-hover:opacity-90"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="p-4">
                 <div className="flex justify-between text-xs  mb-2">

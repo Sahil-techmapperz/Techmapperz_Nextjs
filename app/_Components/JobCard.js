@@ -163,7 +163,7 @@ const JobCard = ({ job }) => {
                   <>
                     <p><strong>Roles & Responsibilities -</strong></p>
                     <ul className="list-disc list-inside text-gray-600">
-                      {job.roleResponsibility && job.roleResponsibility.split('•').filter(item => item.trim() !== '').map(item => <li>{item}</li>)}
+                      {job.roleResponsibility && job.roleResponsibility.split('•').filter(item => item.trim() !== '').map((item, index) => <li key={index}>{item}</li>)}
                     </ul>
                   </>
                 ) : null}
@@ -171,7 +171,7 @@ const JobCard = ({ job }) => {
                   <>
                     <p><strong>Perks & Benefits -</strong></p>
                     <ul className="list-disc list-inside text-gray-600">
-                      {job.perksBenefits && job.perksBenefits.split('•').filter(item => item.trim() !== '').map(item => <li>{item}</li>)}
+                      {job.perksBenefits && job.perksBenefits.split('•').filter(item => item.trim() !== '').map((item, index) => <li key={index}>{item}</li>)}
                     </ul>
                   </>
                 ) : null}
