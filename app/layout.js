@@ -1,11 +1,15 @@
 import { Poppins } from 'next/font/google';
 import "./globals.css";
-import Navbar from './_Components/Navbar';
-import Footer from './_Components/Footer';
-import Script from 'next/script';
-import SocialMediaIcons from './_Components/SocialMediaIcons';
 import dynamic from 'next/dynamic';
-import SlickCarouselProvider from './_Components/SlickCarouselProvider';
+import Script from 'next/script';
+
+// Critical components loaded immediately
+import Navbar from './_Components/Navbar';
+
+// Non-critical components lazy loaded
+const Footer = dynamic(() => import('./_Components/Footer'), { ssr: false });
+const SocialMediaIcons = dynamic(() => import('./_Components/SocialMediaIcons'), { ssr: false });
+const SlickCarouselProvider = dynamic(() => import('./_Components/SlickCarouselProvider'), { ssr: false });
 import { Montserrat } from "next/font/google";
 import Head from 'next/head';
 
@@ -37,11 +41,10 @@ export default function RootLayout({ children }) {
       </Head>
 
       <body className={montserrat.variable}>
-       
+        <Navbar />
+        <main>{children}</main>
         <SlickCarouselProvider>
-          <Navbar />
           <SocialMediaIcons />
-          {children}
           <Footer />
         </SlickCarouselProvider>
       
@@ -49,7 +52,7 @@ export default function RootLayout({ children }) {
         {/* Meta Pixel Code */}
         <Script
           id="meta-pixel"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -63,15 +66,15 @@ export default function RootLayout({ children }) {
         {/* Google Ads & Analytics Scripts */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=AW-10860570322`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SWB2CH4ZWC"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           id="google-ads"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         >
           {`
             window.dataLayer = window.dataLayer || [];
@@ -85,7 +88,7 @@ export default function RootLayout({ children }) {
         {/* Google Tag Manager Script */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         >
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

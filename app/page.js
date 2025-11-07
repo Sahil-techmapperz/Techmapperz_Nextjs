@@ -6,14 +6,39 @@ import Features from './_Components/Features';
 // Add page-level revalidation for ISR
 export const revalidate = 3600; // 1 hour
 
-const Portfolio = dynamic(() => import('./_Components/Portfolio'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
-const Technology = dynamic(() => import('./_Components/Technology'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
-const IndustryExpertise = dynamic(() => import('./_Components/Industry_Expertise'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
-const AboutUs = dynamic(() => import('./_Components/AboutUs'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
-const HappyClients = dynamic(() => import('./_Components/HappyClients'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
-const OurBlog = dynamic(() => import('./_Components/OurBlog'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
-const Testimonial = dynamic(() => import('./_Components/Testimonial'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
-const Homecontact = dynamic(() => import('./_Components/Homecontact'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
+// Aggressive lazy loading with intersection observer
+const Portfolio = dynamic(() => import('./_Components/Portfolio'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
+const Technology = dynamic(() => import('./_Components/Technology'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
+const IndustryExpertise = dynamic(() => import('./_Components/Industry_Expertise'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
+const AboutUs = dynamic(() => import('./_Components/AboutUs'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
+const HappyClients = dynamic(() => import('./_Components/HappyClients'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
+const OurBlog = dynamic(() => import('./_Components/OurBlog'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
+const Testimonial = dynamic(() => import('./_Components/Testimonial'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
+const Homecontact = dynamic(() => import('./_Components/Homecontact'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[200px]" />,
+});
 import HoverButton from './_Components/ExpandButton';
 import Link from 'next/link';
 import company_logo from "@/public/logo.webp"
@@ -91,13 +116,27 @@ const Home = () => {
         </div>
       </section>
 
-      <Technology />
-      <IndustryExpertise />
-      <AboutUs />
-      <HappyClients />
-      <OurBlog />
-      <Testimonial />
-      <Homecontact />
+      <div className="lazy-section">
+        <Technology />
+      </div>
+      <div className="lazy-section">
+        <IndustryExpertise />
+      </div>
+      <div className="lazy-section">
+        <AboutUs />
+      </div>
+      <div className="lazy-section">
+        <HappyClients />
+      </div>
+      <div className="lazy-section">
+        <OurBlog />
+      </div>
+      <div className="lazy-section">
+        <Testimonial />
+      </div>
+      <div className="lazy-section">
+        <Homecontact />
+      </div>
     </div>
   );
 };

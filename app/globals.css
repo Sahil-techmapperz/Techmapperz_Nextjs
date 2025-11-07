@@ -15,12 +15,30 @@ html {
 .hero-section {
   background-color: #000;
   min-height: 90vh;
+  contain: layout style paint;
 }
 
 /* Optimize font loading */
 @font-face {
   font-family: 'Montserrat';
   font-display: swap;
+}
+
+/* Reduce main thread blocking */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 200px;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Font Family Setup */

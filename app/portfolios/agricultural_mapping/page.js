@@ -56,7 +56,7 @@ const Gis = () => {
 
               <div className="h-1 w-full bg-gradient-to-r from-transparent to-gray-500"></div>
               <p className="mb-2">
-                <strong>Precision Farming:</strong> The implementation of Precision Farming applies area-specific management procedures based on spatial data for the purpose of increasing crop yields while minimizing resource use losses.
+                <strong>Precision Farming:</strong> The implementation of  Precision Farming applies area-specific management procedures based on spatial data for the purpose of increasing crop yields while minimizing resource use losses.
               </p>
               <p className="mb-2">
                 <strong>Soil and Crop Analysis:</strong> The analysis of soil and crops includes mapping land conditions for the improvement of both soil sustainability and crop productivity levels.
