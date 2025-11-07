@@ -13,18 +13,12 @@ let CaseStudiesData = [
         ]
     },
     {
-        image: "/Photos/Agricultural_Mapping.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Agricultural Mapping", link: "/portfolios/agricultural_mapping", details: [
-            "We have done the Landuse and Landcover mapping with the help of Higher esolution drone imagery. Digitization of more than 12 layers and 9 sub layers for mapping are done.",
-
-        ]
-    },
-    {
         image: "/Photos/IT_3.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, PHP, MySQL, Apache/Nginx", name: "SHRC", link: "/portfolios/shrc", details: [
             "First of all, a specialized platform called the Special Human Rights Commission (SHRC) aims to encourage innovation and cooperation among welfare societies. Built using the CodeIgniter 4 framework and PHP, SHRC provides a secure environment for members to communicate and engage. By offering features like personalized notifications and two-step OTP verification, the platform enhances community engagement while ensuring security.",
         ]
     },
     {
-        image: "/Photos/Land_Use_Land_Cover_Mapping.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Land-Use  Land -Cover Mapping", link: "/portfolios/landcover_mapping", details: [
+        image: "/Photos/Land_Use_Land_Cover_Mapping.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Urban & Rural Areas 2D Feature Extraction", link: "/portfolios/landcover_mapping", details: [
             "Landuse and Landcover mapping involves creating detailed representations of human settlements using geographic information systems. This entails identifying and delineating residential zones, urban areas, rural settlements, and other inhabited regions. By overlaying various data layers such as population density, building footprints, infrastructure, and land use, GIS facilitates comprehensive analysis and visualization of habitation patterns. This information is crucial for urban planning, disaster management, public health, and resource allocation.",
 
         ]
