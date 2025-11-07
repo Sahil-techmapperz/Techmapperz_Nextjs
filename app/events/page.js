@@ -21,9 +21,11 @@ export const metadata = {
   },
 };
 
+export const revalidate = 600;
+
 const Events = async () => {
   // Fetch dynamic data from API
-  const events = await getEvents( 'completed');
+  const events = await getEvents(undefined, 'completed');
   const cultureHighlights = await getCultureData();
   const workspaceImages = await getWorkspaceImages();
 
@@ -38,8 +40,8 @@ const Events = async () => {
       <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex flex-col justify-center items-center bg-cover bg-center" 
-               style={{ backgroundImage: 'url("/lifeatTechmapperz/img_8.webp")' }}>
+      <section className="relative h-[70vh] flex flex-col justify-center items-center overflow-hidden">
+        <Image src="/lifeatTechmapperz/img_8.webp" alt="Life at Techmapperz background" fill priority className="object-cover" sizes="100vw" />
         <div className='absolute inset-0 w-full h-full bg-black/70'></div>
         <div className='relative z-10 text-center space-y-6'>
           <h1 className='text-6xl max-sm:text-4xl text-white font-bold tracking-tight'>
@@ -92,9 +94,14 @@ const Events = async () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events
             .sort((a, b) => {
-              // Sort featured events first
+              // Sort featured events first, then by most recent date
               if (a.featured && !b.featured) return -1;
               if (!a.featured && b.featured) return 1;
+              const da = new Date(a.date).getTime();
+              const db = new Date(b.date).getTime();
+              if (!isNaN(da) && !isNaN(db)) {
+                return db - da; // newer first
+              }
               return 0;
             })
             .map((event) => (
@@ -114,13 +121,14 @@ const Events = async () => {
               )}
               
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={event.image}
                   alt={event.title}
-                  width={400}
-                  height={250}
-                  unoptimized
+                  width={800}
+                  height={450}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-all duration-500"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  priority={false}
                 />
                 
                 <div className="absolute top-4 left-4">
@@ -178,12 +186,12 @@ const Events = async () => {
 
               return (
                 <div key={image._id || image.id} className={`${getGridClasses(image.type)} relative group overflow-hidden rounded-xl`}>
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.alt}
-                    width={image.width || 400}
-                    height={image.height || 300}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500"
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-all duration-500"
+                    sizes="(min-width: 1024px) 16vw, (min-width: 768px) 25vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                 </div>

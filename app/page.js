@@ -1,14 +1,16 @@
 import ScrollToTop from './_Components/ScrollToTop';
+import dynamic from 'next/dynamic';
 import CustomCarousel from './_Components/HomeCarousel';
 import Features from './_Components/Features';
-import Technology from './_Components/Technology';
-import IndustryExpertise from './_Components/Industry_Expertise';
-import AboutUs from './_Components/AboutUs';
-import HappyClients from './_Components/HappyClients';
-import OurBlog from './_Components/OurBlog';
-import Testimonial from './_Components/Testimonial';
-import Homecontact from './_Components/Homecontact';
-import Portfolio from './_Components/Portfolio';
+
+const Portfolio = dynamic(() => import('./_Components/Portfolio'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+const Technology = dynamic(() => import('./_Components/Technology'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+const IndustryExpertise = dynamic(() => import('./_Components/Industry_Expertise'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+const AboutUs = dynamic(() => import('./_Components/AboutUs'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+const HappyClients = dynamic(() => import('./_Components/HappyClients'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+const OurBlog = dynamic(() => import('./_Components/OurBlog'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+const Testimonial = dynamic(() => import('./_Components/Testimonial'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+const Homecontact = dynamic(() => import('./_Components/Homecontact'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
 import HoverButton from './_Components/ExpandButton';
 import Link from 'next/link';
 import company_logo from "@/public/logo.webp"
