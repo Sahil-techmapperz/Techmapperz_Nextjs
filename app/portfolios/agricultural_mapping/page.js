@@ -40,7 +40,8 @@ const Gis = () => {
           <Image src={Gis_casestudies_1_banner} className='w-[40%] object-contain max-sm:w-[90%] my-4 ' alt={Gis_casestudies_1_banner} />
           <p className='m-auto text-[20px] max-sm:text-[16px] font-[600]'>Agricultural Mapping</p>
           <p className='w-[65%] max-sm:w-full m-auto text-center'>
-            Agricultural mapping functions as an efficient methodology that enables the examination and supervision and management of agricultural resources. Integrated use of geospatial data produces beneficial crop-related intelligence which aids farmers and decision-making groups to maximize their agricultural results. Agricultural mapping system combines spatial analysis, remote sensing technology alongside field investigations which allows precise farming and better sustainability of resources as well as improved yield predictions.          </p>
+            Agricultural mapping functions as an efficient methodology that enables the examination and supervision and management of agricultural resources. Integrated use of geospatial data produces beneficial crop-related intelligence which aids farmers and decision-making groups to maximize their agricultural results. Agricultural mapping system combines spatial analysis, remote sensing technology alongside field investigations which allows precise farming and better sustainability of resources as well as improved yield predictions.
+          </p>
         </div>
 
         <div className="flex max-sm:flex-col-reverse gap-[50px] bg-gray-900 text-white py-[50px] px-[65px] max-sm:px-[20px]" style={{ background: "linear-gradient(90deg, #393939 44.98%, #010101 86.2%)" }}>
@@ -55,14 +56,14 @@ const Gis = () => {
 
               <div className="h-1 w-full bg-gradient-to-r from-transparent to-gray-500"></div>
               <p className="mb-2">
-                <strong>1.	Precision Farming:</strong>
-                The implementation of Precision Farming applies area-specific management procedures based on spatial data for the purpose of increasing crop yields while minimizing resource use losses.               </p>
+                <strong>Precision Farming:</strong> The implementation of Precision Farming applies area-specific management procedures based on spatial data for the purpose of increasing crop yields while minimizing resource use losses.
+              </p>
               <p className="mb-2">
-                <strong>2.	Soil and Crop Analysis: </strong>
-                The analysis of soil and crops includes mapping land conditions for the improvement of both soil sustainability and crop productivity levels.              </p>
+                <strong>Soil and Crop Analysis:</strong> The analysis of soil and crops includes mapping land conditions for the improvement of both soil sustainability and crop productivity levels.
+              </p>
               <p className="mb-2">
-                <strong>3.	Climate and Environmental Monitoring:</strong>
-                The monitoring system analyzes weather patterns together with drought levels and environmental elements that influence agricultural operations.              </p>
+                <strong>Climate and Environmental Monitoring:</strong> The monitoring system analyzes weather patterns together with drought levels and environmental elements that influence agricultural operations.
+              </p>
             </div>
             <div className="w-[35%] max-sm:w-full flex items-center justify-center">
               <Image src={GIS_OBJECTIVES} alt={GIS_OBJECTIVES} className="rounded-lg shadow-lg" />
@@ -89,7 +90,7 @@ const Gis = () => {
               <strong>Soil and Water Mapping:</strong> A comprehensive method to produce detailed soil composition and water resource mapping needs exists for establishing optimal irrigation practices together with effective fertilization techniques.
             </p>
             <p className="mb-2">
-              <strong>Yield Prediction Models:</strong>Supply chain optimization together with crop production estimation becomes possible through historical and multi-source data analysis in GIS formats.
+              <strong>Yield Prediction Models:</strong> Supply chain optimization together with crop production estimation becomes possible through historical and multi-source data analysis in GIS formats.
             </p>
           </div>
         </div>
@@ -107,12 +108,14 @@ const Gis = () => {
               <div className="h-1 w-full bg-gradient-to-r from-transparent to-gray-500"> </div>
               <ul className='list-disc m-8'>
                 <li className='mt-2'>
-                  Enhanced Decision-Making: The precise data allows farmers together with policy advocates to make informed decisions based on accurate information.
+                  <strong>Enhanced Decision-Making:</strong> The precise data allows farmers together with policy advocates to make informed decisions based on accurate information.
                 </li>
                 <li className='mt-2'>
-                  Sustainable Land Management: Sustainable Land Management assists in implementing conservation measures combined with tools that help find proper land use solutions and prevent soil from harming natural ecosystems.                 </li>
+                  <strong>Sustainable Land Management:</strong> Sustainable Land Management assists in implementing conservation measures combined with tools that help find proper land use solutions and prevent soil from harming natural ecosystems.
+                </li>
                 <li className='mt-2'>
-                  Disaster Preparedness and Mitigation: The system assists in predicting and handling agricultural dangers and threats including pest outbreaks and droughts as well as floods.                </li>
+                  <strong>Disaster Preparedness and Mitigation:</strong> The system assists in predicting and handling agricultural dangers and threats including pest outbreaks and droughts as well as floods.
+                </li>
               </ul>
             </div>
             <div className="w-[35%] max-sm:w-full flex items-center justify-center">
