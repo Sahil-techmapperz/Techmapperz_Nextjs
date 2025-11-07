@@ -68,6 +68,51 @@ let CaseStudiesData = [
     },
 
 
+
+
+
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+    {
+        image: "/Photos/IT_7.webp", category: "IT", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Techmapperz CRM", link: "/portfolios/crm", details: [
+            "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
+        ]
+    },
+
+
 ];
 
 async function GET(req, { params }) {
