@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import ScrollToTop from "../_Components/ScrollToTop";
 import Portfolio_banner from "@/public/Photos/Portfolio_banner.webp";
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Camera, 
   Cpu, 
@@ -75,12 +76,20 @@ function ProjectCard({ item, onOpen }) {
         </div>
         <div className="flex items-center justify-between">
           <div className="text-xs text-gray-400">Techmapperz</div>
-          <button
-            onClick={() => onOpen(item)}
-            className="inline-flex items-center gap-1 rounded-xl border border-gray-600 bg-gray-700 px-3 py-1.5 text-sm font-medium text-white hover:bg-[#00B0FE] hover:border-[#00B0FE] transition-colors"
-          >
-            View case <ArrowUpRight className="h-4 w-4" />
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => onOpen(item)}
+              className="inline-flex items-center gap-1 rounded-xl border border-gray-600 bg-gray-700 px-3 py-1.5 text-sm font-medium text-white hover:bg-gray-600 transition-colors"
+            >
+              Quick view
+            </button>
+            <Link
+              href={item.link}
+              className="inline-flex items-center gap-1 rounded-xl border border-[#00B0FE] bg-[#00B0FE] px-3 py-1.5 text-sm font-medium text-white hover:bg-[#0090d4] transition-colors"
+            >
+              View case <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
