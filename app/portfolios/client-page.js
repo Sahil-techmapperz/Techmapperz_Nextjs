@@ -99,13 +99,13 @@ function ProjectCard({ item, onOpen }) {
 function ProjectDrawer({ open, onClose, item }) {
   if (!open || !item) return null;
   return (
-    <div className="fixed inset-0 z-50 flex">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
       <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="ml-auto h-full w-full max-w-3xl overflow-y-auto rounded-l-2xl bg-gray-800 shadow-xl border-l border-gray-700">
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-700 bg-gray-800/90 p-4 backdrop-blur">
+      <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-gray-800 shadow-2xl border border-gray-600">
+        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-600 bg-gray-800 p-4">
           <div>
             <div className="text-xs text-gray-400">Techmapperz</div>
             <h3 className="text-lg font-semibold text-white">{item.title}</h3>
@@ -118,12 +118,12 @@ function ProjectDrawer({ open, onClose, item }) {
             <X className="h-5 w-5" />
           </button>
         </div>
-        <div className="p-5 lg:p-8">
-          <div className="mb-5 grid gap-4 md:grid-cols-2">
+        <div className="p-6 lg:p-8">
+          <div className="mb-6 grid gap-6 md:grid-cols-2">
             <div className="aspect-video overflow-hidden rounded-xl bg-gray-700">
-              <Image src={item.image} alt={item.title} width={400} height={225} className="h-full w-full object-cover" />
+              <Image src={item.image} alt={item.title} width={500} height={280} className="h-full w-full object-cover" />
             </div>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-2 text-sm text-gray-400">
                 <Badge><Building2 className="mr-1 h-3.5 w-3.5" /> {item.category || "Technology"}</Badge>
                 <Badge><MapPin className="mr-1 h-3.5 w-3.5" /> India</Badge>
@@ -142,21 +142,33 @@ function ProjectDrawer({ open, onClose, item }) {
           </div>
 
           <div className="mb-6">
-            <h4 className="mb-2 text-sm font-semibold tracking-wide text-gray-400">Technology Stack</h4>
-            <p className="text-sm text-gray-300">{item.techStack}</p>
+            <h4 className="mb-3 text-sm font-semibold tracking-wide text-gray-400">Technology Stack</h4>
+            <div className="flex flex-wrap gap-2">
+              {item.techStack && item.techStack.split(',').map((tech, index) => (
+                <Badge key={index}>{tech.trim()}</Badge>
+              ))}
+            </div>
           </div>
 
-          <div className="flex items-center justify-between rounded-2xl border border-gray-600 bg-gray-700 p-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl border border-gray-600 bg-gray-700 p-4">
             <div>
               <div className="text-xs text-gray-400">Need a similar solution?</div>
               <div className="text-sm font-medium text-white">Book a free consultation</div>
             </div>
-            <a
-              href={item.link || "#"}
-              className="inline-flex items-center gap-2 rounded-xl bg-[#00B0FE] px-4 py-2 text-sm font-medium text-white hover:bg-[#0090d4] transition-colors"
-            >
-              Get in touch <Rocket className="h-4 w-4" />
-            </a>
+            <div className="flex gap-3">
+              <Link
+                href={item.link || "#"}
+                className="inline-flex items-center gap-2 rounded-xl bg-[#00B0FE] px-4 py-2 text-sm font-medium text-white hover:bg-[#0090d4] transition-colors"
+              >
+                View full case <ArrowUpRight className="h-4 w-4" />
+              </Link>
+              <button
+                onClick={onClose}
+                className="inline-flex items-center gap-2 rounded-xl border border-gray-600 bg-gray-800 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 transition-colors"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
