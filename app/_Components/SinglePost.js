@@ -1,4 +1,5 @@
 import moment from 'moment';
+import Image from 'next/image';
 import CommentForm from './CommentForm';
 
 const SinglePost = ({ post }) => {
@@ -11,7 +12,7 @@ const SinglePost = ({ post }) => {
       <div className="flex flex-col md:flex-row gap-8 p-8">
         <div className="w-full">
           <div className="mb-12">
-            <img src={post.images[0]} alt={post.title} className="w-full mb-4 rounded-md" />
+            <Image src={post.images[0]} alt={post.title} width={800} height={400} className="w-full mb-4 rounded-md" sizes="(max-width: 768px) 100vw, 800px" priority />
             <div className="flex justify-between text-sm font-bold mb-4">
               <div>{`BY ${post.author?.name?.toUpperCase() ?? "Unknown"}`}</div>
               <div>{`COMMENTS ${post.comments.length}`}</div>

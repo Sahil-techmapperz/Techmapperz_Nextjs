@@ -4,17 +4,22 @@ import Navbar from './_Components/Navbar';
 import Footer from './_Components/Footer';
 import Script from 'next/script';
 import SocialMediaIcons from './_Components/SocialMediaIcons';
-import ZohoChat from './_Components/ZohoChat';
+import dynamic from 'next/dynamic';
 import SlickCarouselProvider from './_Components/SlickCarouselProvider';
 import { Montserrat } from "next/font/google";
-import Head from 'next/head'; // Add this at the top
+import Head from 'next/head';
+
+// Dynamic imports for non-critical components
+const ZohoChat = dynamic(() => import('./_Components/ZohoChat'), { ssr: false });
 
 
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "700"], // Adjust as needed
-  variable: "--font-montserrat", // CSS Variable
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
+  display: 'swap', // Improve font loading performance
+  preload: true,
 });
 
 
@@ -25,6 +30,11 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
+        {/* Preload critical assets */}
+        <link rel="preload" href="/Photos/3Drendered_digital_Ear.webp" as="image" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
       </Head>
 
       <body className={montserrat.variable}>

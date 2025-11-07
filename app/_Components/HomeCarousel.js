@@ -101,10 +101,12 @@ const CustomCarousel = () => {
             <Image
               src={Hero_img}
               alt="IT & GIS Solutions"
+              width={800}
               height={800}
               className="object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:rotate-x hover:rotate-y-6"
               sizes="(min-width: 1024px) 50vw, 100vw"
               priority
+              quality={90}
             />
           </div>
 

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Input, InputGroup, InputRightElement, Button, ChakraProvider } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
+import Image from 'next/image';
 import moment from 'moment';
 
 const SearchPosts = () => {
@@ -55,7 +56,7 @@ const SearchPosts = () => {
                   {result.title}
                 </Link>
                 <div className="flex items-center mt-2">
-                  <img src={result.images[0]} alt={result.title} className="w-24 h-24 object-cover rounded-md mr-4" />
+                  <Image src={result.images[0]} alt={result.title} width={96} height={96} className="w-24 h-24 object-cover rounded-md mr-4" sizes="96px" />
                   <div className="flex flex-col">
                     <span className="text-gray-500">{moment(result.created_at).format('YYYY-MM-DD')}</span>
                     <p className="text-sm">{result.content.slice(0, 100) + "..."}</p>

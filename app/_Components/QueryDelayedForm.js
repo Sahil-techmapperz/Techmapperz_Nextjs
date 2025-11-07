@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { AiOutlineClose } from 'react-icons/ai';
 
 const QueryDelayedForm = () => {
@@ -32,8 +33,8 @@ const QueryDelayedForm = () => {
               <AiOutlineClose /> {/* Close Icon */}
             </button>
             <div className='w-full relative'>
-              <img src={"/Photos/Popuop_Banner.png"} alt="Main Banner" className="w-full h-[300px] object-cover" />
-              <img src={"/Photos/popup_form_watermark.png"} alt="Watermark" className="absolute top-0 left-0 w-[180px]" />
+              <Image src={"/Photos/Popuop_Banner.png"} alt="Main Banner" width={600} height={300} className="w-full h-[300px] object-cover" sizes="(max-width: 768px) 100vw, 600px" />
+              <Image src={"/Photos/popup_form_watermark.png"} alt="Watermark" width={180} height={120} className="absolute top-0 left-0 w-[180px]" sizes="180px" />
 
               <div className="absolute lg:justify-between lg:px-6 inset-0 flex items-center text-center px-2">
                 <div className='text-white px-2'>
@@ -59,7 +60,7 @@ const QueryDelayedForm = () => {
                   
                   <div className="z-10  font-bold  bg-[#00CAFF] w-full">
                   <Link href={"/contact"} className='flex justify-center items-center gap-2 max-sm:text-[12px]'>
-                    Get Started <img className='max-sm:hidden' src='/Photos/right-arrow.png' alt="Right Arrow" />
+                    Get Started <Image className='max-sm:hidden' src='/Photos/right-arrow.png' alt="Right Arrow" width={20} height={20} sizes="20px" />
                     </Link>
                   </div>
                  

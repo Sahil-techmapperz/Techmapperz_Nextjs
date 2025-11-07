@@ -3,14 +3,17 @@ import dynamic from 'next/dynamic';
 import CustomCarousel from './_Components/HomeCarousel';
 import Features from './_Components/Features';
 
-const Portfolio = dynamic(() => import('./_Components/Portfolio'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
-const Technology = dynamic(() => import('./_Components/Technology'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
-const IndustryExpertise = dynamic(() => import('./_Components/Industry_Expertise'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
-const AboutUs = dynamic(() => import('./_Components/AboutUs'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
-const HappyClients = dynamic(() => import('./_Components/HappyClients'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
-const OurBlog = dynamic(() => import('./_Components/OurBlog'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
-const Testimonial = dynamic(() => import('./_Components/Testimonial'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
-const Homecontact = dynamic(() => import('./_Components/Homecontact'), { ssr: true, loading: () => <div className="min-h-[200px]" /> });
+// Add page-level revalidation for ISR
+export const revalidate = 3600; // 1 hour
+
+const Portfolio = dynamic(() => import('./_Components/Portfolio'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
+const Technology = dynamic(() => import('./_Components/Technology'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
+const IndustryExpertise = dynamic(() => import('./_Components/Industry_Expertise'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
+const AboutUs = dynamic(() => import('./_Components/AboutUs'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
+const HappyClients = dynamic(() => import('./_Components/HappyClients'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
+const OurBlog = dynamic(() => import('./_Components/OurBlog'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
+const Testimonial = dynamic(() => import('./_Components/Testimonial'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-900 animate-pulse" /> });
+const Homecontact = dynamic(() => import('./_Components/Homecontact'), { ssr: false, loading: () => <div className="min-h-[200px] bg-gray-800 animate-pulse" /> });
 import HoverButton from './_Components/ExpandButton';
 import Link from 'next/link';
 import company_logo from "@/public/logo.webp"
@@ -34,17 +37,21 @@ export const metadata = {
     description: "Techmapperz is a leading IT, GIS, and Drone Solutions provider company in India.",
     url: BASE_URL,
     type: "website",
-    // images: [
-    //   {
-    //     url: "public/logo.webp",
-    //     width: 800,
-    //     height: 600,
-    //     alt: "Techmapperz Logo",
-    //   },
-    // ],
+    images: [
+      {
+        url: `${BASE_URL}/logo.webp`,
+        width: 800,
+        height: 600,
+        alt: "Techmapperz Logo",
+      },
+    ],
   },
   alternates: {
     canonical: BASE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

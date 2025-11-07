@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Critical performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Preload hero background to prevent flash */
+.hero-section {
+  background-color: #000;
+  min-height: 90vh;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+}
+
 /* Font Family Setup */
 
 @layer base {
