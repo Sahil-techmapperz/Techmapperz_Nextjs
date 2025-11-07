@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import ScrollToTop from "../_Components/ScrollToTop";
+import Portfolio_banner from "@/public/Photos/Portfolio_banner.webp";
 import Image from "next/image";
 import { 
   Camera, 
@@ -241,11 +242,31 @@ const Casestudies = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="min-h-screen bg-gray-900">
       <ScrollToTop />
       
-      {/* HERO */}
-      <header className="relative mx-auto max-w-7xl px-4 pb-10 pt-12 sm:pt-16 lg:px-6">
+      {/* HERO BANNER */}
+      <div className="relative w-full">
+        <Image
+          src={Portfolio_banner}
+          className="w-full h-[300px] md:h-[500px] object-cover"
+          alt="Portfolio Banner"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center">
+          <p className="text-center text-4xl md:text-6xl text-white font-bold px-4">
+            Our Portfolio
+          </p>
+          <h1 className="text-center text-lg md:text-xl text-gray-200 mt-4 px-4 md:px-8 md:w-[50%]">
+            Explore our comprehensive portfolio of IT and GIS solutions
+          </h1>
+        </div>
+      </div>
+
+      {/* MODERN PORTFOLIO SECTION */}
+      <div className="bg-gradient-to-b from-gray-900 to-gray-800">
+        <header className="relative mx-auto max-w-7xl px-4 pb-10 pt-12 sm:pt-16 lg:px-6">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-600 bg-gray-800 px-3 py-1 text-xs text-gray-300">
           <Filter className="h-3.5 w-3.5" /> Portfolio Showcase
         </div>
@@ -296,9 +317,9 @@ const Casestudies = () => {
             />
           </div>
         </div>
-      </header>
+        </header>
 
-      {/* KPI STRIP */}
+        {/* KPI STRIP */}
       <section className="mx-auto max-w-7xl px-4 lg:px-6">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-2xl border border-gray-600 bg-gray-800 p-4">
@@ -372,7 +393,8 @@ const Casestudies = () => {
             Start a project <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
-      </main>
+        </main>
+      </div>
 
       <ProjectDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} item={currentProject} />
     </div>
