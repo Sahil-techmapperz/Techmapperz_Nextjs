@@ -256,4 +256,53 @@
     <loc>https://techmapperz.com/sitemap</loc>
     <priority>0.3</priority>
   </url>
+
+  <!-- Additional Pages -->
+  <url>
+    <loc>https://techmapperz.com/events</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://techmapperz.com/thankyou</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Technology Stack Pages -->
+  <url>
+    <loc>https://techmapperz.com/technology/react</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://techmapperz.com/technology/nodejs</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://techmapperz.com/technology/python</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://techmapperz.com/technology/flutter</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://techmapperz.com/technology/android</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://techmapperz.com/technology/nextjs</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://techmapperz.com/technology/mongodb</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
