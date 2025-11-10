@@ -2,35 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Critical performance optimizations */
-* {
-  box-sizing: border-box;
+/* SEO-friendly skip link */
+.skip-link {
+  @apply absolute left-0 top-0 z-50 bg-blue-600 text-white px-4 py-2 rounded-br-lg transform -translate-y-full focus:translate-y-0 transition-transform;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Performance optimizations */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Improve focus visibility for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-blue-500 outline-offset-2;
+  }
+  
+  /* Hide focus ring for mouse users */
+  *:focus:not(:focus-visible) {
+    @apply outline-none;
+  }
 }
 
-/* Preload hero background to prevent flash */
-.hero-section {
-  background-color: #000;
-  min-height: 90vh;
-  contain: layout style paint;
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
 }
 
-/* Optimize font loading */
-@font-face {
-  font-family: 'Montserrat';
-  font-display: swap;
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Reduce main thread blocking */
+/* Lazy loading placeholder */
 .lazy-section {
-  content-visibility: auto;
-  contain-intrinsic-size: 200px;
+  min-height: 200px;
 }
 
-/* Optimize animations */
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Print styles for better SEO */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    color: black !important;
+    background: white !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+}
+
+/* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -38,239 +86,12 @@ html {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-/* Accessibility improvements */
-/* Focus visibility */
-:focus-visible {
-  outline: 2px solid #0ea5e9;
-  outline-offset: 2px;
-}
-
-/* Skip to main content */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 1000;
-  transform: translateY(-100%);
-  transition: transform 0.3s;
-}
-
-.skip-link:focus {
-  transform: translateY(0%);
-}
-
-/* Improve contrast for gray text */
-.text-gray-400 {
-  color: #9ca3af !important;
-}
-
-.text-gray-300 {
-  color: #d1d5db !important;
-}
-
-/* Better touch targets */
-a, button {
-  min-height: 44px;
-  min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Screen reader only content */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Font Family Setup */
-
-@layer base {
-  html {
-    font-family: "GT Sectra Fine", Palatino, serif;
-  }
-}
-
-.case-study-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.case-study-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  transform: translateY(200%);
-  transition: transform 0.5s ease;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.case-study-container:hover .case-study-info {
-  transform: translateY(0);
-}
-
-ul.custom-list li::marker {
-  font-size: 50px;
-  color: #F83131;
-  vertical-align: bottom;
-}
-
-ul.custom-list {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-ul.custom-list li {
-  font-size: 14px;
-  color: white;
-}
-
-.active-category {
-  color: #F83131;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.parallax {
-  background-image: url('/Photos/home_about_BG.webp');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 500px;
-}
-
-.career_why_choose_us {
-  transition: all ease-in-out 0.5s;
-}
-
-.career_why_choose_us:hover {
-  color: white !important;
-  background: #396BA9;
-  transform: scale(1.1);
-  transition: all ease-in-out 0.5s;
-}
-
-.career_why_choose_us:hover p {
-  color: white !important;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-blink {
-  animation: blink 1s infinite;
-}
-
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #a0aec0 #edf2f7;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #a0aec0;
-  border-radius: 8px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #edf2f7;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.animation-delay-200 {
-  animation-delay: 200ms;
-}
-
-
-.custom-button {
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  border-radius: 9999px;
-  /* Fully rounded corners */
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease-in-out;
-  /* Smooth transition */
-}
-
-.custom-button:hover {
-  background: white;
-  color: black;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari and Opera */
-}
-
-.scroll-container {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overscroll-behavior: contain;
-}
-
-.scroll-item {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.scroll-lock {
-  overflow: hidden;
-  height: 100vh;
+/* Font display swap for performance */
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
 }

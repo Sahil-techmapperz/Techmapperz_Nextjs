@@ -56,28 +56,86 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; 
 
 export const metadata = {
   title: "IT Company | GIS Services Company | Drone Survey | Techmapperz | India",
-  description: "Techmapperz is a leading IT, GIS, and Drone Solutions provider company in India.",
+  description: "Techmapperz is a leading IT, GIS, and Drone Solutions provider company in India. From custom web and app development to CRM systems and drone services, we streamline operations, drive data-driven decisions, and fuel sustainable growth for organizations of every scale.",
+  keywords: [
+    'IT company India',
+    'GIS services company',
+    'drone survey India',
+    'web development company',
+    'mobile app development',
+    'CRM development',
+    'custom software development',
+    'GIS mapping services',
+    'drone data processing',
+    'spatial analysis',
+    'geographic information systems',
+    'digital transformation',
+    'technology consulting India',
+    'software solutions',
+    'data digitization',
+    'geospatial solutions',
+    'drone surveying',
+    'web application development',
+    'enterprise software'
+  ].join(', '),
+  authors: [{ name: 'Techmapperz Team' }],
+  creator: 'Techmapperz',
+  publisher: 'Techmapperz',
   openGraph: {
-    title: "IT Company | GIS Services Company | Drone Survey | Techmapperz | India",
-    description: "Techmapperz is a leading IT, GIS, and Drone Solutions provider company in India.",
+    title: "Leading IT & GIS Solutions Company | Techmapperz India",
+    description: "Transform your business with Techmapperz's comprehensive IT and GIS solutions. We offer web development, mobile apps, CRM systems, drone surveys, GIS mapping, and data digitization services across India.",
     url: BASE_URL,
+    siteName: 'Techmapperz',
     type: "website",
+    locale: 'en_US',
     images: [
       {
         url: `${BASE_URL}/logo.webp`,
+        width: 1200,
+        height: 630,
+        alt: "Techmapperz - Leading IT & GIS Solutions Company in India",
+      },
+      {
+        url: `${BASE_URL}/Photos/company_logo.webp`,
         width: 800,
         height: 600,
-        alt: "Techmapperz Logo",
+        alt: "Techmapperz Company Logo",
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@techmapperz',
+    creator: '@techmapperz',
+    title: "Leading IT & GIS Solutions Company | Techmapperz India",
+    description: "Transform your business with comprehensive IT and GIS solutions. Web development, mobile apps, CRM systems, drone surveys & more.",
+    images: [`${BASE_URL}/logo.webp`],
+  },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      'en-US': BASE_URL,
+      'en-IN': BASE_URL
+    }
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  category: 'Technology Services',
+  classification: 'Business',
+  other: {
+    'geo.region': 'IN',
+    'geo.placename': 'India',
+    'business:contact_data:country_name': 'India'
+  }
 };
 
 
