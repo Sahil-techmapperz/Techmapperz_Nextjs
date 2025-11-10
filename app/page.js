@@ -1,47 +1,93 @@
 import ScrollToTop from './_Components/ScrollToTop';
 import dynamic from 'next/dynamic';
-import CustomCarousel from './_Components/HomeCarousel';
-import Features from './_Components/Features';
+
+// Critical above-the-fold components - load immediately for mobile performance
+const CustomCarousel = dynamic(() => import('./_Components/HomeCarousel'), {
+  ssr: true, // Enable SSR for critical above-the-fold content
+  loading: () => (
+    <div className="h-[400px] md:h-[600px] bg-gradient-to-br from-gray-900 to-black animate-pulse">
+      <div className="flex items-center justify-center h-full">
+        <div className="text-center space-y-4">
+          <div className="h-12 bg-gray-800 rounded w-96 mx-auto"></div>
+          <div className="h-6 bg-gray-700 rounded w-64 mx-auto"></div>
+        </div>
+      </div>
+    </div>
+  ),
+});
+
+const Features = dynamic(() => import('./_Components/Features'), {
+  ssr: true, // Enable SSR for important services section
+  loading: () => (
+    <div className="min-h-[300px] bg-black animate-pulse">
+      <div className="mx-auto max-w-7xl px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="h-32 bg-gray-800 rounded-xl"></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  ),
+});
 
 // Add page-level revalidation for ISR
 export const revalidate = 3600; // 1 hour
 
-// Aggressive lazy loading with intersection observer
+// Mobile-optimized lazy loading with intersection observer
 const Portfolio = dynamic(() => import('./_Components/Portfolio'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => (
+    <div className="min-h-[200px] lg:min-h-[400px] bg-gray-900 animate-pulse">
+      <div className="mx-auto max-w-7xl px-4 py-12">
+        <div className="h-8 bg-gray-800 rounded w-64 mx-auto mb-8"></div>
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="h-48 bg-gray-800 rounded-2xl"></div>
+          <div className="h-48 bg-gray-800 rounded-2xl"></div>
+        </div>
+      </div>
+    </div>
+  ),
 });
+
 const Technology = dynamic(() => import('./_Components/Technology'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => <div className="min-h-[150px] lg:min-h-[300px] bg-gray-800 animate-pulse" />,
 });
+
 const IndustryExpertise = dynamic(() => import('./_Components/Industry_Expertise'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => <div className="min-h-[150px] lg:min-h-[300px] bg-black animate-pulse" />,
 });
+
 const AboutUs = dynamic(() => import('./_Components/AboutUs'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => <div className="min-h-[150px] lg:min-h-[300px] bg-gray-900 animate-pulse" />,
 });
+
 const HappyClients = dynamic(() => import('./_Components/HappyClients'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => <div className="min-h-[100px] lg:min-h-[200px] bg-gray-800 animate-pulse" />,
 });
+
 const OurBlog = dynamic(() => import('./_Components/OurBlog'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => <div className="min-h-[150px] lg:min-h-[400px] bg-gray-900 animate-pulse" />,
 });
+
 const Testimonial = dynamic(() => import('./_Components/Testimonial'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => <div className="min-h-[150px] lg:min-h-[300px] bg-black animate-pulse" />,
 });
+
 const Homecontact = dynamic(() => import('./_Components/Homecontact'), { 
-  ssr: false, 
-  loading: () => <div className="min-h-[200px]" />,
+  ssr: false,
+  loading: () => <div className="min-h-[150px] lg:min-h-[400px] bg-gray-900 animate-pulse" />,
 });
 import HoverButton from './_Components/ExpandButton';
 import Link from 'next/link';
-import company_logo from "@/public/logo.webp"
+import company_logo from "@/public/logo.webp";
+import { LazySection } from './_hooks/useIntersectionObserver';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
 
@@ -165,31 +211,81 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='bg-gray-900' >
-        <Portfolio />
-      </section>
+      {/* Portfolio Section - Higher priority, loads sooner on mobile */}
+      <LazySection 
+        mobileRootMargin="150px 0px"
+        fallback={
+          <div className="min-h-[400px] bg-gray-900 animate-pulse">
+            <div className="mx-auto max-w-7xl px-4 py-12">
+              <div className="h-8 bg-gray-800 rounded w-64 mx-auto mb-8"></div>
+              <div className="grid gap-8 md:grid-cols-2">
+                <div className="h-48 bg-gray-800 rounded-2xl"></div>
+                <div className="h-48 bg-gray-800 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <section className='bg-gray-900'>
+          <Portfolio />
+        </section>
+      </LazySection>
 
-      <div className="lazy-section">
+      {/* Technology Section */}
+      <LazySection 
+        mobileRootMargin="100px 0px"
+        fallback={<div className="min-h-[300px] bg-gray-800 animate-pulse" />}
+      >
         <Technology />
-      </div>
-      <div className="lazy-section">
+      </LazySection>
+
+      {/* Industry Expertise Section */}
+      <LazySection 
+        mobileRootMargin="100px 0px"
+        fallback={<div className="min-h-[300px] bg-black animate-pulse" />}
+      >
         <IndustryExpertise />
-      </div>
-      <div className="lazy-section">
+      </LazySection>
+
+      {/* About Us Section */}
+      <LazySection 
+        mobileRootMargin="75px 0px"
+        fallback={<div className="min-h-[300px] bg-gray-900 animate-pulse" />}
+      >
         <AboutUs />
-      </div>
-      <div className="lazy-section">
+      </LazySection>
+
+      {/* Happy Clients Section */}
+      <LazySection 
+        mobileRootMargin="75px 0px"
+        fallback={<div className="min-h-[200px] bg-gray-800 animate-pulse" />}
+      >
         <HappyClients />
-      </div>
-      <div className="lazy-section">
+      </LazySection>
+
+      {/* Blog Section */}
+      <LazySection 
+        mobileRootMargin="50px 0px"
+        fallback={<div className="min-h-[400px] bg-gray-900 animate-pulse" />}
+      >
         <OurBlog />
-      </div>
-      <div className="lazy-section">
+      </LazySection>
+
+      {/* Testimonial Section */}
+      <LazySection 
+        mobileRootMargin="50px 0px"
+        fallback={<div className="min-h-[300px] bg-black animate-pulse" />}
+      >
         <Testimonial />
-      </div>
-      <div className="lazy-section">
+      </LazySection>
+
+      {/* Contact Section */}
+      <LazySection 
+        mobileRootMargin="25px 0px"
+        fallback={<div className="min-h-[400px] bg-gray-900 animate-pulse" />}
+      >
         <Homecontact />
-      </div>
+      </LazySection>
     </div>
   );
 };
