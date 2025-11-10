@@ -69,21 +69,6 @@ function ProjectCard({ item, onOpen }) {
             <Badge key={tech.trim()}>#{tech.trim()}</Badge>
           ))}
         </div>
-        <div className="mb-4 grid grid-cols-3 gap-3">
-          {item.category === "GIS" ? (
-            <>
-              <Metric icon={<Layers size={16} />} label="Projects Delivered" value="25+" />
-              <Metric icon={<BarChart3 size={16} />} label="Avg. CSAT" value="4.8/5" />
-              <Metric icon={<Gauge size={16} />} label="Sectors Served" value="8+" />
-            </>
-          ) : (
-            <>
-              <Metric icon={<Layers size={16} />} label="Status" value="Live" />
-              <Metric icon={<BarChart3 size={16} />} label="Quality" value="4.9/5" />
-              <Metric icon={<Gauge size={16} />} label="On Time" value="98%" />
-            </>
-          )}
-        </div>
         <div className="flex items-center justify-between">
           <div className="text-xs text-gray-400">Techmapperz</div>
           <div className="flex gap-2">
@@ -144,7 +129,6 @@ function ProjectDrawer({ open, onClose, item }) {
                 {item.category === "GIS" ? (
                   <>
                     <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
-                      <Metric icon={<Layers size={16} />} label="Projects Delivered" value="25+" />
                     </div>
                     <div className="rounded-xl border border-gray-600 bg-gray-700 p-3">
                       <Metric icon={<BarChart3 size={16} />} label="Avg. TAT Reduction" value="35%" />
@@ -346,28 +330,6 @@ const Casestudies = ({
           </div>
         </div>
         </header>
-
-        {/* KPI STRIP */}
-      <section className="mx-auto max-w-7xl px-4 lg:px-6">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-2xl border border-gray-600 bg-gray-800 p-4">
-            <div className="text-xs text-gray-400">Projects Delivered</div>
-            <div className="text-2xl font-bold text-white">50+</div>
-          </div>
-          <div className="rounded-2xl border border-gray-600 bg-gray-800 p-4">
-            <div className="text-xs text-gray-400">Client Satisfaction</div>
-            <div className="text-2xl font-bold text-white">4.9/5</div>
-          </div>
-          <div className="rounded-2xl border border-gray-600 bg-gray-800 p-4">
-            <div className="text-xs text-gray-400">Industries Served</div>
-            <div className="text-2xl font-bold text-white">15+</div>
-          </div>
-          <div className="rounded-2xl border border-gray-600 bg-gray-800 p-4">
-            <div className="text-xs text-gray-400">Avg. Time Saved</div>
-            <div className="text-2xl font-bold text-white">35%</div>
-          </div>
-        </div>
-      </section>
 
       {/* PROJECT GRID */}
       <main className="mx-auto max-w-7xl px-4 pb-16 pt-8 lg:px-6">

@@ -3,8 +3,31 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HoverButton from './ExpandButton'
 import { useState, useEffect } from 'react'
+import { enhancedPortfolioData } from '../portfolios/enhancedPortfolioData'
 
-const defaultProjects = [
+// Get featured projects from enhanced data (first 6 projects for home page)
+const getFeaturedProjects = () => {
+  return enhancedPortfolioData.slice(0, 6).map((item, index) => {
+    const slug = item.slug || item.link?.replace('/portfolios/', '') || 
+                item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    
+    return {
+      id: index + 1,
+      title: item.name,
+      category: item.category,
+      techStack: item.techStack,
+      description: Array.isArray(item.details) ? item.details[0] : item.details,
+      mobileDescription: (Array.isArray(item.details) ? item.details[0] : item.details)?.substring(0, 120) + '...',
+      image: item.image,
+      link: `/portfolios/${slug}`,
+      bgColor: item.category === 'IT' ? '#1e293b' : '#1a472a',
+      year: item.projectDetails?.year || '2024',
+      industry: item.projectDetails?.industry || 'Technology'
+    };
+  });
+};
+
+const legacyProjects = [
     // {
     //     id: 1,
     //     title: "CoCreateLabs",
@@ -49,7 +72,9 @@ const defaultProjects = [
     }
 ]
 
-const Portfolio = ({ projects = defaultProjects }) => {
+const Portfolio = ({ projects = null, showAll = false }) => {
+    // Use enhanced data by default, fallback to legacy if needed
+    const displayProjects = projects || (showAll ? enhancedPortfolioData : getFeaturedProjects());
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -62,44 +87,113 @@ const Portfolio = ({ projects = defaultProjects }) => {
     }, [])
 
     return (
-        <section className="">
+        <section className="py-8">
             <div className="container mx-auto px-4 max-w-[1600px] flex flex-col items-center">
-                <div className="text-center mb-4">
-                    <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-white">
+                {/* Modern Header */}
+                <div className="text-center mb-12">
+                    <h1 className="text-[36px] font-bold text-white mb-4">
                         Some of Our Work
-                        <div className="w-20 md:w-24 h-1 bg-blue-500 mx-auto mt-3 md:mt-4"></div>
                     </h1>
+                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                        Discover our latest projects showcasing cutting-edge technology solutions 
+                        and innovative approaches across IT and GIS domains.
+                    </p>
                 </div>
-                <div className="space-y-8 md:space-y-16 w-full md:w-[70%] flex flex-col">
-                    {projects.map((project) => (
-                        <Link href={project.link} key={project.id}>
-                            <div className="rounded-lg overflow-hidden hover:opacity-95 hover:scale-105 md:hover:scale-110 transition-all duration-300"
-                                style={{ backgroundColor: project.bgColor }}>
-                                <div className="flex flex-col md:flex-row items-center">
-                                    <div className="w-full md:w-3/5 p-4 md:p-8 flex flex-col justify-center order-2 md:order-1">
-                                        <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{project.title}</h3>
-                                        <p className="text-gray-300 text-sm md:text-base mb-3 md:mb-4">
-                                            {isMobile ? project.mobileDescription : project.description}
+
+                {/* Modern Portfolio Grid */}
+                <div className="grid gap-8 md:gap-12 w-full max-w-7xl">
+                    {displayProjects.map((project, index) => (
+                        <Link href={project.link} key={project.id || index} className="group">
+                            <div className="rounded-2xl border border-gray-600 bg-gray-800 overflow-hidden hover:border-[#00B0FE]/50 hover:shadow-lg hover:shadow-[#00B0FE]/10 transition-all duration-500 group-hover:scale-[1.02]">
+                                <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
+                                    {/* Content Section */}
+                                    <div className="w-full md:w-3/5 p-6 md:p-8 lg:p-10 flex flex-col justify-center order-2 md:order-1">
+                                        {/* Category Badge */}
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <span className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium ${
+                                                project.category === 'IT' 
+                                                    ? 'bg-[#00B0FE]/20 border-[#00B0FE]/30 text-[#00B0FE]' 
+                                                    : 'bg-green-500/20 border-green-500/30 text-green-400'
+                                            }`}>
+                                                {project.category === 'IT' ? '💻' : '🗺️'} {project.category}
+                                            </span>
+                                            {project.year && (
+                                                <span className="inline-flex items-center gap-1 rounded-full border border-gray-600 bg-gray-700 px-3 py-1 text-xs font-medium text-gray-300">
+                                                    📅 {project.year}
+                                                </span>
+                                            )}
+                                        </div>
+
+                                        {/* Project Title */}
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 group-hover:text-[#00B0FE] transition-colors duration-300">
+                                            {project.title}
+                                        </h3>
+
+                                        {/* Description */}
+                                        <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-4 leading-relaxed">
+                                            {isMobile ? project.mobileDescription : project.description?.substring(0, 200) + '...'}
                                         </p>
-                                        <div className="mt-1 md:mt-2">
-                                            <p className="text-gray-400 text-xs md:text-sm">
-                                                <span className="text-blue-400 font-medium">Tech Stack:</span> {project.techStack}
+
+                                        {/* Tech Stack */}
+                                        <div className="mb-4">
+                                            <p className="text-gray-400 text-xs md:text-sm mb-2">
+                                                <span className="font-medium text-[#00B0FE]">Technologies:</span>
                                             </p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.techStack?.split(',').slice(0, 4).map((tech, techIndex) => (
+                                                    <span key={techIndex} className="rounded-lg border border-gray-600 bg-gray-700 px-3 py-1 text-xs font-medium text-gray-300 hover:bg-gray-600 transition-colors">
+                                                        {tech.trim()}
+                                                    </span>
+                                                ))}
+                                                {project.techStack?.split(',').length > 4 && (
+                                                    <span className="rounded-lg border border-[#00B0FE]/30 bg-[#00B0FE]/10 px-3 py-1 text-xs font-medium text-[#00B0FE]">
+                                                        +{project.techStack.split(',').length - 4} more
+                                                    </span>
+                                                )}
+                                            </div>
+                                        </div>
+
+                                        {/* View Project Button */}
+                                        <div className="flex items-center gap-2 text-[#00B0FE] font-medium group-hover:gap-3 transition-all duration-300">
+                                            <span>View Project</span>
+                                            <svg className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
                                         </div>
                                     </div>
-                                    <div className="w-full md:w-2/6 relative aspect-[16/9] md:aspect-[4/3] order-1 md:order-2">
+
+                                    {/* Image Section */}
+                                    <div className="w-full md:w-2/5 relative aspect-[16/10] md:aspect-[4/3] order-1 md:order-2">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent z-10"></div>
                                         <Image
                                             src={project.image}
                                             alt={project.title}
                                             fill
-                                            className="object-cover"
-                                            priority
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            priority={index < 2}
                                         />
+                                        {/* Overlay Effect */}
+                                        <div className="absolute inset-0 bg-[#00B0FE]/0 group-hover:bg-[#00B0FE]/10 transition-all duration-500"></div>
                                     </div>
                                 </div>
                             </div>
                         </Link>
                     ))}
+                </div>
+
+                {/* Enhanced CTA Section */}
+                <div className="mt-12 text-center">
+                    <p className="text-gray-400 mb-6">
+                        Explore our complete portfolio of {enhancedPortfolioData.length}+ successful projects
+                    </p>
+                    <Link href="/portfolios">
+                        <button className="inline-flex items-center gap-2 rounded-xl bg-[#00B0FE] px-8 py-4 text-base font-medium text-white hover:bg-[#0090d4] hover:shadow-lg hover:shadow-[#00B0FE]/25 transition-all duration-300 transform hover:scale-105">
+                            View All Projects
+                            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -221,10 +221,10 @@ export default function PortfolioDetailTemplate({
               <div className="flex flex-wrap gap-4 pt-4">
                 {portfolioItem.link && portfolioItem.link !== "#" && (
                   <Link
-                    href={portfolioItem.link}
+                    href={'/portfolios'}
                     className="group inline-flex items-center gap-3 rounded-xl bg-[#00B0FE] px-8 py-4 text-base font-medium text-white hover:bg-[#0090d4] hover:shadow-lg hover:shadow-[#00B0FE]/25 transition-all duration-300 transform hover:scale-105"
                   >
-                    View Live Project 
+                    View Projects 
                     <ExternalLink className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 )}
@@ -239,7 +239,7 @@ export default function PortfolioDetailTemplate({
             </div>
 
             {/* Hero Image */}
-            <div className="relative lg:order-first lg:order-last">
+            <div className="relative  lg:order-last">
               {/* Main project image */}
               <div className="relative group">
                 <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-gray-600 bg-gray-800 shadow-2xl">

@@ -107,13 +107,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='py-8 max-sm:py-2 max-sm:px-4 px-[4rem] bg-gray-900' >
+      <section className='bg-gray-900' >
         <Portfolio />
-        <div className="flex justify-center mt-8 md:mt-12">
-          <Link href="/portfolios">
-            <HoverButton text="See Our All Works" />
-          </Link>
-        </div>
       </section>
 
       <div className="lazy-section">
