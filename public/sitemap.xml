@@ -94,18 +94,6 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Portfolio Categories -->
-  <url>
-    <loc>https://techmapperz.com/portfolios/IT</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://techmapperz.com/portfolios/GIS</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
   <!-- Portfolio Projects - IT -->
   <url>
     <loc>https://techmapperz.com/portfolios/fabcon</loc>
