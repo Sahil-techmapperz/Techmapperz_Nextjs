@@ -216,17 +216,27 @@ const Casestudies = ({
   };
 
   // Transform the static data to match the expected format
-  const transformedProjects = portfolioData.map((item, index) => ({
-    id: index,
-    title: item.name,
-    category: item.category,
-    techStack: item.techStack,
-    description: Array.isArray(item.details) ? item.details[0] : item.description,
-    mobileDescription: getMobileDescription(Array.isArray(item.details) ? item.details[0] : item.description, item.category),
-    image: item.image,
-    link: item.link || "#",
-    bgColor: "#1e293b"
-  }));
+  const transformedProjects = portfolioData.map((item, index) => {
+    // Generate slug for dynamic routing
+    const slug = item.slug || item.link?.replace('/portfolios/', '') || 
+                item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    
+    return {
+      id: index,
+      title: item.name,
+      category: item.category,
+      techStack: item.techStack,
+      description: Array.isArray(item.details) ? item.details[0] : item.description,
+      mobileDescription: getMobileDescription(Array.isArray(item.details) ? item.details[0] : item.description, item.category),
+      image: item.image,
+      technologies: item.techStack || "React, Node.js, MongoDB",
+      link: `/portfolios/${slug}`, // Use dynamic slug routing
+      period: item.projectDetails?.year || "2024",
+      location: item.projectDetails?.location || "India",
+      slug: slug, // Add slug for reference
+      bgColor: "#1e293b"
+    };
+  });
 
   const filteredProjects = useMemo(() => {
     let filtered = transformedProjects;
