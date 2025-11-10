@@ -18,7 +18,7 @@ let CaseStudiesData = [
         ]
     },
     {
-        image: "/Photos/Land_Use_Land_Cover_Mapping.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Urban & Rural Areas 2D Feature Extraction", link: "/portfolios/landcover_mapping", details: [
+        image: "/gis_images/Urban & Rural.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Urban & Rural Areas 2D Feature Extraction", link: "/portfolios/landcover_mapping", details: [
             "Landuse and Landcover mapping involves creating detailed representations of human settlements using geographic information systems. This entails identifying and delineating residential zones, urban areas, rural settlements, and other inhabited regions. By overlaying various data layers such as population density, building footprints, infrastructure, and land use, GIS facilitates comprehensive analysis and visualization of habitation patterns. This information is crucial for urban planning, disaster management, public health, and resource allocation.",
 
         ]
@@ -56,7 +56,7 @@ let CaseStudiesData = [
         ]
     },
     {
-        image: "/Photos/Gis_casestudies_1.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Hooghly", link: "/portfolios/city_mapping", details: [
+        image: "/Photos/Gis_casestudies_1.webp", category: "GIS", techStack: "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping", name: "Hooghly Riverfront", link: "/portfolios/city_mapping", details: [
             "Drones have revolutionized city mapping by providing high-resolution aerial imagery that can be integrated into GIS systems. This technology enables cities to create detailed and up-to-date maps of urban infrastructure, land use, and environmental conditions, supporting informed decision-making and effective resource allocation. Drones play a crucial role in optimizing emergency response, predicting potential hotspots, and enhancing overall public safety. ",
 
         ]
@@ -72,7 +72,7 @@ let CaseStudiesData = [
 
 
     {
-        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Topographical Drone Survey & Mapping of proposed Elevated Railway Track", link: "/portfolios/crm", details: [
+        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Topographical LiDAR Drone Survey & Mapping of proposed Elevated Railway Track", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
@@ -82,7 +82,7 @@ let CaseStudiesData = [
         ]
     },
     {
-        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Gas Pipeline Digitization & Report Making", link: "/portfolios/crm", details: [
+        image: "/gis_images/Gas Pipeline.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Gas Pipeline Digitization & Report Making", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
@@ -93,7 +93,7 @@ let CaseStudiesData = [
     },
     
     {
-        image: "/Photos/IT_7.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Navigation Mapping", link: "/portfolios/crm", details: [
+        image: "/gis_images/gis_services/gis_mapping/Navigation_mapping.webp", category: "GIS", techStack: "HTML5, CSS3, JavaScript, Bootstrap, CodeIgniter 4, PHP, MySQL, Apache/Nginx", name: "Navigation Mapping", link: "/portfolios/crm", details: [
             "The sales, marketing, and customer relationship management software is designed to provide the factual data and management tools for customer interaction within Techmapperz CRM. This powerful tool consolidates sales, marketing, and customer service data and activity, presenting it in a neatly established Customer Relationship Management framework.",
         ]
     },
