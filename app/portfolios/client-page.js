@@ -199,54 +199,37 @@ function ProjectDrawer({ open, onClose, item }) {
   );
 }
 
-const Casestudies = () => {
-  const [filter, setFilter] = useState("All");
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Casestudies = ({ 
+  portfolioData, 
+  defaultCategory = "All", 
+  hideFilters = false, 
+  customTitle = null 
+}) => {
+  const [filter, setFilter] = useState(defaultCategory);
   const [query, setQuery] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
-
-  const getTechStack = (category) => {
-    return category === "GIS"
-      ? "ArcGIS, QGIS,  Geographic Information Systems, Drone Mapping"
-      : "Next.js, React, Node.js, MongoDB, Express.js, PHP, MySQL, AWS";
-  };
 
   const getMobileDescription = (description, category) => {
     if (typeof description !== 'string') return '';
     return description.length > 150 ? description.substring(0, 150) + '...' : description;
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const res = await fetch(`/api/casestudies/${filter}`);
-        const data = await res.json();
-        const transformedProjects = data.map((item) => ({
-          id: item.id,
-          title: item.name,
-          category: item.category, // Add this missing field!
-          techStack: item.techStack,
-          description: Array.isArray(item.details) ? item.details[0] : item.description,
-          mobileDescription: getMobileDescription(Array.isArray(item.details) ? item.details[0] : item.description, item.category),
-          image: item.image,
-          link: item.link || "#",
-          bgColor: "#1e293b"
-        }));
-        setProjects(transformedProjects);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [filter]);
+  // Transform the static data to match the expected format
+  const transformedProjects = portfolioData.map((item, index) => ({
+    id: index,
+    title: item.name,
+    category: item.category,
+    techStack: item.techStack,
+    description: Array.isArray(item.details) ? item.details[0] : item.description,
+    mobileDescription: getMobileDescription(Array.isArray(item.details) ? item.details[0] : item.description, item.category),
+    image: item.image,
+    link: item.link || "#",
+    bgColor: "#1e293b"
+  }));
 
   const filteredProjects = useMemo(() => {
-    let filtered = projects;
+    let filtered = transformedProjects;
     
     // Filter by category
     if (filter !== "All") {
@@ -265,7 +248,7 @@ const Casestudies = () => {
     }
     
     return filtered;
-  }, [projects, filter, query]);
+  }, [transformedProjects, filter, query]);
 
   const handleFilterChange = (category) => {
     setFilter(category);
@@ -275,15 +258,6 @@ const Casestudies = () => {
     setCurrentProject(project);
     setDrawerOpen(true);
   };
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen bg-gray-900">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#00B0FE]"></div>
-        <p className="ml-4 text-white">Loading projects...</p>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-gray-900">
