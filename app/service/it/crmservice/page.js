@@ -1,16 +1,47 @@
 import ScrollToTop from '@/app/_Components/ScrollToTop';
-import OurCrm from '@/app/_Components/OurCrm';
-import WebsiteIntroduction from '@/app/_Components/WebsiteIntroduction';
-import WhyChooseTechmapperz, { defaultFeatures } from '@/app/_Components/WhyChooseTechmapperz';
-import FAQ from '@/app/_Components/FAQ';
-import OurServices from '@/app/_Components/OurServices';
-import WebsiteBanner from '@/app/_Components/WebsiteBanner';
+import dynamicImport from 'next/dynamic';
+import { createOptimizedLoader, ISR_CONFIGS } from '@/app/lib/utils/performanceOptimizer';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
+// Critical above-the-fold components
+const WebsiteBanner = dynamicImport(() => import('@/app/_Components/WebsiteBanner'), {
+  ssr: true,
+  ...createOptimizedLoader("500px", "bg-gradient-to-br from-gray-900 to-black")
+});
+
+const WebsiteIntroduction = dynamicImport(() => import('@/app/_Components/WebsiteIntroduction'), {
+  ssr: true,
+  ...createOptimizedLoader("400px", "bg-black")
+});
+
+// Below-the-fold components - lazy load
+const OurCrm = dynamicImport(() => import('@/app/_Components/OurCrm'), {
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-gray-900")
+});
+
+const OurServices = dynamicImport(() => import('@/app/_Components/OurServices'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900")
+});
+
+const WhyChooseTechmapperz = dynamicImport(() => import('@/app/_Components/WhyChooseTechmapperz'), {
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-gray-800")
+});
+
+const FAQ = dynamicImport(() => import('@/app/_Components/FAQ'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-black")
+});
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com";
+
+// Force dynamic rendering to avoid prerender errors
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
     title: "Custom CRM Software Development | CRM Solutions | Techmapperz",
-    description: "Techmapperz’s custom CRM solution centralizes your data, automates follow-ups, and accelerates growth—all tailored to your unique needs.",
+    description: "Techmapperz's custom CRM solution centralizes your data, automates follow-ups, and accelerates growth—all tailored to your unique needs.",
     alternates: {
         canonical: `${BASE_URL}/service/it/crmservice`,
     },
@@ -22,8 +53,7 @@ const CRM_pages = () => {
         imageSrc: "/Photos/CRM_Introduction.webp",
         imageAlt: "CRM Solutions",
         paragraphs: [
-            "In modern business handling leads, sales, finance, and projects through different applications is the main problem to grow your business. By combining activities and enabling effortless lead management with follow-up automation, modern CRM systems effectively maximise conversion rates. Moreover, task assignment and reporting promptly become cooperative work. This tool does not only help track data seamlessly but it provides insights that lead to significant moves that will save effort and profits, as well as encourage smart growth.",
-
+            "In modern business handling leads, sales, finance, and projects through different applications is the main problem to grow your business. By combining activities and enabling effortless lead management with follow-up automation, modern CRM systems effectively maximise conversion rates. Moreover, task assignment and reporting promptly become cooperative work. This tool does not only help track data seamlessly but it provides insights that lead to significant moves that will save effort and boost productivity."
         ],
         services: [
             { text: "CRM Solution boosts sales and ", highlight: "enhances productivity." },
@@ -38,13 +68,13 @@ const CRM_pages = () => {
             id: 1,
             title: "CRM Customization",
             icon: "/crm_services_icon/CRM Consulting.svg",
-            description: "CRM customization is the system to fit a business's specific needs, improving efficiency and user experiences. Our CRM involves adjusting features, fields, and workflows to match the company’s goals. Techmapperz Customization CRM helps streamline processes and enhances customer relationship management."
+            description: "CRM customization is the system to fit a business's specific needs, improving efficiency and user experiences. Our CRM involves adjusting features, fields, and workflows to match the company's goals. Techmapperz Customization CRM helps streamline processes and enhances customer relationship management."
         },
         {
             id: 2,
             title: "CRM development",
             icon: "/crm_services_icon/CRM Implementation.svg",
-            description: "CRM development includes creating or improving Customer Relationship Management systems, to meet a business’s specific needs. This includes the creation of custom features and the best automation of all processes related to the client."
+            description: "CRM development includes creating or improving Customer Relationship Management systems, to meet a business's specific needs. This includes the creation of custom features and the best automation of all processes related to the client."
         },
         {
             id: 3,
@@ -57,8 +87,7 @@ const CRM_pages = () => {
             title: "CRM Deployment",
             icon: "/crm_services_icon/CRM Integration.svg",
             description: "As big data is one of the most valued assets in this digital age, how you manage information about your customers can actually make or break your business. Investing in customer relationship management (CRM) software yields many benefits and quickly brings return."
-        },
-
+        }
     ];
 
     const faqData = [
@@ -94,8 +123,7 @@ const CRM_pages = () => {
             question: "8.	Can I migrate my data from an old CRM or spreadsheets to the new CRM?",
             answer: "Absolutely! We ensures a secure, hassle-free migration process, transferring all your valuable data accurately while maintaining system integrity without downtime or data loss.",
         },
-    ]
-
+    ];
 
     const bannerData = {
         title: (
@@ -104,28 +132,20 @@ const CRM_pages = () => {
                 <span className="text-gradient">CRM Solution</span>
             </>
         ),
-        // title: "Unlock Success with our Custom CRM Solution",
         subtitle: "TOP RATED AGENCY FOR WEB DESIGN",
-        // description: "Enhance your business operations and customer satisfaction with customized CRM systems.",
         description: "",
-
         buttonText: "Get In Touch",
         imageSrc: "/Photos/CRM_Mockup_banner.webp",
         imageAlt: "Web Development Mockup"
     };
 
-
     return (
         <div className="bg-gray-900 text-white relative overflow-hidden">
             <ScrollToTop />
 
-
             <WebsiteBanner {...bannerData} />
 
             <section className="w-full max-sm:px-5 max-sm:py-4 px-20 py-10 bg-black relative">
-                {/* <div className="absolute top-12 right-[-1rem] text-[116px] leading-[174px] text-gray-400 opacity-5">IT Service</div>
-                <div className="absolute top-20 right-[-1rem] text-[645px] leading-[968px] text-gray-400 opacity-5">?</div> */}
-
                 <WebsiteIntroduction
                     imageSrc={introData.imageSrc}
                     imageAlt={introData.imageAlt}
@@ -134,7 +154,6 @@ const CRM_pages = () => {
                     backgroundText={introData.backgroundText}
                 />
 
-                {/* Service we offer? */}
                 <OurCrm />
                 <OurServices
                     title="Services We Offer"
@@ -145,17 +164,11 @@ const CRM_pages = () => {
                     services={crmServicesData}
                 />
 
-
                 <WhyChooseTechmapperz
-                    features={defaultFeatures}
                     heading={'Why Choose Techmapperz for CRM'}
                 />
 
                 <FAQ faqData={faqData} />
-
-
-
-
             </section>
         </div>
     );

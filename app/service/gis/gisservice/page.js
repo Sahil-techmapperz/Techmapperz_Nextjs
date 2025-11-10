@@ -1,25 +1,48 @@
 // pages/gisServices.js
 import Image from 'next/image';
 import Link from 'next/link';
-
+import dynamic from 'next/dynamic';
 import ScrollToTop from '@/app/_Components/ScrollToTop';
-import WhyChooseTechmapperz from '@/app/_Components/WhyChooseTechmapperz';
-import FAQ from '@/app/_Components/FAQ';
-import GisServices_Services_We_Offer from '@/app/_Components/GisServices_Services_We_Offer';
+import { createOptimizedLoader, ISR_CONFIGS } from '@/app/lib/utils/performanceOptimizer';
 
 import GIS_Mapping from "@/public/gis_images/GIS_Main_Page/GIS_Mapping.webp";
 import GIS_Consulting from "@/public/gis_images/GIS_Main_Page/GIS_Consulting.webp";
 import GIS_Data_Digitization from "@/public/gis_images/GIS_Main_Page/GIS_Data_Digitization.webp";
 import Web_GIS from "@/public/gis_images/GIS_Main_Page/Web_GIS.webp";
 import GIS_Survey from "@/public/gis_images/GIS_Main_Page/GIS_Survey.webp";
-import WebsiteBanner from '@/app/_Components/WebsiteBanner';
-
 import GISintroImg from "@/public/gis_images/GISintroImg.webp";
-import WebsiteIntroduction from '@/app/_Components/WebsiteIntroduction';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
+// Critical above-the-fold components
+const WebsiteBanner = dynamic(() => import('@/app/_Components/WebsiteBanner'), {
+  ssr: true,
+  ...createOptimizedLoader("500px", "bg-gradient-to-br from-gray-900 to-black")
+});
 
+const WebsiteIntroduction = dynamic(() => import('@/app/_Components/WebsiteIntroduction'), {
+  ssr: true,
+  ...createOptimizedLoader("400px", "bg-black")
+});
 
+// Below-the-fold components - lazy load
+const GisServices_Services_We_Offer = dynamic(() => import('@/app/_Components/GisServices_Services_We_Offer'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-gray-900")
+});
+
+const WhyChooseTechmapperz = dynamic(() => import('@/app/_Components/WhyChooseTechmapperz'), {
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-gray-800")
+});
+
+const FAQ = dynamic(() => import('@/app/_Components/FAQ'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-black")
+});
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com";
+
+// Add ISR for page caching
+export const revalidate = ISR_CONFIGS.service;
 
 export const metadata = {
   title: "GIS Consulting & Mapping Services | Web GIS Applications | Techmapperz",

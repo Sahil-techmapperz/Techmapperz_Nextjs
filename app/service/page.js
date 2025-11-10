@@ -1,10 +1,19 @@
 import Link from 'next/link';
 import ScrollToTop from '@/app/_Components/ScrollToTop';
-
-import Features from '../_Components/Features';
+import dynamic from 'next/dynamic';
 import { FaArrowRightLong } from 'react-icons/fa6';
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
+import { ISR_CONFIGS, createOptimizedLoader } from '../lib/utils/performanceOptimizer';
 
+// Critical above-the-fold component - load with SSR for better performance
+const Features = dynamic(() => import('../_Components/Features'), {
+  ssr: true,
+  ...createOptimizedLoader("400px", "bg-black")
+});
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com";
+
+// Add ISR for page caching
+export const revalidate = ISR_CONFIGS.service;
 
 export const metadata = {
   title: "Software, GIS & Drone Survey Company in India | Techmapperz",

@@ -1,17 +1,39 @@
 
-
 import Link from 'next/link';
 import Image from 'next/image';
-import Choose from './choose';
-import OfficeLive from './OfficeLive';
-import CompanyValues from './CompanyValues';
 import ScrollToTop from '../_Components/ScrollToTop';
-import Missionvision from '../_Components/Missionvision';
+import dynamic from 'next/dynamic';
 import How_do_we_work_imgWebp from '@/public/Photos/How_do_we_work_img.webp';
 import about_us_banner_img from '@/public/Photos/about_us_banner.webp';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IMAGE_CONFIGS, createOptimizedLoader, ISR_CONFIGS } from '../lib/utils/performanceOptimizer';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
+// Critical above-the-fold components - load immediately
+const Missionvision = dynamic(() => import('../_Components/Missionvision'), {
+  ssr: true,
+  ...createOptimizedLoader("300px", "bg-gray-900")
+});
+
+// Below-the-fold components - lazy load with intersection observer
+const Choose = dynamic(() => import('./choose'), { 
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-black")
+});
+
+const OfficeLive = dynamic(() => import('./OfficeLive'), { 
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-gray-800")
+});
+
+const CompanyValues = dynamic(() => import('./CompanyValues'), { 
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-gray-900")
+});
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com";
+
+// Add ISR for page caching
+export const revalidate = ISR_CONFIGS.about;
 
 export const metadata = {
   title: "Optimizing Businesses with Smart IT & Geospatial Technologies | India",
@@ -35,6 +57,9 @@ const About = () => {
               src={about_us_banner_img}
               className='w-full h-[600px] object-cover transition-transform duration-1000 filter hover:brightness-110'
               alt="About Us Banner"
+              {...IMAGE_CONFIGS.banner}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
             <div className='absolute inset-0 w-full h-full bg-gradient-to-b from-black/70 to-black/50 flex flex-col justify-center items-center'>
               <h1 className='text-center text-7xl max-sm:text-4xl text-white font-bold tracking-tight'>

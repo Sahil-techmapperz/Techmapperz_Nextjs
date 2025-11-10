@@ -15,7 +15,7 @@ const FAQ = ({ faqData }) => {
                 Frequently Asked Questions <span className="font-[500]" >(FAQs)</span>
             </h2>
             <div className="lg:w-[80%] md:w-[90%] w-full mx-auto space-y-3 sm:space-y-4">
-                {faqData.map((faq, index) => (
+                {faqData && faqData.length > 0 && faqData.map((faq, index) => (
                     <div key={index} className="sm:p-4 p-3 border-b border-gray-500 shadow-lg">
                         <button
                             className="flex justify-between items-center w-full text-lg sm:text-xl md:text-2xl font-semibold text-left text-gray-300"

@@ -1,15 +1,25 @@
 import ScrollToTop from '../_Components/ScrollToTop';
-import ContactForm from '../_Components/ContactForm';
+import dynamic from 'next/dynamic';
 import { IoLocation } from "react-icons/io5";
+import { ISR_CONFIGS, createOptimizedLoader } from '../lib/utils/performanceOptimizer';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
+// Lazy load ContactForm as it's not critical for initial render
+const ContactForm = dynamic(() => import('../_Components/ContactForm'), {
+  ssr: true,
+  ...createOptimizedLoader("400px", "bg-gradient-to-r from-gray-900 to-gray-800")
+});
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com";
+
+// Add ISR for page caching
+export const revalidate = ISR_CONFIGS.contact;
 
 export const metadata = {
 	title: "Contact us for all your IT & GIS needs  | Techmapperz",
 	description: "Techmapperz is a leading IT Services, GIS and Drone Services provider company in India. ",
 	alternates: {
 		canonical: `${BASE_URL}/contact`,
-	  },
+	},
 };
 
 const Contact = () => {

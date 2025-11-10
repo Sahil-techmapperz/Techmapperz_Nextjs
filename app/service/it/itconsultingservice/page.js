@@ -1,15 +1,45 @@
 import { FaAws, FaJira, FaConfluence, FaGithub, FaDatabase, FaCloud } from "react-icons/fa";
 import { SiMicrosoftazure, SiTableau, SiPowerbi, SiSalesforce, SiServicenow } from "react-icons/si";
-
 import ScrollToTop from '@/app/_Components/ScrollToTop';
-import WhyChooseTechmapperz, { defaultFeatures } from '@/app/_Components/WhyChooseTechmapperz';
-import FAQ from '@/app/_Components/FAQ';
-import WebsiteIntroduction from '@/app/_Components/WebsiteIntroduction';
-import OurServices from '@/app/_Components/OurServices';
-import WebsiteBanner from '@/app/_Components/WebsiteBanner';
-import TechStack from '@/app/_Components/TechStack';
+import dynamicImport from 'next/dynamic';
+import { createOptimizedLoader, ISR_CONFIGS } from '@/app/lib/utils/performanceOptimizer';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
+// Critical above-the-fold components
+const WebsiteBanner = dynamicImport(() => import('@/app/_Components/WebsiteBanner'), {
+  ssr: true,
+  ...createOptimizedLoader("500px", "bg-gradient-to-br from-gray-900 to-black")
+});
+
+const WebsiteIntroduction = dynamicImport(() => import('@/app/_Components/WebsiteIntroduction'), {
+  ssr: true,
+  ...createOptimizedLoader("400px", "bg-black")
+});
+
+// Below-the-fold components - lazy load
+const OurServices = dynamicImport(() => import('@/app/_Components/OurServices'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900")
+});
+
+const TechStack = dynamicImport(() => import('@/app/_Components/TechStack'), {
+  ssr: false,
+  ...createOptimizedLoader("300px", "bg-black")
+});
+
+const WhyChooseTechmapperz = dynamicImport(() => import('@/app/_Components/WhyChooseTechmapperz'), {
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-gray-800")
+});
+
+const FAQ = dynamicImport(() => import('@/app/_Components/FAQ'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-gray-900")
+});
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com";
+
+// Force dynamic rendering to avoid prerender errors
+export const dynamic = 'force-dynamic';
 
 
 export const metadata = {
@@ -123,7 +153,6 @@ const ItConsulting = () => {
     ];
 
 
-
     const bannerData = {
         title: (
             <>
@@ -168,7 +197,6 @@ const ItConsulting = () => {
                 <TechStack techItems={itconsultingTechItems} Headingtext={'Our Tech Tools'} />
 
                 <WhyChooseTechmapperz
-                    features={defaultFeatures}
                     heading={'Why Choose Techmapperz for IT Consultancy'}
                 />
 

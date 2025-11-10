@@ -43,7 +43,7 @@ const OurServices = ({
 
                     {/* Right Side */}
                     <div className="space-y-6 sm:space-y-8 md:space-y-10 mt-6 lg:mt-0">
-                        {services.map((service) => (
+                        {services && services.length > 0 && services.map((service) => (
                             <div key={service.id} className="flex items-start space-x-3 sm:space-x-4 border-b border-white/20 pb-4 sm:pb-6 md:pb-8 last:border-b-0">
                                 <div className="text-lg sm:text-xl flex-shrink-0 bg-blue-600/10 p-2.5 sm:p-3 rounded-lg">
                                     <Image
@@ -64,6 +64,11 @@ const OurServices = ({
                                 </div>
                             </div>
                         ))}
+                        {(!services || services.length === 0) && (
+                            <div className="text-center text-gray-400 py-8">
+                                No services available
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -1,17 +1,52 @@
 
 import ScrollToTop from '@/app/_Components/ScrollToTop';
+import dynamic from 'next/dynamic';
 import { FaReact, FaAndroid, FaApple, FaGithub, FaDatabase, FaNpm } from "react-icons/fa";
 import { SiFlutter, SiKotlin, SiSwift, SiFirebase, SiReactnative } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
-import FAQ from '@/app/_Components/FAQ';
-import WebsiteIntroduction from '@/app/_Components/WebsiteIntroduction';
-import WhyChooseTechmapperz from '@/app/_Components/WhyChooseTechmapperz';
-import OurServices from '@/app/_Components/OurServices';
-import WebsiteBanner from '@/app/_Components/WebsiteBanner';
-import TechStack from '@/app/_Components/TechStack';
-import How_Mobile_Applications_Grow_Your_Business from '@/app/_Components/How_Mobile_Applications_Grow_Your_Business';
+import { createOptimizedLoader, ISR_CONFIGS } from '@/app/lib/utils/performanceOptimizer';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com"; // Fallback URL
+// Critical above-the-fold components
+const WebsiteBanner = dynamic(() => import('@/app/_Components/WebsiteBanner'), {
+  ssr: true,
+  ...createOptimizedLoader("500px", "bg-gradient-to-br from-gray-900 to-black")
+});
+
+const WebsiteIntroduction = dynamic(() => import('@/app/_Components/WebsiteIntroduction'), {
+  ssr: true,
+  ...createOptimizedLoader("400px", "bg-black")
+});
+
+// Below-the-fold components - lazy load
+const OurServices = dynamic(() => import('@/app/_Components/OurServices'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900")
+});
+
+const How_Mobile_Applications_Grow_Your_Business = dynamic(() => import('@/app/_Components/How_Mobile_Applications_Grow_Your_Business'), {
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-gray-900")
+});
+
+const TechStack = dynamic(() => import('@/app/_Components/TechStack'), {
+  ssr: false,
+  ...createOptimizedLoader("300px", "bg-black")
+});
+
+const WhyChooseTechmapperz = dynamic(() => import('@/app/_Components/WhyChooseTechmapperz'), {
+  ssr: false,
+  ...createOptimizedLoader("400px", "bg-gray-800")
+});
+
+const FAQ = dynamic(() => import('@/app/_Components/FAQ'), {
+  ssr: false,
+  ...createOptimizedLoader("500px", "bg-gray-900")
+});
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://techmapperz.com";
+
+// Add ISR for page caching
+export const revalidate = ISR_CONFIGS.service;
 
 export const metadata = {
     title: "Custom Mobile App Development Company | Android & iOS Apps | Techmapperz",

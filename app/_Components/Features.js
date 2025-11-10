@@ -1,5 +1,5 @@
 import Link from "next/link";
-import FlipCard from "./FlipCard";
+import dynamic from 'next/dynamic';
 import crm from '@/public/Icons/crm.svg'
 import drone from '@/public/Icons/drone.svg'
 import web_dev from '@/public/Icons/web_dev.svg'
@@ -14,7 +14,24 @@ import app_dev_Color_changed from '@/public/Icons/app_dev_Color_changed.webp'
 import consultant_Color_changed from '@/public/Icons/consultant_Color_Changed.webp'
 import GIS_Color_changed from '@/public/Icons/GIS_Color_Changed.webp'
 import Image from "next/image";
-import HoverButton from "./ExpandButton";
+import { IMAGE_CONFIGS } from '../lib/utils/performanceOptimizer';
+
+// Lazy load FlipCard for better performance
+const FlipCard = dynamic(() => import('./FlipCard'), {
+  ssr: false,
+  loading: () => (
+    <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl animate-pulse">
+      <div className="p-6">
+        <div className="w-16 h-16 bg-gray-700 rounded-lg mb-4"></div>
+        <div className="h-6 bg-gray-700 rounded mb-3"></div>
+        <div className="space-y-2">
+          <div className="h-4 bg-gray-700 rounded"></div>
+          <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+        </div>
+      </div>
+    </div>
+  )
+});
 
 const Features = () => {
   const features = [

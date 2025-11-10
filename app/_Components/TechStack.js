@@ -51,7 +51,7 @@ const TechStack = ({ techItems = [],Headingtext="Technology We Use" }) => {
 				initial="hidden"
 				animate="visible"
 			>
-				{techItems.map((tech, index) => (
+				{techItems && techItems.length > 0 && techItems.map((tech, index) => (
 					<Link key={index} href={`#`}>
 						<motion.div
 							className={styles.card}

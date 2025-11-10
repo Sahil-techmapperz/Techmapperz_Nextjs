@@ -10,6 +10,7 @@ import Navbar from './_Components/Navbar';
 const Footer = dynamic(() => import('./_Components/Footer'), { ssr: false });
 const SocialMediaIcons = dynamic(() => import('./_Components/SocialMediaIcons'), { ssr: false });
 const SlickCarouselProvider = dynamic(() => import('./_Components/SlickCarouselProvider'), { ssr: false });
+const PerformanceProvider = dynamic(() => import('./_Components/PerformanceProvider'), { ssr: false });
 import { Montserrat } from "next/font/google";
 import Head from 'next/head';
 
